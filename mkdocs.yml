@@ -2,7 +2,13 @@ site_name: IT-Basis - Überblick über das Web und Programmiersprachen
 
 nav:
   - Übersicht: index.md
-  - Topic 1: content/1.md
+  - HTML CSS: content/HTML_CSS/1.md
+  - JavaScript: content/JavaScript/1.md
+  - XML: content/XML/1.md
+  - Java Grundlagen: content/Java_Grundlagen/1.md
+  - Java Aufbau: content/Java_Aufbau/1.md
+  - Application Server: content/Application_Server/1.md
+  - Low Code: content/Low_Code/1.md
 
 
 theme:
