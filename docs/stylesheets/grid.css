@@ -35,7 +35,7 @@
     width: 60px; /* Größe der Icons im normalen Zustand */
     height: auto;
     fill: var(--md-accent-bg-color); 
-    transition: opacity 0.3s ease, transform 0.7s ease, fill 0.3s ease; /* Übergangseffekte für Hover */
+    transition: opacity 0.3s ease, transform 0.3s ease, fill 0.3s ease; /* Übergangseffekte für Hover */
     pointer-events: none; /* Keine Interaktion mit dem Icon */
     z-index: 1; /* Stellt sicher, dass das Icon nicht hinter anderen Elementen liegt */
 }
@@ -43,9 +43,15 @@
 /* Animation und Vergrößerung bei Hover auf die Karten */
 .grid.cards.fancy li:hover svg {
     opacity: 1; /* Icons werden undurchsichtig beim Hover */
-    transform: translateY(-50%) scale(1.4) rotate(365deg); /* Leichte Vergrößerung und Rotation im Uhrzeigersinn */
+    transform: translateY(-50%) scale(1.4) rotate(5deg); /* Leichte Vergrößerung und Rotation im Uhrzeigersinn */
     width: 80px; /* Vergrößert das Icon dezent */
-    fill: var(--md-primary-fg-color);
+    /* fill: var(--md-primary-fg-color); */
+    fill: #e53312;
+    stroke: #fff;         /* border color */
+    stroke-width: 2.5px;    /* border thickness */
+    stroke-linejoin: round;
+    stroke-linecap: round;
+    paint-order: stroke fill; /* draw stroke behind fill (nice outline) */
 }
 
 /* Anpassung der Textfarbe und Schriftarten */

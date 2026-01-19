@@ -13,13 +13,13 @@ hide:
 # IT-Basis - Überblick über das Web und Programmiersprachen
 
 <div class="grid cards fancy grid--cols-1" markdown >
-- [:material-language-html5: HTML/CSS](content/1.md)
-- [:material-language-javascript: JavaScript](content/1.md)
-- [:material-code-tags: XML](content/1.md)
-- [:material-coffee: Java Grundlagen](content/1.md)
-- [:material-layers-triple: Java Aufbau](content/1.md)
-- [:material-server: Application Server](content/1.md)
-- [:material-robot-outline: Low Code](content/1.md)
+- [:material-language-html5: HTML/CSS](content/HTML_CSS/1.md)
+- [:material-language-javascript: JavaScript](content/JavaScript/1.md)
+- [:material-code-tags: XML](content/XML/1.md)
+- [:material-language-java: Java Grundlagen](content/Java_Grundlagen/1.md)
+- [:material-language-java: Java Aufbau](content/Java_Aufbau/1.md)
+- [:material-server: Application Server](content/Application_Server/1.md)
+- [:material-robot-outline: Low Code](content/Low_Code/1.md)
 </div>
 
 </div>
