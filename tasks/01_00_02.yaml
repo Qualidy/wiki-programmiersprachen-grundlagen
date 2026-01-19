@@ -1,0 +1,17 @@
+title: "Tag-Schachtelung reparieren"
+question: |-
+  In diesem Code ist die Schachtelung falsch (Tags werden „über Kreuz“ geschlossen).
+  Korrigiere den Code so, dass er **valide** ist:
+
+  ```html
+  <p>Ich lerne <strong>HTML</p></strong>
+  ```
+
+  Tipp: Achte auf die richtige Reihenfolge der schließenden Tags.
+solution: |-
+  Korrekt wäre z. B.:
+
+  ```html
+  <p>Ich lerne <strong>HTML</strong></p>
+  ```
+solution_video: null

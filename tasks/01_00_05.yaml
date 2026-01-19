@@ -1,0 +1,25 @@
+title: "Attribute: Link & Bild korrekt einbinden"
+question: |-
+  Ergänze in deinem <body>:
+
+  1) Einen Link zu "https://example.com" der in einem neuen Tab öffnet.
+     - Nutze `target="_blank"`
+     - Gib dem Link außerdem ein `title`
+
+  2) Ein Bild-Tag mit:
+     - `src="img/logo.png"`
+     - sinnvollem `alt`-Text
+     - einer `class="logo"`
+
+  Hinweis: Die Datei muss nicht wirklich existieren – es geht um die korrekte HTML-Syntax.
+solution: |-
+  Beispiel:
+  
+  ```html
+  <a href="https://example.com" target="_blank" title="Öffnet example.com in neuem Tab">
+    Zur Beispielseite
+  </a>
+
+  <img src="img/logo.png" alt="Firmenlogo" class="logo" />
+  ```
+solution_video: null

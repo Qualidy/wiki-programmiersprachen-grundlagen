@@ -1,24 +1,33 @@
-title: Erstes GUI – Label und zwei Buttons
-question: |
-  Erstelle ein WinForms-Projekt, füge ein Label `LblAnzeige` und zwei Buttons `CmdHallo`, `CmdEnde` ein.
+title: "Warm-up: Was gehört wohin?"
+question: |-
+  Ordne die folgenden Begriffe dem richtigen Bereich zu: **head** oder **body**.
 
-  - Form-Text: „Mein erstes Projekt“
+  - Seitentitel (Tab-Name)
+  - sichtbarer Text auf der Seite
+  - Verweis auf CSS-Datei
+  - Überschrift
+  - Meta-Informationen (z. B. charset)
+  - Bild auf der Seite
+
+  Schreibe deine Lösung als zwei Listen:
+
+  head:
+
+  - ...
+
+  body:
+
+  - ...
+solution: |-
+  head:
+
+  - Seitentitel (Tab-Name)
+  - Verweis auf CSS-Datei
+  - Meta-Informationen (z. B. charset)
+
+  body:
   
-  - `LblAnzeige` zunächst leer, mit Rahmen (`FixedSingle`)
-
-  $$
-  \frac{10}{12}x
-  $$
-solution: |
-  ```csharp
-  // Eigenschaften per Designer setzen.
-  // Optional per Code im Form_Load:
-  private void Form1_Load(object sender, EventArgs e)
-  {
-      this.Text = "Mein erstes Projekt";
-      LblAnzeige.Text = "";
-      LblAnzeige.BorderStyle = BorderStyle.FixedSingle;
-  }
-  ```
-solution_video: https://www.youtube.com/embed/n0NM4xbNzyE?si=VtGnkT2LiBNYdRq0
-tip: Hier noch ein Tip
+  - sichtbarer Text auf der Seite
+  - Überschrift
+  - Bild auf der Seite
+solution_video: null

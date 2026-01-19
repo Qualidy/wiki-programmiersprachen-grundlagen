@@ -1,0 +1,30 @@
+title: "HTML-Grundgerüst erstellen (mit DOCTYPE)"
+question: |-
+  Erstelle eine Datei **index.html** und baue ein vollständiges HTML5-Grundgerüst.
+
+  Anforderungen:
+  - `<!DOCTYPE html>` muss ganz oben stehen
+  - `<html lang="de">` setzen
+  - Im `<head>`: `meta charset="utf-8"` und ein `<title>`
+  - Im `<body>`: eine `<h1>` und ein `<p>`
+
+  Bonus:
+  - Füge `meta name="viewport"` hinzu (wie im Skript)
+solution: |-
+  Beispiel-Lösung:
+
+  ```html
+  <!DOCTYPE html>
+  <html lang="de">
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>Meine erste Seite</title>
+    </head>
+    <body>
+      <h1>Hallo HTML!</h1>
+      <p>Das ist meine erste HTML-Seite.</p>
+    </body>
+  </html>
+  ```
+solution_video: null

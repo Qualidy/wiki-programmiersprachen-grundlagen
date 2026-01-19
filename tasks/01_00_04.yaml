@@ -1,0 +1,35 @@
+title: "Block oder Inline?"
+question: |-
+  Entscheide, ob die Elemente typischerweise **Block** oder **Inline** sind:
+
+  - h1
+  - p
+  - a
+  - span
+  - div
+  - strong
+  - img
+
+  Bonus (optional):
+  Erstelle in deiner index.html ein Beispiel, in dem du Inline-Elemente in einem Satz verwendest
+  (z. B. `<strong>` und `<a>`) und darunter Block-Elemente (z. B. `<h2>`, `<p>`, `<div>`).
+solution: |-
+  Typischerweise:
+
+  - h1 → Block
+  - p → Block
+  - a → Inline
+  - span → Inline
+  - div → Block
+  - strong → Inline
+  - img → Inline (erscheint im Textfluss; technisch „replaced element“)
+
+  Bonus-Beispiel:
+  ```html
+  <p>Ich mag <strong>HTML</strong> und hier ist ein <a href="#">Link</a>.</p>
+  <div>
+    <h2>Ein Blockbereich</h2>
+    <p>Noch ein Absatz.</p>
+  </div>
+  ```
+solution_video: null
