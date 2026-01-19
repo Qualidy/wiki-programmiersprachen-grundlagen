@@ -1,4 +1,4 @@
-site_name: Basis Wiki
+site_name: IT-Basis - Überblick über das Web und Programmiersprachen
 
 nav:
   - Übersicht: index.md
@@ -8,10 +8,10 @@ nav:
 theme:
   name: material
   palette:
-    # primary: blue
-    # accent: green
-    primary: amber
-    accent: deep orange
+    primary: blue
+    accent: green
+    # primary: amber
+    # accent: deep orange
   logo: assets/logo.png
   favicon: assets/favicon.png
   features:
