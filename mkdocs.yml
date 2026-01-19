@@ -52,6 +52,7 @@ extra_css:
   - stylesheets/video_admonition.css
   - stylesheets/python_tutor_admonition.css
   - stylesheets/mermaid.css
+  - stylesheets/cd.css
 
 extra_javascript:
   - javascripts/mathjax.js
