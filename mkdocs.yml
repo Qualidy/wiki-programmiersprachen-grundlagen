@@ -8,8 +8,10 @@ nav:
 theme:
   name: material
   palette:
+    # primary: blue
+    # accent: green
     primary: amber
-    accent: indigo
+    accent: deep orange
   logo: assets/logo.png
   favicon: assets/favicon.png
   features:
@@ -73,4 +75,4 @@ extra:
 watch:
   - tasks
 
-copyright: Copyright &copy; 2025 Qualidy GmbH
+copyright: Copyright &copy; 2026 Qualidy GmbH

@@ -23,7 +23,7 @@ hide:
 
 <div style="margin-left: 15px" markdown>
 
-![](assets/Logo_Qualidy_cmyk.svg)
+![](assets/logo.png)
 
 Hier können weitere Inhalte rein.
 
@@ -36,8 +36,9 @@ Hier können weitere Inhalte rein.
     ++p++ oder ++comma++ : Zur vorherigen Seite gehen (**P**revious)
 
     ++n++ oder ++period++ : Zur nächsten Seite gehen (**N**ext)
-
-
+    
 </div>
+[Subscribe to our newsletter](#){ .md-button }
 
+[Subscribe to our newsletter](#){ .md-button .md-button--primary }
 </div>
