@@ -9,8 +9,38 @@ def define_env(env):
 
         if file:
             file_path = os.path.join(env.project_dir, file)
-            with open(file_path, 'r', encoding='utf-8') as file:
-                params.update(yaml.safe_load(file))
+            try:
+                with open(file_path, 'r', encoding='utf-8') as f:   # <-- geändert: "as f" statt "as file" (kein Shadowing)
+                    loaded = yaml.safe_load(f) or {}
+                    if not isinstance(loaded, dict):
+                        return error_admonition(
+                            title="Ungültiges YAML-Format",
+                            message=(
+                                f"Die Datei `{file}` konnte geladen werden, enthält aber **kein YAML-Objekt (dict)**.\n"
+                                f"Gefunden: `{type(loaded).__name__}`"
+                            ),
+                        )
+                    params.update(loaded)
+
+            except FileNotFoundError as e:
+                return error_admonition(
+                    title="Datei nicht gefunden",
+                    message=(
+                        f"Die Aufgaben-Datei `{file}` wurde nicht gefunden.\n\n"
+                        f"Pfad: `{file_path}`\n"
+                        f"Fehler: `{e}`"
+                    ),
+                )
+
+            except (yaml.YAMLError, UnicodeDecodeError) as e:
+                return error_admonition(
+                    title="Fehler beim Laden der Aufgabe",
+                    message=(
+                        f"Die Datei `{file}` konnte nicht korrekt eingelesen/geparst werden.\n\n"
+                        f"Pfad: `{file_path}`\n\n"
+                        f"Fehler: `{e}`"
+                    ),
+                )
 
         params.update(parameter)
 
@@ -43,6 +73,9 @@ def youtube_video_admonition(inner_url, title='Video'):
         <iframe src="{inner_url}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
     </div>'''
 
+def error_admonition(title="Fehler", message=""):
+    # "danger" ist in MkDocs Material rot
+    return f'!!! danger "{title}"' + add_tabs(message, 1)
 
 def create_task(title="Aufgabe",
                 question="⚠QUESTION_TEXT_MISSING⚠",
