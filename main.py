@@ -27,6 +27,13 @@ def define_env(env):
     @env.macro
     def python_tutor_button(code_string, title="Code im Debugger ansehen"):
         return generate_pythontutor_button(code_string, title=title)
+    
+    @env.macro
+    def link(text="", url="", new_tab=True, icon=":fontawesome-solid-external-link:"):
+        result = f'[{icon} {text}]({url})'
+        if new_tab:
+            result +='{ target=_blank rel="noopener noreferrer" }'
+        return result
 
 
 def youtube_video_admonition(inner_url, title='Video'):

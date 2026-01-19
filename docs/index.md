@@ -27,7 +27,7 @@ hide:
 
 Hier können weitere Inhalte rein.
 
-[:fontawesome-solid-external-link: Externer Link mit neuen Tab](https://pictogrammers.com/library/mdi/){ target=_blank rel="noopener noreferrer" }
+{{ link("externer Link", "https://google.com") }}
 
 {{ youtube_video("https://www.youtube.com/embed/chPCpYNJe_Q?si=frU_Z_VwSGnPWEPF") }}
 
