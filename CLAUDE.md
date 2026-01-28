@@ -1,0 +1,1 @@
+Add CLAUDE.md to staging
