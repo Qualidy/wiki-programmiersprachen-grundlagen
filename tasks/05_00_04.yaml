@@ -1,0 +1,123 @@
+title: "Streams & Collectors"
+question: |-
+  Verarbeite eine Liste von Personen mit Streams.
+
+  Gegeben:
+  ```java
+  class Person {
+      String name;
+      int alter;
+      String stadt;
+      double gehalt;
+      // Konstruktor, Getter...
+  }
+
+  List<Person> personen = Arrays.asList(
+      new Person("Max", 25, "Berlin", 3000),
+      new Person("Anna", 30, "Hamburg", 4500),
+      new Person("Tom", 20, "Berlin", 2500),
+      new Person("Lisa", 35, "München", 5000),
+      new Person("Peter", 28, "Hamburg", 3500)
+  );
+  ```
+
+  **Aufgaben:**
+  1. Alle Personen älter als 25
+  2. Durchschnittsalter aller Personen
+  3. Summe aller Gehälter
+  4. Gruppierung nach Stadt
+  5. Höchstes Gehalt pro Stadt
+  6. Sortierung nach Gehalt (absteigend)
+
+  **Bonus:** Erstelle eine Map mit Name -> Gehalt.
+solution: |-
+  ```java
+  import java.util.*;
+  import java.util.stream.Collectors;
+
+  class Person {
+      private String name;
+      private int alter;
+      private String stadt;
+      private double gehalt;
+
+      public Person(String name, int alter, String stadt, double gehalt) {
+          this.name = name;
+          this.alter = alter;
+          this.stadt = stadt;
+          this.gehalt = gehalt;
+      }
+
+      public String getName() { return name; }
+      public int getAlter() { return alter; }
+      public String getStadt() { return stadt; }
+      public double getGehalt() { return gehalt; }
+
+      @Override
+      public String toString() {
+          return String.format("%s (%d, %s, %.2f€)", name, alter, stadt, gehalt);
+      }
+  }
+
+  public class StreamBeispiele {
+      public static void main(String[] args) {
+          List<Person> personen = Arrays.asList(
+              new Person("Max", 25, "Berlin", 3000),
+              new Person("Anna", 30, "Hamburg", 4500),
+              new Person("Tom", 20, "Berlin", 2500),
+              new Person("Lisa", 35, "München", 5000),
+              new Person("Peter", 28, "Hamburg", 3500)
+          );
+
+          // 1. Alle Personen älter als 25
+          List<Person> alt = personen.stream()
+              .filter(p -> p.getAlter() > 25)
+              .collect(Collectors.toList());
+          System.out.println("Älter als 25: " + alt);
+
+          // 2. Durchschnittsalter
+          double durchschnitt = personen.stream()
+              .mapToInt(Person::getAlter)
+              .average()
+              .orElse(0);
+          System.out.println("Durchschnittsalter: " + durchschnitt);
+
+          // 3. Summe aller Gehälter
+          double summeGehalt = personen.stream()
+              .mapToDouble(Person::getGehalt)
+              .sum();
+          System.out.println("Summe Gehälter: " + summeGehalt + "€");
+
+          // 4. Gruppierung nach Stadt
+          Map<String, List<Person>> nachStadt = personen.stream()
+              .collect(Collectors.groupingBy(Person::getStadt));
+          System.out.println("Gruppiert nach Stadt: " + nachStadt);
+
+          // 5. Höchstes Gehalt pro Stadt
+          Map<String, Double> maxGehaltProStadt = personen.stream()
+              .collect(Collectors.groupingBy(
+                  Person::getStadt,
+                  Collectors.mapping(
+                      Person::getGehalt,
+                      Collectors.maxBy(Double::compare)
+                  )
+              ));
+          System.out.println("Max Gehalt pro Stadt: " + maxGehaltProStadt);
+
+          // 6. Sortierung nach Gehalt (absteigend)
+          List<Person> sortiert = personen.stream()
+              .sorted((p1, p2) -> Double.compare(p2.getGehalt(), p1.getGehalt()))
+              .collect(Collectors.toList());
+          System.out.println("Sortiert nach Gehalt: " + sortiert);
+
+          // Bonus: Map Name -> Gehalt
+          Map<String, Double> gehaltsMap = personen.stream()
+              .collect(Collectors.toMap(
+                  Person::getName,
+                  Person::getGehalt
+              ));
+          System.out.println("Name -> Gehalt: " + gehaltsMap);
+      }
+  }
+  ```
+solution_video: null

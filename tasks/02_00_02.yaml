@@ -1,0 +1,38 @@
+title: "Datentypen erkennen"
+question: |-
+  Bestimme den Datentyp jeder Variable:
+
+  ```javascript
+  const a = "Hallo";
+  const b = 42;
+  const c = true;
+  const d = null;
+  const e = undefined;
+  const f = 3.14;
+  const g = 0;
+  const h = "";
+  ```
+
+  Bonus: Schreibe ein kurzes Skript, das alle Typen mit `typeof` prüft und ausgibt.
+solution: |-
+  ```javascript
+  const a = "Hallo";      // string
+  const b = 42;           // number
+  const c = true;         // boolean
+  const d = null;         // object (historischer Bug in JS)
+  const e = undefined;    // undefined
+  const f = 3.14;         // number
+  const g = 0;            // number
+  const h = "";           // string
+
+  // Bonus
+  console.log(typeof a); // "string"
+  console.log(typeof b); // "number"
+  console.log(typeof c); // "boolean"
+  console.log(typeof d); // "object"
+  console.log(typeof e); // "undefined"
+  console.log(typeof f); // "number"
+  console.log(typeof g); // "number"
+  console.log(typeof h); // "string"
+  ```
+solution_video: null

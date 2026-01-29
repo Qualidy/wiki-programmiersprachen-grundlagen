@@ -1,0 +1,62 @@
+title: "Typ-Konvertierung & Vergleiche"
+question: |-
+  Analysiere die folgenden Vergleiche und entscheide, ob sie `true` oder `false` ergeben:
+
+  ```javascript
+  const x = 10;
+  const y = "10";
+  const z = 0;
+  const w = "";
+  ```
+
+  1. `x == y`
+  2. `x === y`
+  3. `x != y`
+  4. `x !== y`
+  5. `z == w`
+  6. `z === w`
+  7. `Boolean(x)`
+  8. `Boolean(z)`
+  9. `Boolean(w)`
+
+  Bonus: Konvertiere `y` in eine Number und multipliziere es mit `x`.
+solution: |-
+  ```javascript
+  const x = 10;
+  const y = "10";
+  const z = 0;
+  const w = "";
+
+  // 1. x == y → 10 == "10" → 10 == 10 → true
+  console.log(x == y);   // true
+
+  // 2. x === y → 10 === "10" → false
+  console.log(x === y);  // false
+
+  // 3. x != y → 10 != "10" → 10 != 10 → false
+  console.log(x != y);   // false
+
+  // 4. x !== y → 10 !== "10" → true
+  console.log(x !== y);  // true
+
+  // 5. z == w → 0 == "" → 0 == 0 → true
+  console.log(z == w);   // true
+
+  // 6. z === w → 0 === "" → false
+  console.log(z === w);  // false
+
+  // 7. Boolean(x) → true (nicht 0)
+  console.log(Boolean(x)); // true
+
+  // 8. Boolean(z) → false (0 ist falsy)
+  console.log(Boolean(z)); // false
+
+  // 9. Boolean(w) → false (leerer String ist falsy)
+  console.log(Boolean(w)); // false
+
+  // Bonus
+  const yAlsNumber = Number(y);
+  const ergebnis = x * yAlsNumber; // 10 * 10 = 100
+  console.log(ergebnis); // 100
+  ```
+solution_video: null

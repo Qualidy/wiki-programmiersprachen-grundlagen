@@ -1,0 +1,102 @@
+title: "Schleifen & Arrays"
+question: |-
+  Schreibe eine Funktion `statistik(int[] zahlen)`, die:
+  1. Durchschnitt aller Zahlen berechnet
+  2. Minimum und Maximum findet
+  3. Anzahl der geraden Zahlen zählt
+  4. Alle Ergebnisse in einem String zurückgibt
+
+  **Bonus:** Verwende `for-each` Schleife und Streams.
+solution: |-
+  ```java
+  public class Statistik {
+      // Mit for-Schleife
+      public static String statistik(int[] zahlen) {
+          if (zahlen == null || zahlen.length == 0) {
+              return "Keine Zahlen vorhanden";
+          }
+
+          int summe = 0;
+          int min = zahlen[0];
+          int max = zahlen[0];
+          int geradeCount = 0;
+
+          for (int i = 0; i < zahlen.length; i++) {
+              int zahl = zahlen[i];
+              summe += zahl;
+
+              if (zahl < min) min = zahl;
+              if (zahl > max) max = zahl;
+              if (zahl % 2 == 0) geradeCount++;
+          }
+
+          double durchschnitt = (double) summe / zahlen.length;
+
+          return String.format(
+              "Summe: %d, Durchschnitt: %.2f, Min: %d, Max: %d, Gerade: %d",
+              summe, durchschnitt, min, max, geradeCount
+          );
+      }
+
+      // Mit for-each
+      public static String statistikForEach(int[] zahlen) {
+          if (zahlen == null || zahlen.length == 0) {
+              return "Keine Zahlen vorhanden";
+          }
+
+          int summe = 0;
+          int min = Integer.MAX_VALUE;
+          int max = Integer.MIN_VALUE;
+          int geradeCount = 0;
+
+          for (int zahl : zahlen) {
+              summe += zahl;
+              min = Math.min(min, zahl);
+              max = Math.max(max, zahl);
+              if (zahl % 2 == 0) geradeCount++;
+          }
+
+          double durchschnitt = (double) summe / zahlen.length;
+
+          return String.format(
+              "Summe: %d, Durchschnitt: %.2f, Min: %d, Max: %d, Gerade: %d",
+              summe, durchschnitt, min, max, geradeCount
+          );
+      }
+
+      // Mit Streams (Bonus)
+      public static String statistikStream(int[] zahlen) {
+          if (zahlen == null || zahlen.length == 0) {
+              return "Keine Zahlen vorhanden";
+          }
+
+          int summe = java.util.Arrays.stream(zahlen).sum();
+          int min = java.util.Arrays.stream(zahlen).min().getAsInt();
+          int max = java.util.Arrays.stream(zahlen).max().getAsInt();
+          long geradeCount = java.util.Arrays.stream(zahlen)
+              .filter(z -> z % 2 == 0)
+              .count();
+
+          double durchschnitt = (double) summe / zahlen.length;
+
+          return String.format(
+              "Summe: %d, Durchschnitt: %.2f, Min: %d, Max: %d, Gerade: %d",
+              summe, durchschnitt, min, max, geradeCount
+          );
+      }
+
+      public static void main(String[] args) {
+          int[] zahlen = {10, 25, 30, 45, 50, 65, 70, 85, 90, 100};
+
+          System.out.println("Mit for-Schleife:");
+          System.out.println(statistik(zahlen));
+
+          System.out.println("\nMit for-each:");
+          System.out.println(statistikForEach(zahlen));
+
+          System.out.println("\nMit Streams:");
+          System.out.println(statistikStream(zahlen));
+      }
+  }
+  ```
+solution_video: null

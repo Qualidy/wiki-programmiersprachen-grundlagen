@@ -1,0 +1,58 @@
+title: "DOM-Auswahl & Manipulation"
+question: |-
+  Erstelle eine HTML-Seite mit:
+  - Einem `<div id="container">`
+  - Einem `<button id="add">Hinzufügen</button>`
+  - Einem `<button id="clear">Löschen</button>`
+
+  **Aufgaben:**
+  1. Klick auf "Hinzufügen" fügt ein neues `<p>` mit aktueller Zeit hinzu
+  2. Klick auf "Löschen" entfernt alle `<p>` Elemente
+  3. Jedes `<p>` soll beim Klick gelöscht werden
+
+  Bonus: Färbe jedes zweite `<p>` rot.
+solution: |-
+  ```html
+  <!DOCTYPE html>
+  <html lang="de">
+  <head>
+      <meta charset="UTF-8">
+      <title>DOM Manipulation</title>
+      <style>
+          p { margin: 5px; padding: 5px; border: 1px solid #ccc; }
+          p:nth-child(even) { background-color: #ffcccc; }
+      </style>
+  </head>
+  <body>
+      <div id="container"></div>
+      <button id="add">Hinzufügen</button>
+      <button id="clear">Löschen</button>
+
+      <script>
+          const container = document.getElementById('container');
+          const addBtn = document.getElementById('add');
+          const clearBtn = document.getElementById('clear');
+
+          // Hinzufügen
+          addBtn.addEventListener('click', () => {
+              const p = document.createElement('p');
+              p.textContent = `Zeit: ${new Date().toLocaleTimeString()}`;
+
+              // Klick zum Löschen
+              p.addEventListener('click', () => {
+                  p.remove();
+              });
+
+              container.appendChild(p);
+          });
+
+          // Alle löschen
+          clearBtn.addEventListener('click', () => {
+              const paragraphs = container.querySelectorAll('p');
+              paragraphs.forEach(p => p.remove());
+          });
+      </script>
+  </body>
+  </html>
+  ```
+solution_video: null

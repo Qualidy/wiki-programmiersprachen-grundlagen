@@ -1,0 +1,115 @@
+title: "Fetch API & Error Handling"
+question: |-
+  Erstelle eine Funktion `fetchGitHubUser`, die:
+  1. Einen GitHub-Benutzer per API abfragt
+  2. Timeout nach 5 Sekunden
+  3. HTTP-Status prüft
+  4. Fallback-Daten bei Fehler
+
+  **Aufgaben:**
+  1. Implementiere mit `async/await`
+  2. Verwende `AbortController` für Timeout
+  3. Zeige Benutzerdaten im UI an
+  4. Zeige Fehler im UI an
+
+  Bonus: Lade zusätzlich die Repositories des Benutzers.
+solution: |-
+  ```javascript
+  async function fetchGitHubUser(username) {
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 5000);
+
+    try {
+      const response = await fetch(
+        `https://api.github.com/users/${username}`,
+        { signal: controller.signal }
+      );
+
+      clearTimeout(timeout);
+
+      if (!response.ok) {
+        if (response.status === 404) {
+          throw new Error('Benutzer nicht gefunden');
+        }
+        throw new Error(`HTTP ${response.status}`);
+      }
+
+      const user = await response.json();
+
+      return {
+        name: user.name || user.login,
+        followers: user.followers,
+        publicRepos: user.public_repos,
+        avatar: user.avatar_url
+      };
+
+    } catch (fehler) {
+      if (fehler.name === 'AbortError') {
+        throw new Error('Anfrage Timeout (5s)');
+      }
+      throw fehler;
+    }
+  }
+
+  // UI-Integration
+  async function zeigeGitHubUser() {
+    const username = document.getElementById('username').value;
+    const statusDiv = document.getElementById('status');
+    const resultDiv = document.getElementById('result');
+
+    try {
+      statusDiv.textContent = 'Lade...';
+      statusDiv.style.color = 'blue';
+
+      const user = await fetchGitHubUser(username);
+
+      statusDiv.textContent = 'Benutzer gefunden!';
+      statusDiv.style.color = 'green';
+
+      resultDiv.innerHTML = `
+        <img src="${user.avatar}" width="50" style="border-radius: 50%;">
+        <h3>${user.name}</h3>
+        <p>Follower: ${user.followers}</p>
+        <p>Repos: ${user.publicRepos}</p>
+      `;
+
+    } catch (fehler) {
+      statusDiv.textContent = `Fehler: ${fehler.message}`;
+      statusDiv.style.color = 'red';
+      resultDiv.innerHTML = '';
+    }
+  }
+
+  // Bonus: Repositories laden
+  async function fetchUserRepos(username) {
+    try {
+      const response = await fetch(`https://api.github.com/users/${username}/repos`);
+
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`);
+      }
+
+      const repos = await response.json();
+
+      // Nur die ersten 5 Repos
+      return repos.slice(0, 5).map(repo => ({
+        name: repo.name,
+        stars: repo.stargazers_count,
+        url: repo.html_url
+      }));
+
+    } catch (fehler) {
+      console.error("Repos Fehler:", fehler);
+      return [];
+    }
+  }
+
+  // HTML für Test
+  /*
+  <input type="text" id="username" placeholder="GitHub Username">
+  <button onclick="zeigeGitHubUser()">Suchen</button>
+  <div id="status"></div>
+  <div id="result"></div>
+  */
+  ```
+solution_video: null

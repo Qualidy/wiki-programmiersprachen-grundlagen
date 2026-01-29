@@ -1,0 +1,81 @@
+title: "Optional & Null-Sicherheit"
+question: |-
+  Verwende `Optional` für sichere Null-Verarbeitung in Java.
+
+  Gegeben:
+  ```java
+  class Benutzer {
+      String name;
+      String email;
+      Benutzer(String name, String email) {
+          this.name = name;
+          this.email = email;
+      }
+      String getName() { return name; }
+      String getEmail() { return email; }
+  }
+  ```
+
+  **Aufgaben:**
+  1. Erstelle eine Methode `findBenutzer(String name)`, die ein `Optional<Benutzer>` zurückgibt
+  2. Verwende `Optional` in der `main`-Methode, um:
+     - Den Benutzer zu finden
+     - Falls vorhanden, den Namen auszugeben
+     - Falls nicht vorhanden, "Benutzer nicht gefunden" auszugeben
+  3. Bonus: Verwende `orElseGet()` mit einem Supplier
+
+  **Hinweis:** Simuliere den Fall, dass der Benutzer nicht gefunden wird.
+solution: |-
+  ```java
+  import java.util.Optional;
+
+  class Benutzer {
+      String name;
+      String email;
+      Benutzer(String name, String email) {
+          this.name = name;
+          this.email = email;
+      }
+      String getName() { return name; }
+      String getEmail() { return email; }
+  }
+
+  public class OptionalBeispiel {
+      // Methode, die Optional zurückgibt
+      public static Optional<Benutzer> findBenutzer(String name) {
+          // Simuliere Suche (in echt wäre das eine Datenbank-Abfrage)
+          if ("Max".equals(name)) {
+              return Optional.of(new Benutzer("Max", "max@example.com"));
+          }
+          return Optional.empty(); // Benutzer nicht gefunden
+      }
+
+      public static void main(String[] args) {
+          // 1. Benutzer finden
+          Optional<Benutzer> benutzer = findBenutzer("Max");
+
+          // 2. Mit ifPresent ausgeben
+          benutzer.ifPresent(b -> System.out.println("Gefunden: " + b.getName()));
+
+          // 3. Mit orElse (Standardwert)
+          String name = benutzer
+              .map(Benutzer::getName)
+              .orElse("Benutzer nicht gefunden");
+          System.out.println(name);
+
+          // Bonus: Mit orElseGet (Supplier)
+          String name2 = benutzer
+              .map(Benutzer::getName)
+              .orElseGet(() -> "Standard-Name");
+          System.out.println(name2);
+
+          // Test mit nicht existierendem Benutzer
+          Optional<Benutzer> nichtGefunden = findBenutzer("Anna");
+          String name3 = nichtGefunden
+              .map(Benutzer::getName)
+              .orElse("Benutzer nicht gefunden");
+          System.out.println(name3); // "Benutzer nicht gefunden"
+      }
+  }
+  ```
+solution_video: null

@@ -1,0 +1,104 @@
+title: "Collection Performance"
+question: |-
+  Analysiere die Performance verschiedener Collections.
+
+  **Aufgaben:**
+  1. Erstelle eine Liste mit 10.000 Zufallszahlen
+  2. Teste verschiedene Collections:
+     - ArrayList
+     - LinkedList
+     - HashSet
+     - TreeSet
+  3. Messen Sie:
+     - Einfügezeit
+     - Suchzeit (enthält)
+     - Iterationszeit
+  4. Dokumentiere die Ergebnisse
+
+  **Bonus:** Erkläre, wann welche Collection verwendet werden sollte.
+solution: |-
+  ```java
+  import java.util.*;
+  import java.util.stream.Collectors;
+
+  public class CollectionPerformance {
+      private static final int ANZAHL = 10000;
+
+      public static void main(String[] args) {
+          // Zufallszahlen generieren
+          List<Integer> zufallszahlen = new Random().ints(ANZAHL, 0, 100000)
+              .boxed()
+              .collect(Collectors.toList());
+
+          // ArrayList
+          testCollection("ArrayList", zufallszahlen, new ArrayList<>());
+
+          // LinkedList
+          testCollection("LinkedList", zufallszahlen, new LinkedList<>());
+
+          // HashSet
+          testCollection("HashSet", zufallszahlen, new HashSet<>());
+
+          // TreeSet
+          testCollection("TreeSet", zufallszahlen, new TreeSet<>());
+      }
+
+      private static void testCollection(String name, List<Integer> daten, Collection<Integer> collection) {
+          System.out.println("\n=== " + name + " ===");
+
+          // Einfügen
+          long start = System.currentTimeMillis();
+          collection.addAll(daten);
+          long insertTime = System.currentTimeMillis() - start;
+          System.out.println("Einfügen: " + insertTime + " ms");
+
+          // Suchen (enthält)
+          start = System.currentTimeMillis();
+          for (int i = 0; i < 1000; i++) {
+              collection.contains(daten.get(i));
+          }
+          long searchTime = System.currentTimeMillis() - start;
+          System.out.println("Suchen (1000x): " + searchTime + " ms");
+
+          // Iteration
+          start = System.currentTimeMillis();
+          for (Integer zahl : collection) {
+              // Nur Iteration
+          }
+          long iterateTime = System.currentTimeMillis() - start;
+          System.out.println("Iteration: " + iterateTime + " ms");
+
+          // Ergebnisse
+          System.out.println("Größe: " + collection.size());
+      }
+  }
+
+  /*
+  Typische Ergebnisse (abhängig von Hardware):
+
+  ArrayList:
+  - Einfügen: Schnell (am Ende)
+  - Suchen: Schnell (O(1))
+  - Iteration: Schnell
+  - Speicher: Niedrig
+
+  LinkedList:
+  - Einfügen: Schnell (am Anfang/Ende)
+  - Suchen: Langsam (O(n))
+  - Iteration: Mittel
+  - Speicher: Hoch
+
+  HashSet:
+  - Einfügen: Schnell (O(1) avg)
+  - Suchen: Schnell (O(1) avg)
+  - Iteration: Schnell
+  - Speicher: Mittel
+
+  TreeSet:
+  - Einfügen: Mittel (O(log n))
+  - Suchen: Mittel (O(log n))
+  - Iteration: Mittel (sortiert)
+  - Speicher: Hoch
+  */
+  ```
+solution_video: null

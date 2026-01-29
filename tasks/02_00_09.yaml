@@ -1,0 +1,84 @@
+title: "Event Handling & Delegation"
+question: |-
+  Erstelle eine To-Do Liste mit:
+  - Input-Feld für neue Aufgaben
+  - Button "Hinzufügen"
+  - Liste der Aufgaben
+  - Jede Aufgabe hat einen "Löschen"-Button
+
+  **Anforderungen:**
+  1. Neue Aufgaben werden hinzugefügt
+  2. Klick auf "Löschen" entfernt die Aufgabe
+  3. Verwende Event-Delegation für die Liste
+  4. Aufgaben können durch Klick als "erledigt" markiert werden (durchgestrichen)
+
+  Bonus: Enter-Taste im Input fügt Aufgabe hinzu.
+solution: |-
+  ```html
+  <!DOCTYPE html>
+  <html lang="de">
+  <head>
+      <meta charset="UTF-8">
+      <title>To-Do Liste</title>
+      <style>
+          .erledigt { text-decoration: line-through; color: gray; }
+          .todo-item { margin: 5px; padding: 5px; border: 1px solid #ccc; }
+          .delete-btn { margin-left: 10px; background: red; color: white; border: none; cursor: pointer; }
+      </style>
+  </head>
+  <body>
+      <h1>To-Do Liste</h1>
+      <input type="text" id="todo-input" placeholder="Neue Aufgabe...">
+      <button id="add-btn">Hinzufügen</button>
+      <ul id="todo-list"></ul>
+
+      <script>
+          const input = document.getElementById('todo-input');
+          const addBtn = document.getElementById('add-btn');
+          const list = document.getElementById('todo-list');
+
+          // Event-Delegation auf die Liste
+          list.addEventListener('click', (event) => {
+              const target = event.target;
+
+              // Löschen-Button
+              if (target.classList.contains('delete-btn')) {
+                  target.parentElement.remove();
+              }
+              // Aufgabe markieren
+              else if (target.classList.contains('todo-item')) {
+                  target.classList.toggle('erledigt');
+              }
+          });
+
+          // Hinzufügen
+          function addTodo() {
+              const text = input.value.trim();
+              if (!text) return;
+
+              const li = document.createElement('li');
+              li.className = 'todo-item';
+              li.textContent = text;
+
+              const deleteBtn = document.createElement('button');
+              deleteBtn.textContent = 'Löschen';
+              deleteBtn.className = 'delete-btn';
+
+              li.appendChild(deleteBtn);
+              list.appendChild(li);
+              input.value = '';
+          }
+
+          addBtn.addEventListener('click', addTodo);
+
+          // Enter-Taste
+          input.addEventListener('keydown', (event) => {
+              if (event.key === 'Enter') {
+                  addTodo();
+              }
+          });
+      </script>
+  </body>
+  </html>
+  ```
+solution_video: null

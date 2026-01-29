@@ -1,0 +1,74 @@
+title: "XPath Abfragen"
+question: |-
+  Verwende XPath, um Daten aus einem XML-Dokument abzufragen.
+
+  Gegeben (Adressbuch-XML):
+  ```xml
+  <adressbuch>
+    <kontakt id="1" status="aktiv">
+      <name>Max Mustermann</name>
+      <email>max@example.com</email>
+      <telefon>+49 123 456789</telefon>
+      <adresse>
+        <strasse>Hauptstraße 1</strasse>
+        <stadt>Berlin</stadt>
+        <plz>10115</plz>
+      </adresse>
+    </kontakt>
+    <kontakt id="2" status="inaktiv">
+      <name>Anna Müller</name>
+      <email>anna@example.com</email>
+      <telefon>+49 987 654321</telefon>
+      <adresse>
+        <strasse>Nebenstraße 42</strasse>
+        <stadt>Hamburg</stadt>
+        <plz>20095</plz>
+      </adresse>
+    </kontakt>
+    <kontakt id="3" status="aktiv">
+      <name>Tom Schmidt</name>
+      <email>tom@example.com</email>
+      <telefon>+49 555 123456</telefon>
+      <adresse>
+        <strasse>Testweg 7</strasse>
+        <stadt>Berlin</stadt>
+        <plz>10117</plz>
+      </adresse>
+    </kontakt>
+  </adressbuch>
+  ```
+
+  **Aufgaben:** Schreibe XPath-Ausdrücke für:
+  1. Alle aktiven Kontakte
+  2. Alle Kontakte aus Berlin
+  3. Den ersten Kontakt (id=1)
+  4. Alle Städte ohne Duplikate
+  5. Kontakte mit mehr als 15 Zeichen im Namen
+  6. Summe aller PLZ (als Zahl)
+
+  **Bonus:** Alle Kontakte, die ein Telefon haben und aktiv sind.
+solution: |-
+  ```xpath
+  <!-- 1. Alle aktiven Kontakte -->
+  //kontakt[@status='aktiv']
+
+  <!-- 2. Alle Kontakte aus Berlin -->
+  //kontakt[adresse/stadt='Berlin']
+
+  <!-- 3. Erster Kontakt (id=1) -->
+  //kontakt[@id='1']
+
+  <!-- 4. Alle Städte ohne Duplikate -->
+  //stadt[not(preceding::stadt=.)]
+  <!-- Oder: //stadt/text() -->
+
+  <!-- 5. Kontakte mit Namen > 15 Zeichen -->
+  //kontakt[string-length(name) > 15]
+
+  <!-- 6. Summe aller PLZ (als Zahl) -->
+  sum(//plz)
+
+  <!-- Bonus: Kontakte mit Telefon und aktiv -->
+  //kontakt[telefon and @status='aktiv']
+  ```
+solution_video: null

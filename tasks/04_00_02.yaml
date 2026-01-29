@@ -1,0 +1,53 @@
+title: "Java-Operatoren & Typ-Konvertierung"
+question: |-
+  Analysiere den folgenden Java-Code und bestimme die Ergebnisse:
+
+  ```java
+  public class Analyse {
+      public static void main(String[] args) {
+          int a = 10;
+          int b = 3;
+          double c = 5.5;
+          String d = "20";
+
+          // Welches Ergebnis hat jede Zeile?
+          System.out.println(a + b);           // ?
+          System.out.println(a + c);           // ?
+          System.out.println(a + d);           // ?
+          System.out.println(a / b);           // ?
+          System.out.println(a % b);           // ?
+          System.out.println(a == b);          // ?
+          System.out.println(a > b);           // ?
+
+          // Bonus: Was ist das Problem?
+          long l = 10000000000;
+      }
+  }
+  ```
+
+  **Bonus:** Finde den Fehler und korrigiere ihn.
+solution: |-
+  ```java
+  public class Analyse {
+      public static void main(String[] args) {
+          int a = 10;
+          int b = 3;
+          double c = 5.5;
+          String d = "20";
+
+          // Ergebnisse:
+          System.out.println(a + b);           // 13 (Addition)
+          System.out.println(a + c);           // 15.5 (int → double, Addition)
+          System.out.println(a + d);           // "1020" (String-Konkatenation)
+          System.out.println(a / b);           // 3 (Ganzzahl-Division)
+          System.out.println(a % b);           // 1 (Modulo)
+          System.out.println(a == b);          // false (Vergleich)
+          System.out.println(a > b);           // true (Vergleich)
+
+          // Bonus: Fehler - zu groß für int
+          // long l = 10000000000; // FEHLER: Zahl zu groß für int
+          long l = 10000000000L; // KORREKT: L am Ende für long
+      }
+  }
+  ```
+solution_video: null

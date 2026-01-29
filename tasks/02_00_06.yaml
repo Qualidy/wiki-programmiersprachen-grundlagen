@@ -1,0 +1,58 @@
+title: "Kontrollstrukturen & Schleifen"
+question: |-
+  Schreibe eine Funktion `zahlenTabelle(bis)`, die:
+  1. Alle Zahlen von 1 bis `bis` ausgibt
+  2. Gerade Zahlen mit "gerade" markiert
+  3. Ungerade Zahlen mit "ungerade" markiert
+  4. Bei Vielfachen von 3 zusätzlich "Teilbar durch 3" ausgibt
+
+  Bonus: Verwende `switch` für die Markierung.
+solution: |-
+  ```javascript
+  function zahlenTabelle(bis) {
+    for (let i = 1; i <= bis; i++) {
+      let markierung = "";
+
+      // Gerade/Ungerade
+      if (i % 2 === 0) {
+        markierung = "gerade";
+      } else {
+        markierung = "ungerade";
+      }
+
+      // Vielfaches von 3
+      if (i % 3 === 0) {
+        markierung += ", Teilbar durch 3";
+      }
+
+      console.log(`${i}: ${markierung}`);
+    }
+  }
+
+  // Bonus mit switch
+  function zahlenTabelleSwitch(bis) {
+    for (let i = 1; i <= bis; i++) {
+      let markierung = "";
+
+      switch (true) {
+        case (i % 2 === 0 && i % 3 === 0):
+          markierung = "gerade, Teilbar durch 3";
+          break;
+        case (i % 2 === 0):
+          markierung = "gerade";
+          break;
+        case (i % 3 === 0):
+          markierung = "ungerade, Teilbar durch 3";
+          break;
+        default:
+          markierung = "ungerade";
+      }
+
+      console.log(`${i}: ${markierung}`);
+    }
+  }
+
+  // Test
+  zahlenTabelle(10);
+  ```
+solution_video: null

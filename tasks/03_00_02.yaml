@@ -1,0 +1,42 @@
+title: "Attribute vs. Elemente"
+question: |-
+  Analysiere das folgende XML und entscheide, welche Daten als **Attribute** und welche als **Elemente** dargestellt werden sollten:
+
+  ```xml
+  <produkt id="1001" name="Laptop" preis="1299.99" kategorie="elektronik">
+    <beschreibung>High-Performance Laptop mit 15-Zoll-Display</beschreibung>
+    <lagerbestand>15</lagerbestand>
+  </produkt>
+  ```
+
+  **Aufgaben:**
+  1. Welche Daten sind **Metadaten** (sollten als Attribute bleiben)?
+  2. Welche Daten sind **strukturierte Informationen** (sollten als Elemente)?
+  3. Schreibe eine **bessere Version** mit korrekter Aufteilung.
+
+  **Begründung:** Erkläre deine Entscheidung für jede Änderung.
+solution: |-
+  ```xml
+  <!-- Bessere Version mit korrekter Aufteilung -->
+  <produkt id="1001" kategorie="elektronik">
+    <name>Laptop</name>
+    <preis waehrung="EUR">1299.99</preis>
+    <beschreibung>High-Performance Laptop mit 15-Zoll-Display</beschreibung>
+    <lagerbestand>15</lagerbestand>
+  </produkt>
+  ```
+
+  **Begründung:**
+
+  **Attribute (Metadaten):**
+  - `id="1001"`: Eindeutiger Identifikator (Metadatum)
+  - `kategorie="elektronik"`: Klassifizierung (Metadatum)
+
+  **Elemente (strukturierte Daten):**
+  - `<name>`: Kann komplex werden (z. B. mit Übersetzungen)
+  - `<preis>`: Enthält zusätzliche Information (Währung als Attribut)
+  - `<beschreibung>`: Kann lang sein, mehrzeilig
+  - `<lagerbestand>`: Kann erweitert werden (z. B. mit Lagerort)
+
+  **Regel:** Attribute für einfache, eindeutige Werte. Elemente für strukturierte, wiederholbare oder komplexe Daten.
+solution_video: null

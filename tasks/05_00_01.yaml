@@ -1,0 +1,88 @@
+title: "Streams & Lambdas verwenden"
+question: |-
+  Verwende Java Streams und Lambdas, um eine Liste von Personen zu verarbeiten.
+
+  Gegeben:
+  ```java
+  class Person {
+      String name;
+      int alter;
+      Person(String name, int alter) {
+          this.name = name;
+          this.alter = alter;
+      }
+      String getName() { return name; }
+      int getAlter() { return alter; }
+  }
+
+  List<Person> personen = List.of(
+      new Person("Max", 25),
+      new Person("Anna", 30),
+      new Person("Tom", 20),
+      new Person("Lisa", 35),
+      new Person("Peter", 28)
+  );
+  ```
+
+  Aufgaben:
+  1. Finde alle Personen, die älter als 25 sind
+  2. Gib nur die Namen dieser Personen aus
+  3. Berechne das Durchschnittsalter aller Personen
+  4. Sortiere die Personen nach Alter (aufsteigend)
+
+  Bonus: Verwende Methoden-Referenzen wo möglich.
+solution: |-
+  ```java
+  import java.util.List;
+  import java.util.stream.Collectors;
+
+  class Person {
+      String name;
+      int alter;
+      Person(String name, int alter) {
+          this.name = name;
+          this.alter = alter;
+      }
+      String getName() { return name; }
+      int getAlter() { return alter; }
+  }
+
+  public class StreamBeispiel {
+      public static void main(String[] args) {
+          List<Person> personen = List.of(
+              new Person("Max", 25),
+              new Person("Anna", 30),
+              new Person("Tom", 20),
+              new Person("Lisa", 35),
+              new Person("Peter", 28)
+          );
+
+          // 1. & 2. Personen über 25 und ihre Namen
+          List<String> altePersonen = personen.stream()
+              .filter(p -> p.getAlter() > 25)
+              .map(Person::getName)
+              .collect(Collectors.toList());
+
+          System.out.println("Personen über 25: " + altePersonen);
+          // Ausgabe: [Anna, Lisa, Peter]
+
+          // 3. Durchschnittsalter
+          double durchschnitt = personen.stream()
+              .mapToInt(Person::getAlter)
+              .average()
+              .orElse(0.0);
+
+          System.out.println("Durchschnittsalter: " + durchschnitt);
+          // Ausgabe: 27.6
+
+          // 4. Nach Alter sortiert
+          List<Person> sortiert = personen.stream()
+              .sorted((p1, p2) -> p1.getAlter() - p2.getAlter())
+              .collect(Collectors.toList());
+
+          System.out.println("Sortiert nach Alter:");
+          sortiert.forEach(p -> System.out.println(p.getName() + ": " + p.getAlter()));
+      }
+  }
+  ```
+solution_video: null

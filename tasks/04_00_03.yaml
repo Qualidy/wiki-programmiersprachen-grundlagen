@@ -1,0 +1,63 @@
+title: "Switch & Ternary Operator"
+question: |-
+  Schreibe eine Funktion `bewertung(int punkte)`, die:
+  1. Punkte in Note umwandelt (0-100)
+  2. Verwende `switch` für die Logik
+  3. Gib die Note als String zurück
+
+  **Bewertung:**
+  - 90-100: "Sehr gut"
+  - 75-89: "Gut"
+  - 50-74: "Befriedigend"
+  - 0-49: "Nicht bestanden"
+
+  **Bonus:** Erstelle eine zweite Funktion mit Ternary Operator.
+solution: |-
+  ```java
+  public class Bewertung {
+      // Mit Switch
+      public static String bewertungSwitch(int punkte) {
+          if (punkte < 0 || punkte > 100) {
+              return "Ungültige Punktzahl";
+          }
+
+          switch (punkte / 10) {
+              case 10:
+              case 9:
+                  return "Sehr gut";
+              case 8:
+              case 7:
+                  return "Gut";
+              case 6:
+              case 5:
+                  return "Befriedigend";
+              default:
+                  return "Nicht bestanden";
+          }
+      }
+
+      // Mit Ternary Operator
+      public static String bewertungTernary(int punkte) {
+          if (punkte < 0 || punkte > 100) {
+              return "Ungültige Punktzahl";
+          }
+
+          return punkte >= 90 ? "Sehr gut" :
+                 punkte >= 75 ? "Gut" :
+                 punkte >= 50 ? "Befriedigend" :
+                 "Nicht bestanden";
+      }
+
+      public static void main(String[] args) {
+          // Test
+          System.out.println("95 Punkte: " + bewertungSwitch(95)); // Sehr gut
+          System.out.println("80 Punkte: " + bewertungSwitch(80)); // Gut
+          System.out.println("60 Punkte: " + bewertungSwitch(60)); // Befriedigend
+          System.out.println("30 Punkte: " + bewertungSwitch(30)); // Nicht bestanden
+
+          // Bonus
+          System.out.println("95 Punkte (Ternary): " + bewertungTernary(95));
+      }
+  }
+  ```
+solution_video: null

@@ -1,0 +1,32 @@
+title: "Well-formed XML erstellen"
+question: |-
+  Erstelle ein wohlgeformtes XML-Dokument für ein einfaches Adressbuch.
+
+  Anforderungen:
+  - Wurzelelement `<adressbuch>`
+  - Mindestens zwei `<kontakt>` Elemente
+  - Jeder Kontakt hat: `<name>`, `<email>`, `<telefon>`
+  - Jeder Kontakt hat ein `id`-Attribut
+  - Verwende korrekte XML-Syntax (Tags geschlossen, Attribute in Anführungszeichen)
+
+  Beispiel-Daten:
+  - Kontakt 1: id="1", name="Max Mustermann", email="max@example.com", telefon="+49 123 456789"
+  - Kontakt 2: id="2", name="Anna Müller", email="anna@example.com", telefon="+49 987 654321"
+solution: |-
+  ```xml
+  <?xml version="1.0" encoding="UTF-8"?>
+  <adressbuch>
+    <kontakt id="1">
+      <name>Max Mustermann</name>
+      <email>max@example.com</email>
+      <telefon>+49 123 456789</telefon>
+    </kontakt>
+
+    <kontakt id="2">
+      <name>Anna Müller</name>
+      <email>anna@example.com</email>
+      <telefon>+49 987 654321</telefon>
+    </kontakt>
+  </adressbuch>
+  ```
+solution_video: null

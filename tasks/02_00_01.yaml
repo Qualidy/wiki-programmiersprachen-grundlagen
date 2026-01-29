@@ -1,0 +1,24 @@
+title: "Variablen deklarieren"
+question: |-
+  Deklariere drei Variablen:
+
+  1. Eine Konstante `name` mit dem Wert "Max"
+  2. Eine Variable `alter` mit dem Wert 25
+  3. Eine Variable `istAktiv` mit dem Wert true
+
+  Verwende die richtigen Schlüsselwörter (`const`, `let`).
+
+  Bonus: Ändere den Wert von `alter` auf 26 und gib alle Variablen in der Konsole aus.
+solution: |-
+  ```javascript
+  const name = "Max";
+  let alter = 25;
+  let istAktiv = true;
+
+  // Bonus
+  alter = 26;
+  console.log(name);      // "Max"
+  console.log(alter);     // 26
+  console.log(isAktiv);   // true
+  ```
+solution_video: null

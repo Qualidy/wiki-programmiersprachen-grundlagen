@@ -1,0 +1,54 @@
+title: "Tomcat Setup & Konfiguration"
+question: |-
+  Beschreibe die Schritte, um Apache Tomcat auf deinem System zu installieren und zu konfigurieren.
+
+  **Aufgaben:**
+  1. **Download & Installation**
+     - Wo lade ich Tomcat herunter?
+     - Welche Version sollte ich wählen?
+     - Wo entpacke ich die Datei?
+
+  2. **Starten & Stoppen**
+     - Welche Befehle werden verwendet?
+     - Wo finde ich die Startseite?
+
+  3. **Konfiguration**
+     - Wie ändere ich den Port von 8080 auf 8081?
+     - Wie richte ich einen Admin-Benutzer ein?
+     - Wo finde ich die Konfigurationsdateien?
+
+  4. **Deployment**
+     - Wie deployed man eine WAR-Datei?
+     - Was ist der Context-Path?
+     - Wie prüft man, ob die Anwendung läuft?
+
+  **Bonus:** Erkläre den Unterschied zwischen `webapps` und `conf` Verzeichnis.
+solution: |-
+  **1. Download & Installation:**
+  - Download von: https://tomcat.apache.org/
+  - Version wählen: Tomcat 10.1.x (aktuell, Jakarta EE 10)
+  - Entpacken: In ein Verzeichnis wie `C:\Programme\apache-tomcat-10.1.x\`
+
+  **2. Starten & Stoppen:**
+  - **Starten (Windows):** `bin\startup.bat`
+  - **Starten (Linux/Mac):** `./bin/startup.sh`
+  - **Stoppen (Windows):** `bin\shutdown.bat`
+  - **Stoppen (Linux/Mac):** `./bin/shutdown.sh`
+  - **Prüfen:** Browser öffnen → `http://localhost:8080`
+
+  **3. Konfiguration:**
+  - **Port ändern:** Datei `conf/server.xml` → `<Connector port="8081" ... />`
+  - **Admin-Benutzer:** Datei `conf/tomcat-users.xml` → User mit Rollen `manager-gui`, `admin-gui`
+  - **Konfigurationsdateien:** Im `conf/` Verzeichnis
+
+  **4. Deployment:**
+  - **WAR-Datei:** Kopieren in `webapps/` Verzeichnis
+  - **Context-Path:** Name der WAR-Datei (z. B. `meine-app.war` → `/meine-app`)
+  - **Prüfen:** `http://localhost:8080/meine-app/`
+
+  **Bonus:**
+  - `webapps/`: Hier liegen die deployed Anwendungen (WAR-Dateien)
+  - `conf/`: Konfigurationsdateien für Server, Users, Logging
+  - `bin/`: Start/Stop-Skripte
+  - `logs/`: Log-Dateien
+solution_video: null

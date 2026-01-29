@@ -1,0 +1,87 @@
+title: "Promises & Async/Await"
+question: |-
+  Erstelle eine Funktion `ladeDatenMitTimeout`, die:
+  1. Simuliert das Laden von Daten (setTimeout)
+  2. Erfolgreich ist mit 70% Wahrscheinlichkeit
+  3. Ein Promise zurückgibt
+
+  **Aufgaben:**
+  1. Verwende `async/await` zum Aufruf
+  2. Implementiere Fehlerbehandlung
+  3. Zeige Loading-State im UI an
+  4. Zeige Fehler im UI an
+
+  Bonus: Lade 3 Daten parallel mit `Promise.all`.
+solution: |-
+  ```javascript
+  // Simuliere API-Call
+  function ladeDatenMitTimeout(id) {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        const erfolg = Math.random() > 0.3; // 70% Erfolg
+
+        if (erfolg) {
+          resolve({ id, data: `Daten für ${id}` });
+        } else {
+          reject(new Error(`Fehler beim Laden von ${id}`));
+        }
+      }, 1000);
+    });
+  }
+
+  // Async/Await mit UI-Update
+  async function ladeUndAnzeigen() {
+    const statusDiv = document.getElementById('status');
+    const dataDiv = document.getElementById('data');
+
+    try {
+      statusDiv.textContent = 'Lade Daten...';
+      statusDiv.style.color = 'blue';
+
+      const daten = await ladeDatenMitTimeout(1);
+
+      statusDiv.textContent = 'Daten geladen!';
+      statusDiv.style.color = 'green';
+      dataDiv.textContent = JSON.stringify(daten);
+
+    } catch (fehler) {
+      statusDiv.textContent = `Fehler: ${fehler.message}`;
+      statusDiv.style.color = 'red';
+      dataDiv.textContent = '';
+    }
+  }
+
+  // Parallel mit Promise.all
+  async function ladeAlleParallel() {
+    const statusDiv = document.getElementById('status');
+    const dataDiv = document.getElementById('data');
+
+    try {
+      statusDiv.textContent = 'Lade alle Daten...';
+      statusDiv.style.color = 'blue';
+
+      const alleDaten = await Promise.all([
+        ladeDatenMitTimeout(1),
+        ladeDatenMitTimeout(2),
+        ladeDatenMitTimeout(3)
+      ]);
+
+      statusDiv.textContent = 'Alle Daten geladen!';
+      statusDiv.style.color = 'green';
+      dataDiv.textContent = JSON.stringify(alleDaten, null, 2);
+
+    } catch (fehler) {
+      statusDiv.textContent = `Fehler: ${fehler.message}`;
+      statusDiv.style.color = 'red';
+    }
+  }
+
+  // HTML für Test
+  /*
+  <div id="status"></div>
+  <div id="data"></div>
+  <button onclick="ladeUndAnzeigen()">Laden (Seriell)</button>
+  <button onclick="ladeAlleParallel()">Laden (Parallel)</button>
+  */
+  ```
+solution_video: null

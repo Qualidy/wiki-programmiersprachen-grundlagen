@@ -1,0 +1,32 @@
+title: "Erstes Java-Programm"
+question: |-
+  Erstelle eine Java-Klasse `HalloJava` mit folgenden Anforderungen:
+
+  1. Deklariere eine Konstante `PI` mit dem Wert 3.14159
+  2. Deklariere eine Variable `radius` mit dem Wert 5.0
+  3. Berechne den Flächeninhalt eines Kreises: `Fläche = PI * radius²`
+  4. Gib das Ergebnis in der Konsole aus mit dem Format: "Fläche: [wert]"
+
+  Bonus: Verwende `double` für alle Berechnungen und gib das Ergebnis mit 2 Nachkommastellen aus.
+solution: |-
+  ```java
+  public class HalloJava {
+      public static void main(String[] args) {
+          // Konstante
+          final double PI = 3.14159;
+
+          // Variable
+          double radius = 5.0;
+
+          // Berechnung
+          double flaeche = PI * radius * radius;
+
+          // Ausgabe
+          System.out.println("Fläche: " + flaeche);
+
+          // Bonus: Mit 2 Nachkommastellen
+          System.out.printf("Fläche: %.2f%n", flaeche);
+      }
+  }
+  ```
+solution_video: null

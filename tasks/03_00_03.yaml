@@ -1,0 +1,85 @@
+title: "XML Schema Validierung"
+question: |-
+  Erstelle ein XML Schema (XSD) für ein einfaches Blog-System.
+
+  **Anforderungen:**
+  1. Wurzelelement `<blog>`
+  2. Mehrere `<post>` Elemente
+  3. Jeder Post hat: `<titel>`, `<autor>`, `<inhalt>`, `<datum>`
+  4. Jeder Post hat ein `id`-Attribut (erforderlich)
+  5. `<autor>` hat optional ein `<email>` Element
+  6. `<datum>` muss das Format YYYY-MM-DD haben
+
+  **Bonus:** Erstelle ein Beispiel-XML-Dokument, das dem Schema entspricht.
+solution: |-
+  ```xml
+  <!-- blog.xsd -->
+  <?xml version="1.0" encoding="UTF-8"?>
+  <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Datentyp für Datum -->
+    <xs:simpleType name="dateType">
+      <xs:restriction base="xs:date">
+        <!-- Pattern für YYYY-MM-DD -->
+        <xs:pattern value="\d{4}-\d{2}-\d{2}"/>
+      </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Autor-Typ -->
+    <xs:complexType name="autorType">
+      <xs:sequence>
+        <xs:element name="name" type="xs:string"/>
+        <xs:element name="email" type="xs:string" minOccurs="0"/>
+      </xs:sequence>
+    </xs:complexType>
+
+    <!-- Post-Typ -->
+    <xs:complexType name="postType">
+      <xs:sequence>
+        <xs:element name="titel" type="xs:string"/>
+        <xs:element name="autor" type="autorType"/>
+        <xs:element name="inhalt" type="xs:string"/>
+        <xs:element name="datum" type="dateType"/>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID" use="required"/>
+    </xs:complexType>
+
+    <!-- Wurzelelement -->
+    <xs:element name="blog">
+      <xs:complexType>
+        <xs:sequence>
+          <xs:element name="post" type="postType" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:element>
+
+  </xs:schema>
+  ```
+
+  **Beispiel-XML:**
+  ```xml
+  <?xml version="1.0" encoding="UTF-8"?>
+  <blog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="blog.xsd">
+    <post id="1">
+      <titel>Erster Blogbeitrag</titel>
+      <autor>
+        <name>Max Mustermann</name>
+        <email>max@example.com</email>
+      </autor>
+      <inhalt>Hier ist der Inhalt des ersten Beitrags...</inhalt>
+      <datum>2024-01-15</datum>
+    </post>
+
+    <post id="2">
+      <titel>Zweiter Blogbeitrag</titel>
+      <autor>
+        <name>Anna Müller</name>
+        <!-- Email optional -->
+      </autor>
+      <inhalt>Inhalt des zweiten Beitrags...</inhalt>
+      <datum>2024-01-20</datum>
+    </post>
+  </blog>
+  ```
+solution_video: null

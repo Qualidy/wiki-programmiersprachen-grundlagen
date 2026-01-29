@@ -1,0 +1,40 @@
+title: "Funktionen & Parameter"
+question: |-
+  Erstelle eine Funktion `rechnungTaschenrechner`, die:
+  1. Zwei Zahlen als Parameter nimmt
+  2. Eine dritte Parameter für die Operation (+, -, *, /)
+  3. Das Ergebnis zurückgibt
+  4. Bei ungültiger Operation Fehler wirft
+
+  Bonus: Erstelle eine Funktion `berechneMehrfach`, die mehrere Zahlen addiert.
+solution: |-
+  ```javascript
+  function rechnungTaschenrechner(a, b, operation) {
+    switch (operation) {
+      case '+':
+        return a + b;
+      case '-':
+        return a - b;
+      case '*':
+        return a * b;
+      case '/':
+        if (b === 0) {
+          throw new Error("Division durch Null nicht erlaubt");
+        }
+        return a / b;
+      default:
+        throw new Error(`Ungültige Operation: ${operation}`);
+    }
+  }
+
+  // Bonus: Mehrere Zahlen addieren
+  function berechneMehrfach(...zahlen) {
+    return zahlen.reduce((summe, zahl) => summe + zahl, 0);
+  }
+
+  // Test
+  console.log(rechnungTaschenrechner(10, 5, '+')); // 15
+  console.log(rechnungTaschenrechner(10, 5, '*')); // 50
+  console.log(berechneMehrfach(1, 2, 3, 4, 5)); // 15
+  ```
+solution_video: null

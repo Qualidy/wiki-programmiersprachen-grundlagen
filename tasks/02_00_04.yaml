@@ -1,0 +1,46 @@
+title: "Operatoren für Berechnungen"
+question: |-
+  Berechne das Ergebnis jeder Operation:
+
+  ```javascript
+  const a = 10;
+  const b = 3;
+  const c = 5;
+  ```
+
+  1. `a + b * c`
+  2. `(a + b) * c`
+  3. `a % b`
+  4. `a ** 2`
+  5. `a / b`
+
+  Bonus: Erstelle eine Variable `ergebnis` mit dem Wert 42 und verwende Zuweisungsoperatoren, um sie zu verdoppeln, zu halbieren und dann zu subtrahieren.
+solution: |-
+  ```javascript
+  const a = 10;
+  const b = 3;
+  const c = 5;
+
+  // 1. a + b * c = 10 + 3 * 5 = 10 + 15 = 25
+  console.log(a + b * c); // 25
+
+  // 2. (a + b) * c = (10 + 3) * 5 = 13 * 5 = 65
+  console.log((a + b) * c); // 65
+
+  // 3. a % b = 10 % 3 = 1 (Rest)
+  console.log(a % b); // 1
+
+  // 4. a ** 2 = 10² = 100
+  console.log(a ** 2); // 100
+
+  // 5. a / b = 10 / 3 = 3.333...
+  console.log(a / b); // 3.333...
+
+  // Bonus
+  let ergebnis = 42;
+  ergebnis *= 2;  // 84
+  ergebnis /= 2;  // 42
+  ergebnis -= 10; // 32
+  console.log(ergebnis); // 32
+  ```
+solution_video: null

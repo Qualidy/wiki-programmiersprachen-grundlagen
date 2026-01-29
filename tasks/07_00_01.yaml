@@ -1,0 +1,58 @@
+title: "Low Code vs. Full Code Entscheidung"
+question: |-
+  Analysiere folgende Anforderungen und entscheide, ob **Low Code** oder **Full Code** besser geeignet ist:
+
+  **Anforderungen:**
+  1. **E-Commerce Shop**
+     - 10.000 Produkte
+     - Komplexe Such- und Filterfunktionen
+     - Zahlungsintegration (Stripe, PayPal)
+     - Hohe Performance bei vielen Besuchern
+     - Individuelle Designanforderungen
+
+  2. **Interne Genehmigungs-App**
+     - 50 Mitarbeiter
+     - Formular-basierte Urlaubsanträge
+     - Workflow: Mitarbeiter → Manager → HR
+     - Email-Benachrichtigungen
+     - Integration mit Outlook Kalender
+
+  3. **MVP für Startup**
+     - 3 Monate Zeit bis Launch
+     - 2 Entwickler
+     - €10.000 Budget
+     - Core Feature: Produkt-Konfigurator
+     - Späterer Ausbau geplant
+
+  **Aufgaben:**
+  1. Entscheide für jede Anforderung (Low Code oder Full Code)
+  2. Begründe deine Entscheidung
+  3. Nenne eine passende Plattform (falls Low Code)
+  4. Erkläre potenzielle Risiken
+
+  **Bonus:** Erkläre den Hybrid-Ansatz für Anforderung 1.
+solution: |-
+  **1. E-Commerce Shop: FULL CODE**
+  - **Begründung:** Hohe Performance, komplexe Logik, individuelle Anforderungen
+  - **Risiken:** Hohe Entwicklungskosten, längere Time-to-Market
+  - **Technologien:** Java/Spring, PHP/Laravel, Node.js
+  - **Alternative:** Shopify (No Code) für einfache Shops
+
+  **2. Interne Genehmigungs-App: LOW CODE**
+  - **Begründung:** Standardisierte Logik, schnelle Entwicklung, geringe Komplexität
+  - **Plattform:** Microsoft Power Apps (gute Office-Integration)
+  - **Risiken:** Vendor Lock-in, begrenzte Skalierbarkeit
+  - **Vorteile:** Schnelle Umsetzung (Wochen statt Monate)
+
+  **3. MVP für Startup: LOW CODE**
+  - **Begründung:** Schnelle Time-to-Market, begrenztes Budget, Validierung vor Investment
+  - **Plattform:** Bubble (flexibel, große Community)
+  - **Risiken:** Vendor Lock-in, spätere Migration zu Full Code nötig
+  - **Vorteile:** Launch in Wochen statt Monaten, geringere Kosten
+
+  **Bonus: Hybrid-Ansatz für E-Commerce**
+  - **Low Code:** Admin-Panel, Produktverwaltung, Reporting
+  - **Full Code:** Shop-Frontend, Such-Engine, Payment-Integration
+  - **Integration:** REST-APIs zwischen beiden Systemen
+  - **Vorteile:** Schnelle Admin-Entwicklung, volle Kontrolle über Core-Logik
+solution_video: null

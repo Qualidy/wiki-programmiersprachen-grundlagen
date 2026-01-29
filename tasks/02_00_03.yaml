@@ -1,0 +1,36 @@
+title: "Template Literals verwenden"
+question: |-
+  Erstelle einen String mit Template Literals (Backticks).
+
+  Gegeben:
+  ```javascript
+  const vorname = "Anna";
+  const nachname = "Müller";
+  const alter = 28;
+  ```
+
+  Erstelle einen String: "Hallo, Anna Müller! Du bist 28 Jahre alt."
+
+  Bonus: Erstelle einen mehrzeiligen String mit einer Liste:
+  - Apfel
+  - Banane
+  - Orange
+solution: |-
+  ```javascript
+  const vorname = "Anna";
+  const nachname = "Müller";
+  const alter = 28;
+
+  // Einfacher String
+  const gruss = `Hallo, ${vorname} ${nachname}! Du bist ${alter} Jahre alt.`;
+  console.log(gruss);
+
+  // Bonus: Mehrzeiliger String
+  const liste = `
+  - Apfel
+  - Banane
+  - Orange
+  `;
+  console.log(liste);
+  ```
+solution_video: null
