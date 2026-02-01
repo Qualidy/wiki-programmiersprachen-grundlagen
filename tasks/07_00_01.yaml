@@ -1,0 +1,12 @@
+title: "Low Code Dashboard"
+question: |
+  Erstelle in Retool ein Dashboard, das Verkaufsdaten aus der API `/api/sales` anzeigt. Verwende einen **Chart** und eine **Tabelle**. Datenformat:
+  ```json
+  [{"product":"A","sales":120},{"product":"B","sales":80}]
+  ```
+solution: |
+  1. **Chart**: Wähle `Bar Chart`, Quelle auf `/api/sales`.
+  2. **Tabelle**: `Table` Widget, Quelle `/api/sales`.
+  3. Speichere das Dashboard.
+  tip: "Teste die API zuerst mit Postman, um die Struktur zu prüfen."
+  difficulty: 2

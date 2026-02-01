@@ -1,0 +1,14 @@
+title: "JavaScript Variable‑Deklaration"
+question: |
+  Schreibe ein JavaScript‑Snippet, das die folgenden Variablen deklariert:
+  * `age` als `let` mit dem Wert 25
+  * `name` als `const` mit dem Wert "Anna"
+  * `isStudent` als `var` mit dem Wert `true`
+solution: |
+  ```javascript
+  let age = 25;
+  const name = 'Anna';
+  var isStudent = true;
+  ```
+  tip: "Nutze `let` für veränderliche Werte, `const` für Konstante und `var` nur für Legacy‑Code."
+  difficulty: 1

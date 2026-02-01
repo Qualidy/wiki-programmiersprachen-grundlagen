@@ -1,0 +1,12 @@
+title: "XML Buch‑Liste"
+question: |
+  Erstelle ein XML‑Dokument mit einer Liste von Büchern. Jedes Buch soll die Attribute `id`, `title` und `author` besitzen. Beispiel: `<book id="1" title="JavaScript Essentials" author="Jane Doe"/>`.
+solution: |
+  ```xml
+  <books>
+    <book id="1" title="JavaScript Essentials" author="Jane Doe"/>
+    <book id="2" title="Learning Python" author="John Smith"/>
+  </books>
+  ```
+  tip: "XML verwendet selbstschließende Tags und Attributwerte in doppelten Anführungszeichen."
+  difficulty: 1

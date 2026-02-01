@@ -1,0 +1,37 @@
+title: "Java Maven‑Projekt"
+question: |
+  Erstelle ein Maven‑Projekt mit `groupId` `com.wiki` und `artifactId` `demo`. Lege die Paketstruktur `com.wiki.demo.model` an und füge eine Klasse `User` mit den Feldern `id` und `name` hinzu.
+solution: |
+  ```xml
+  <!-- pom.xml -->
+  <project xmlns="http://maven.apache.org/POM/4.0.0"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+      <modelVersion>4.0.0</modelVersion>
+      <groupId>com.wiki</groupId>
+      <artifactId>demo</artifactId>
+      <version>1.0-SNAPSHOT</version>
+      <dependencies>
+          <!-- dependencies here -->
+      </dependencies>
+  </project>
+  ```
+  ```java
+  // src/main/java/com/wiki/demo/model/User.java
+  package com.wiki.demo.model;
+
+  public class User {
+      private int id;
+      private String name;
+
+      public User(int id, String name) {
+          this.id = id;
+          this.name = name;
+      }
+
+      public int getId() { return id; }
+      public String getName() { return name; }
+  }
+  ```
+  tip: "Maven verwaltet Abhängigkeiten und den Build‑Prozess."
+  difficulty: 3

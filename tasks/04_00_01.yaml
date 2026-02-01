@@ -1,0 +1,23 @@
+title: "Java Auto‑Klasse"
+question: |
+  Schreibe eine Java‑Klasse `Auto` mit den Feldern `marke`, `modell` und `baujahr`. Füge einen Konstruktor hinzu und eine Methode `info()`, die die Daten ausgibt.
+solution: |
+  ```java
+  public class Auto {
+      private String marke;
+      private String modell;
+      private int baujahr;
+
+      public Auto(String marke, String modell, int baujahr) {
+          this.marke = marke;
+          this.modell = modell;
+          this.baujahr = baujahr;
+      }
+
+      public void info() {
+          System.out.println("Auto: " + marke + " " + modell + " (" + baujahr + ")");
+      }
+  }
+  ```
+  tip: "Verwende `private` für Felder, um Encapsulation zu gewährleisten."
+  difficulty: 2

@@ -1,0 +1,24 @@
+title: "Servlet Login"
+question: |
+  Implementiere ein Servlet `LoginServlet`, das ein Login‑Formular verarbeitet. Wenn `username` gleich "admin" und `password` gleich "secret" ist, setze einen Cookie `sessionId` und leite zur Seite `/welcome`. Andernfalls zeige eine Fehlermeldung.
+solution: |
+  ```java
+  @WebServlet("/login")
+  public class LoginServlet extends HttpServlet {
+      protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+          String username = req.getParameter("username");
+          String password = req.getParameter("password");
+          if ("admin".equals(username) && "secret".equals(password)) {
+              Cookie cookie = new Cookie("sessionId", "abc123");
+              cookie.setHttpOnly(true);
+              resp.addCookie(cookie);
+              resp.sendRedirect("/welcome");
+          } else {
+              resp.setContentType("text/html");
+              resp.getWriter().write("<h1>Login fehlgeschlagen</h1>");
+          }
+      }
+  }
+  ```
+  tip: "Cookie `HttpOnly` schützt vor XSS."
+  difficulty: 3
