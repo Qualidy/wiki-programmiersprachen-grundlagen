@@ -9,6 +9,7 @@ nav:
     - CSS Fundamentals: content/HTML_CSS/4.md
     - CSS Layout: content/HTML_CSS/5.md
     - Accessibility: content/HTML_CSS/6.md
+    - Übungsaufgabe: content/HTML_CSS/7.md
   - JavaScript:
     - Variablen & Operatoren: content/JavaScript/1.md
     - Kontrollstrukturen: content/JavaScript/2.md
