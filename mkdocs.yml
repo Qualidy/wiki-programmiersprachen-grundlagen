@@ -17,10 +17,12 @@ nav:
     - Async & APIs: content/JavaScript/4.md
     - Arrays & Objects: content/JavaScript/5.md
     - Best Practices & Patterns: content/JavaScript/6.md
+    - Übungsaufgabe (Simulation): content/JavaScript/7.md
   - XML:
     - Syntax & Struktur: content/XML/1.md
     - DTD & Schema: content/XML/2.md
     - XPath & XSLT: content/XML/3.md
+    - Erweiterte Abfragen: content/XML/4.md
   - Java Grundlagen:
     - Setup & Syntax: content/Java_Grundlagen/1.md
     - Kontrollstrukturen: content/Java_Grundlagen/2.md

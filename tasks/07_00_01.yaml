@@ -1,4 +1,11 @@
-title: "Low Code vs. Full Code Entscheidung"
+title: "Game of Life Simulation"
+question: |
+  Implementiere in `docs/content/JavaScript/7.md` eine einfache Version des Game of Life.
+  Bereitstellung von Konzepten, Diagrammen, Bildern und Code‑Fragmenten.
+  Ziel ist es, das Gelernte zu wiederholen, indem die Lösung in die persönliche Website eingebettet wird.
+solution: |
+  Das komplette Beispiel findest du im Markdown‑Abschnitt der Datei.
+solution_video: null
 question: |-
   Analysiere folgende Anforderungen und entscheide, ob **Low Code** oder **Full Code** besser geeignet ist:
 
