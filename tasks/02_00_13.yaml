@@ -1,0 +1,34 @@
+title: "Array Methoden Slice, Splice, Map, Filter, Reduce"
+question: |
+  Nutze das Array `zahlen` aus dem vorherigen Beispiel (1, 2, 3, 4, 5). Führe die folgenden Aufgaben aus und zeige die Ergebnisse in der Konsole:
+  1. Erstelle einen neuen Array `teil` mit slice, das nur die Werte 2 bis 4 enthält.
+  2. Verwende splice, um das Element an Index 1 zu entfernen und ersetze es durch die Werte 10 und 11.
+  3. Erstelle ein neues Array `gerade` mit map, das jede Zahl um den Faktor 2 multipliziert.
+  4. Filtere das Array `zahlen` mit filter, um nur gerade Zahlen zu behalten.
+  5. Berechne mit reduce die Summe aller Zahlen im Array `zahlen`.
+solution: |
+  ```javascript
+  const zahlen = [1, 2, 3, 4, 5];
+  console.log('Ursprünglich:', zahlen);
+
+  // 1. slice
+  const teil = zahlen.slice(1, 4); // Index 1 bis 3
+  console.log('Slice 1-4:', teil);
+
+  // 2. splice
+  const removed = zahlen.splice(1, 1, 10, 11); // entferne 1 Element, füge 10,11 ein
+  console.log('Nach splice:', zahlen, 'Removed:', removed);
+
+  // 3. map
+  const gerade = zahlen.map(x => x * 2);
+  console.log('Map *2:', gerade);
+
+  // 4. filter
+  const geradeZahlen = zahlen.filter(x => x % 2 === 0);
+  console.log('Filter gerade:', geradeZahlen);
+
+  // 5. reduce
+  const summe = zahlen.reduce((acc, curr) => acc + curr, 0);
+  console.log('Reduce Summe:', summe);
+  ```
+solution_video: null

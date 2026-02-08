@@ -1,0 +1,30 @@
+title: "Array Methoden Push, Pop, Shift, Unshift"
+question: |
+  Erstelle ein Array `zahlen` mit den Werten 1, 2, 3, 4, 5.
+  Führe die folgenden Operationen aus und gib das Ergebnis nach jeder Operation in der Konsole aus:
+  1. Füge die Zahl 6 am Ende des Arrays hinzu.
+  2. Entferne die letzte Zahl des Arrays.
+  3. Füge die Zahl 0 am Anfang des Arrays hinzu.
+  4. Entferne die erste Zahl des Arrays.
+solution: |
+  ```javascript
+  const zahlen = [1, 2, 3, 4, 5];
+  console.log('Ursprünglich:', zahlen);
+
+  // 1. push
+  zahlen.push(6);
+  console.log('Nach push(6):', zahlen);
+
+  // 2. pop
+  const letzte = zahlen.pop();
+  console.log('Nach pop():', zahlen, 'Pop result:', letzte);
+
+  // 3. unshift
+  zahlen.unshift(0);
+  console.log('Nach unshift(0):', zahlen);
+
+  // 4. shift
+  const erste = zahlen.shift();
+  console.log('Nach shift():', zahlen, 'Shift result:', erste);
+  ```
+solution_video: null

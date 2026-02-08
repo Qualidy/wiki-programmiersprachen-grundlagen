@@ -1,0 +1,41 @@
+title: "Singleton Logger Pattern"
+question: |
+  Implementiere eine Singleton‑Klasse `Logger`, die ein einzelnes Logger‑Objekt verwaltet. Die Klasse soll folgende Eigenschaften haben:
+  1. Ein privates statisches Feld `_instance`.
+  2. Ein statisches Methode `getInstance()` die die Singleton‑Instanz zurückgibt.
+  3. Eine Methode `log(msg)` die die Nachricht mit einem Timestamp in der Konsole ausgibt.
+  Demonstriere die Verwendung, indem du zwei Variablen `logger1` und `logger2` erstellst und zeigst, dass sie auf dieselbe Instanz verweisen.
+solution: |
+  ```javascript
+  class Logger {
+    static _instance = null;
+
+    constructor() {
+      if (Logger._instance) {
+        return Logger._instance;
+      }
+      Logger._instance = this;
+    }
+
+    static getInstance() {
+      if (!Logger._instance) {
+        Logger._instance = new Logger();
+      }
+      return Logger._instance;
+    }
+
+    log(msg) {
+      const ts = new Date().toISOString();
+      console.log(`[${ts}] ${msg}`);
+    }
+  }
+
+  // Nutzung
+  const logger1 = Logger.getInstance();
+  const logger2 = Logger.getInstance();
+
+  console.log('Gleiche Instanz?', logger1 === logger2); // true
+  logger1.log('Dies ist eine Testnachricht');
+  logger2.log('Noch eine Nachricht');
+  ```
+solution_video: null

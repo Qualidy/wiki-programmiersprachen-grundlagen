@@ -1,0 +1,25 @@
+title: "JSON Parsen und Stringify"
+question: |
+  1. Erstelle ein Objekt `person` mit den Eigenschaften:
+     - `name`: "Max Mustermann"
+     - `alter`: 30
+     - `istAktiv`: true
+  2. Wandle das Objekt in einen JSON‑String um und gib ihn in der Konsole aus.
+  3. Konvertiere den JSON‑String zurück in ein Objekt und gib das neue Objekt aus.
+solution: |
+  ```javascript
+  const person = {
+    name: "Max Mustermann",
+    alter: 30,
+    istAktiv: true,
+  };
+
+  // to JSON
+  const jsonString = JSON.stringify(person, null, 2);
+  console.log('JSON‑String:', jsonString);
+
+  // from JSON
+  const parsed = JSON.parse(jsonString);
+  console.log('Parsed Objekt:', parsed);
+  ```
+solution_video: null
