@@ -52,4 +52,9 @@ hide:
 </div>
 </div>
 
-# WEBSITE IM AUFBAU :construction_site: :construction_worker: :construction:
+# Tageszusammenfassungen
+
+{{ youtube_video("https://www.youtube.com/embed/5ZvJSSuqlsU?si=9FBcajokk8jFpBV1", title="Tag 1") }}
+{{ youtube_video("https://www.youtube.com/embed/W20V562jivk?si=sUxa8D_Ot5PoPIIa", title="Tag 2") }}
+{{ youtube_video("https://www.youtube.com/embed/7ZtwH9XYaMY?si=3o-4JOjoXWwOwrLZ", title="Tag 3") }}
+{{ youtube_video("https://www.youtube.com/embed/5aILXHCT9s4?si=1IY_vsDTCGeClHPJ", title="Tag 4") }}
