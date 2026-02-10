@@ -1,0 +1,49 @@
+title: "Tag 1 - Übung 2: Adressbuch XML erstellen"
+question: "Erstelle ein XML-Dokument für ein Adressbuch mit folgenden Kontakten:
+
+- Max Mustermann (Berlin, Hauptstraße 1, +49 123 456789, max@example.com)
+- Anna Müller (Hamburg, Nebenstraße 42, +49 987 654321, anna@example.com)
+- Peter Schmidt (München, Bahnhofstraße 15, +49 234 567890, peter@example.com)
+
+Anforderungen:
+- Jeder Kontakt muss eine eindeutige ID haben (1, 2, 3)
+- Telefonnummer ist optional (für einen Kontakt nicht angeben)
+- Struktur: Wurzelelement <adressbuch>, Elemente <kontakt>, <name>, <email>, <telefon>, <adresse>, <strasse>, <stadt>, <plz>
+- Alle Tags müssen korrekt geschlossenen werden
+- UTF-8 als Zeichencodierung verwenden"
+solution: |
+  <?xml version="1.0" encoding="UTF-8"?>
+  <adressbuch>
+    <kontakt id="1">
+      <name>Max Mustermann</name>
+      <email>max@example.com</email>
+      <telefon>+49 123 456789</telefon>
+      <adresse>
+        <strasse>Hauptstraße 1</strasse>
+        <stadt>Berlin</stadt>
+        <plz>10115</plz>
+      </adresse>
+    </kontakt>
+
+    <kontakt id="2">
+      <name>Anna Müller</name>
+      <email>anna@example.com</email>
+      <telefon>+49 987 654321</telefon>
+      <adresse>
+        <strasse>Nebenstraße 42</strasse>
+        <stadt>Hamburg</stadt>
+        <plz>20095</plz>
+      </adresse>
+    </kontakt>
+
+    <kontakt id="3">
+      <name>Peter Schmidt</name>
+      <email>peter@example.com</email>
+      <adresse>
+        <strasse>Bahnhofstraße 15</strasse>
+        <stadt>München</stadt>
+        <plz>80331</plz>
+      </adresse>
+    </kontakt>
+  </adressbuch>
+difficulty: 2

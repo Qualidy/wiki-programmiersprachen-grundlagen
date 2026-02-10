@@ -1,0 +1,62 @@
+title: "Tag 2 - Übung 2: XSD für Adressbuch erstellen"
+question: "Erstelle ein XML Schema (XSD) für das Adressbuch.
+
+Anforderungen für das XSD:
+1. Definiere einen Komplexen Typ für <kontakt> mit:
+   - <name> als xs:string
+   - <email> als xs:string
+   - <telefon> als xs:string (minOccurs="0")
+   - <adresse> als Komplexer Typ
+2. Definiere einen Komplexen Typ für <adresse> mit:
+   - <strasse> als xs:string
+   - <stadt> als xs:string
+   - <plz> als xs:string
+3. Definiere ein Element <adressbuch> als Wurzelelement mit Komplexem Typ, das <kontakt> (maxOccurs="unbounded") enthält
+4. Definiere ein Attribut 'id' vom Typ xs:string für <kontakt> (use="required")
+5. Optional: Füge Datentyp-Einschränkungen hinzu:
+   - <plz> muss 4-stellige Zahlen sein (xs:pattern: \d{4})
+   - <email> muss gültiges E-Mail-Format haben (xs:pattern: [^@]+@[^\.]+\..+)"
+
+Erstelle das XSD und validiere anschließend dein Adressbuch XML-Dokument."
+solution: |
+  <?xml version="1.0" encoding="UTF-8"?>
+  <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <!-- Komplexer Typ für Adresse -->
+    <xs:complexType name="adresseType">
+      <xs:sequence>
+        <xs:element name="strasse" type="xs:string"/>
+        <xs:element name="stadt" type="xs:string"/>
+        <xs:element name="plz" type="plzType"/>
+      </xs:sequence>
+    </xs:complexType>
+
+    <!-- Einfacher Typ für PLZ -->
+    <xs:simpleType name="plzType">
+      <xs:restriction base="xs:string">
+        <xs:pattern value="\d{4}"/>
+      </xs:restriction>
+    </xs:simpleType>
+
+    <!-- Komplexer Typ für Kontakt -->
+    <xs:complexType name="kontaktType">
+      <xs:sequence>
+        <xs:element name="name" type="xs:string"/>
+        <xs:element name="email" type="xs:string"/>
+        <xs:element name="telefon" type="xs:string" minOccurs="0"/>
+        <xs:element name="adresse" type="adresseType"/>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:string" use="required"/>
+    </xs:complexType>
+
+    <!-- Wurzelelement -->
+    <xs:element name="adressbuch">
+      <xs:complexType>
+        <xs:sequence>
+          <xs:element name="kontakt" type="kontaktType" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:element>
+
+  </xs:schema>
+difficulty: 3

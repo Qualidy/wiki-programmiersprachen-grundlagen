@@ -1,0 +1,64 @@
+title: "Tag 2 - Übung 3: XPath-Abfragen schreiben"
+question: "Schreibe XPath-Abfragen für das folgende Adressbuch XML:
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<adressbuch>
+  <kontakt id="1">
+    <name>Max Mustermann</name>
+    <email>max@example.com</email>
+    <telefon>+49 123 456789</telefon>
+    <adresse>
+      <strasse>Hauptstraße 1</strasse>
+      <stadt>Berlin</stadt>
+      <plz>10115</plz>
+    </adresse>
+  </kontakt>
+
+  <kontakt id="2">
+    <name>Anna Müller</name>
+    <email>anna@example.com</email>
+    <adresse>
+      <strasse>Nebenstraße 42</strasse>
+      <stadt>Hamburg</stadt>
+      <plz>20095</plz>
+    </adresse>
+  </kontakt>
+
+  <kontakt id="3">
+    <name>Peter Schmidt</name>
+    <email>peter@example.com</email>
+    <telefon>+49 234 567890</telefon>
+    <adresse>
+      <strasse>Bahnhofstraße 15</strasse>
+      <stadt>München</stadt>
+      <plz>80331</plz>
+    </adresse>
+  </kontakt>
+</adressbuch>
+```
+
+Schreibe folgende Abfragen:
+
+1. Alle Kontakte aus Berlin
+2. Alle Kontakte mit E-Mail-Adresse
+3. Alle Kontakte, die eine Telefonnummer haben
+4. Alle Kontakte, die keine Telefonnummer haben
+5. Der erste Kontakt
+6. Der letzte Kontakt
+7. Die Namen aller Kontakte
+8. Alle Kontakte, deren ID ungerade ist
+9. Alle Kontakte aus München oder Berlin
+10. Alle Kontakte, deren Name 'Schmidt' enthält"
+solution: |
+  1. //kontakt[stadt='Berlin']
+  2. //kontakt[email]
+  3. //kontakt[telefon]
+  4. //kontakt[not(telefon)]
+  5. /adressbuch/kontakt[1]
+  6. /adressbuch/kontakt[last()]
+  7. //kontakt/name
+  8. //kontakt[id mod 2 = 1]  oder  //kontakt[id='1' or id='3']
+  9. //kontakt[stadt='Berlin' or stadt='München']
+  10. //kontakt[contains(name, 'Schmidt')]
+difficulty: 3

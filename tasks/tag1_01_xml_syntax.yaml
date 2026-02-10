@@ -1,0 +1,40 @@
+title: "Tag 1 - Übung 1: XML-Syntax korrigieren"
+question: "Korrigiere die folgenden XML-Beispiele. Welche Fehler enthalten sie?"
+solution: |
+  # Beispiel 1: Fehlendes schließendes Tag
+  <person>
+    <name>Max Mustermann</name>
+  </person>
+
+  # Beispiel 2: Falsche Groß-/Kleinschreibung
+  <Person>
+    <name>Max Mustermann</name>
+  </Person>
+
+  # Beispiel 3: Attribute ohne Anführungszeichen
+  <person id=1 status=aktiv>
+    <name>Max Mustermann</name>
+  </person>
+
+  # Beispiel 4: Falsche Verschachtelung
+  <adresse>
+    <strasse>Hauptstraße 1</stadt>
+    <stadt>Berlin</strasse>
+  </adresse>
+
+  # Beispiel 5: Fehlendes Wurzelelement
+  <person>Max Mustermann</person>
+  <person>Anna Müller</person>
+
+  # Beispiel 6: Leeres Tag ohne Schließen (HTML-Stil)
+  <br>
+  <br>
+tip: |
+  Achte auf diese Regeln:
+  1. Alle Tags müssen geschlossen werden
+  2. Groß-/Kleinschreibung ist wichtig
+  3. Attribute müssen in Anführungszeichen stehen
+  4. Tags müssen korrekt verschachtelt werden
+  5. Nur ein Wurzelelement pro Dokument
+  6. Leere Tags mit / schließen: <br />
+difficulty: 1

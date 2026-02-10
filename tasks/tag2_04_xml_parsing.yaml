@@ -1,0 +1,60 @@
+title: "Tag 2 - Übung 4: XML-Parsing mit Java und Python"
+question: "Lese das Adressbuch XML aus Übung Tag 2-1 mit verschiedenen Programmiersprachen aus und gib die Kontakte aus:
+
+Anforderungen für **Java**:
+1. Verwende DOM Parser (javax.xml.parsers)
+2. Lade die Adressbuch-XML-Datei
+3. Iteriere durch alle <kontakt>-Elemente
+4. Gib Name und E-Mail jedes Kontakts aus
+
+Anforderungen für **Python**:
+1. Verwende ElementTree (xml.etree.ElementTree)
+2. Lade die Adressbuch-XML-Datei
+3. Iteriere durch alle <kontakt>-Elemente
+4. Gib Name und E-Mail jedes Kontakts im Format 'Name: email' aus
+
+Zusatz: Wenn ein Kontakt kein Telefon hat, gib zusätzlich 'Kein Telefon' aus."
+solution: |
+  # Java Lösung
+  import javax.xml.parsers.*;
+  import org.w3c.dom.*;
+  import java.io.File;
+
+  public class XMLParser {
+      public static void main(String[] args) throws Exception {
+          DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+          Document doc = factory.newDocumentBuilder().parse(new File("adressbuch.xml"));
+
+          NodeList kontakte = doc.getElementsByTagName("kontakt");
+
+          for (int i = 0; i < kontakte.getLength(); i++) {
+              Element kontakt = (Element) kontakte.item(i);
+              String name = kontakt.getElementsByTagName("name").item(0).getTextContent();
+              String email = kontakt.getElementsByTagName("email").item(0).getTextContent();
+
+              NodeList telefonNodes = kontakt.getElementsByTagName("telefon");
+              String telefon = telefonNodes.getLength() > 0
+                  ? telefonNodes.item(0).getTextContent()
+                  : "Kein Telefon";
+
+              System.out.println(name + ": " + email + " - " + telefon);
+          }
+      }
+  }
+
+  # Python Lösung
+  import xml.etree.ElementTree as ET
+
+  tree = ET.parse('adressbuch.xml')
+  root = tree.getroot()
+
+  for kontakt in root.findall('kontakt'):
+      name = kontakt.find('name').text
+      email = kontakt.find('email').text
+
+      telefon = kontakt.find('telefon')
+      if telefon is not None:
+          print(f"{name}: {email} - {telefon.text}")
+      else:
+          print(f"{name}: {email} - Kein Telefon")
+difficulty: 4

@@ -1,0 +1,63 @@
+title: "Tag 1 - Übung 4: Produktlisten erstellen"
+question: "Erstelle XML-Dateien für folgende Szenarien:
+
+1. **Einfache Produktliste** (3 Produkte):
+   - Laptop (ID: 1001, Kategorie: elektronik, Preis: 1299.99, Lagerbestand: 15)
+   - Smartphone (ID: 1002, Kategorie: elektronik, Preis: 699.99, Lagerbestand: 42)
+   - Bluetooth-Kopfhörer (ID: 1003, Kategorie: elektronik, Preis: 99.99, Lagerbestand: 100)
+
+2. **Buch-Katalog** (3 Bücher):
+   - Titel: "Java Grundlagen", Autor: "Max Mustermann", ISBN: 978-3-0000-0000-1
+   - Titel: "XML Profi", Autor: "Anna Müller", ISBN: 978-3-0000-0001-8
+   - Titel: "JavaScript Modern", Autor: "Peter Schmidt", ISBN: 978-3-0000-0020-4
+
+Anforderungen für beide Dateien:
+- Wurzelelement <produktliste> bzw. <buchkatalog>
+- Produkte/Kataloge enthalten eindeutige IDs
+- Preise haben ein Attribut 'waehrung' mit Wert 'EUR'
+- Metadaten in Attributen (id, kategorie, isbn, autor)"
+solution: |
+  <!-- produktliste.xml -->
+  <?xml version="1.0" encoding="UTF-8"?>
+  <produktliste>
+    <produkt id="1001" kategorie="elektronik">
+      <name>Laptop</name>
+      <preis waehrung="EUR">1299.99</preis>
+      <lagerbestand>15</lagerbestand>
+    </produkt>
+
+    <produkt id="1002" kategorie="elektronik">
+      <name>Smartphone</name>
+      <preis waehrung="EUR">699.99</preis>
+      <lagerbestand>42</lagerbestand>
+    </produkt>
+
+    <produkt id="1003" kategorie="elektronik">
+      <name>Bluetooth-Kopfhörer</name>
+      <preis waehrung="EUR">99.99</preis>
+      <lagerbestand>100</lagerbestand>
+    </produkt>
+  </produktliste>
+
+  <!-- buchkatalog.xml -->
+  <?xml version="1.0" encoding="UTF-8"?>
+  <buchkatalog>
+    <buch id="1">
+      <titel>Java Grundlagen</titel>
+      <autor>Max Mustermann</autor>
+      <isbn>978-3-0000-0000-1</isbn>
+    </buch>
+
+    <buch id="2">
+      <titel>XML Profi</titel>
+      <autor>Anna Müller</autor>
+      <isbn>978-3-0000-0001-8</isbn>
+    </buch>
+
+    <buch id="3">
+      <titel>JavaScript Modern</titel>
+      <autor>Peter Schmidt</autor>
+      <isbn>978-3-0000-0020-4</isbn>
+    </buch>
+  </buchkatalog>
+difficulty: 2

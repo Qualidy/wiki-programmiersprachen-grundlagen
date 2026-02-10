@@ -1,0 +1,49 @@
+title: "Tag 1 - Übung 3: Konfigurationsdatei erstellen"
+question: "Erstelle eine XML-Konfigurationsdatei für eine einfache Webanwendung mit folgenden Einstellungen:
+
+Datenbankeinstellungen:
+- Host: localhost
+- Port: 5432
+- Datenbankname: myapp
+- Benutzer: admin
+- Passwort: (verschlüsselt, Passwort muss im Attribut 'encrypted' gesetzt sein)
+
+Servereinstellungen:
+- Port: 8080
+- SSL aktiviert (Attreibut 'enabled' mit Wert 'true')
+- Zertifikat-Pfad: /path/to/cert.pem
+- Schlüssel-Pfad: /path/to/key.pem
+
+Logging:
+- Log-Level: INFO
+- Log-Datei: /var/log/app.log
+
+Wichtige Anforderungen:
+- Sprechende Elementnamen verwenden (z.B. <database>, <server>, <logging>)
+- Attribute für Metadaten verwenden
+- UTF-8 Zeichencodierung"
+solution: |
+  <?xml version="1.0" encoding="UTF-8"?>
+  <configuration>
+    <database>
+      <host>localhost</host>
+      <port>5432</port>
+      <name>myapp</name>
+      <user>admin</user>
+      <password encrypted="true">abc123</password>
+    </database>
+
+    <server>
+      <port>8080</port>
+      <ssl enabled="true">
+        <certificate>/path/to/cert.pem</certificate>
+        <key>/path/to/key.pem</key>
+      </ssl>
+    </server>
+
+    <logging>
+      <level>INFO</level>
+      <file>/var/log/app.log</file>
+    </logging>
+  </configuration>
+difficulty: 2

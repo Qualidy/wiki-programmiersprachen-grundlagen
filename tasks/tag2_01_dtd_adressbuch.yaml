@@ -1,0 +1,38 @@
+title: "Tag 2 - Übung 1: DTD für Adressbuch erstellen"
+question: "Erstelle eine DTD (Document Type Definition) für das Adressbuch aus Tag 1 Übung 2.
+
+Anforderungen für die DTD:
+1. Wurzelelement <adressbuch> darf mehrere <kontakt>-Elemente enthalten (mindestens 1)
+2. Jedes <kontakt> darf folgende Elemente enthalten (in dieser Reihenfolge):
+   - <name> (erforderlich)
+   - <email> (erforderlich)
+   - <telefon> (optional, minOccurs="0")
+   - <adresse> (erforderlich)
+3. <adresse> darf folgende Elemente enthalten (in dieser Reihenfolge):
+   - <strasse> (erforderlich)
+   - <stadt> (erforderlich)
+   - <plz> (erforderlich)
+4. Jedes <kontakt> muss ein Attribut 'id' haben (erforderlich, CDATA)
+5. Optional: <telefon> darf ein Attribut 'typ' haben (optional, Werte: 'privat' oder 'geschäftlich', Standard: 'privat')"
+
+Verwende interne DTD-Deklaration im XML-Dokument."
+solution: |
+  <?xml version="1.0" encoding="UTF-8"?>
+  <!DOCTYPE adressbuch [
+    <!ELEMENT adressbuch (kontakt+)>
+    <!ELEMENT kontakt (name, email, telefon?, adresse)>
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT email (#PCDATA)>
+    <!ELEMENT telefon (#PCDATA)>
+    <!ELEMENT adresse (strasse, stadt, plz)>
+    <!ELEMENT strasse (#PCDATA)>
+    <!ELEMENT stadt (#PCDATA)>
+    <!ELEMENT plz (#PCDATA)>
+    <!ATTLIST kontakt id CDATA #REQUIRED>
+    <!ATTLIST telefon typ (privat | geschäftlich) "privat">
+  ]>
+
+  <adressbuch>
+    <!-- Hier dein Adressbuch einfügen -->
+  </adressbuch>
+difficulty: 3
