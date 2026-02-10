@@ -1,0 +1,51 @@
+title: "Tag 2 - Übung 5: XSLT Transformation (XML → HTML)"
+question: "Erstelle ein XSLT-Stylesheet, das das Adressbuch XML in eine HTML-Tabelle umwandelt.
+
+Anforderungen für die XSLT:
+1. Erstelle ein HTML-Output (method="html")
+2. Haupt-Tabelle mit folgenden Spalten: ID, Name, E-Mail, Stadt, PLZ, Telefon
+3. Jeder Kontakt wird in einer Tabellenzeile dargestellt
+4. Telefon wird nur angezeigt, wenn vorhanden
+5. Tabelle mit CSS formatieren (Klassen: table, th, td, even, odd)
+6. Tabelle sortiere alphabetisch nach Name
+7. Füge einen Titel hinzu: 'Adressbuch'
+8. Füge eine Fußzeile mit 'Kurs XML 2-Tage' hinzu"
+
+Erstelle das XSLT und validiere das Ergebnis."
+
+Beispiel-HTML-Struktur:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Adressbuch</title>
+  <style>
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+    th { background-color: #f2f2f2; }
+    tr:nth-child(even) { background-color: #f9f9f9; }
+  </style>
+</head>
+<body>
+  <h1>Adressbuch</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>E-Mail</th>
+        <th>Stadt</th>
+        <th>PLZ</th>
+        <th>Telefon</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Zeilen hier -->
+    </tbody>
+  </table>
+  <footer>Kurs XML 2-Tage</footer>
+</body>
+</html>
+```
+difficulty: 4
