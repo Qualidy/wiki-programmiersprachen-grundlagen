@@ -24,6 +24,7 @@ nav:
     - XPath & XSLT: content/XML/3.md
     - Erweiterte Abfragen: content/XML/4.md
   - Java Grundlagen:
+    - Objektorientierung: content/OOP_Introduction/1.md
     - Setup & Syntax: content/Java_Grundlagen/1.md
     - Kontrollstrukturen: content/Java_Grundlagen/2.md
     - Methoden & Funktionen: content/Java_Grundlagen/3.md
