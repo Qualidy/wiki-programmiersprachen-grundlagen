@@ -1,0 +1,2108 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../1/">
+      
+      
+      
+      <link rel="icon" href="../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Advanced - IT-Basis - Überblick über das Web und Programmiersprachen</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/logo.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/grid.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/video_admonition.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/python_tutor_admonition.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/mermaid.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/cd.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#low-code-2-advanced-low-code-topics" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="IT-Basis - Überblick über das Web und Programmiersprachen" class="md-header__button md-logo" aria-label="IT-Basis - Überblick über das Web und Programmiersprachen" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IT-Basis - Überblick über das Web und Programmiersprachen
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Advanced
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="IT-Basis - Überblick über das Web und Programmiersprachen" class="md-nav__button md-logo" aria-label="IT-Basis - Überblick über das Web und Programmiersprachen" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    IT-Basis - Überblick über das Web und Programmiersprachen
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    HTML CSS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            HTML CSS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HTML_CSS/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Einführung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HTML_CSS/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HTML-Elemente
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HTML_CSS/3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Attribute & Formulare
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HTML_CSS/4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CSS Fundamentals
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HTML_CSS/5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CSS Layout
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HTML_CSS/6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Accessibility
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HTML_CSS/7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übungsaufgabe
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    JavaScript
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            JavaScript
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Variablen & Operatoren
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kontrollstrukturen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DOM & Events
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Async & APIs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Arrays & Objects
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Best Practices & Patterns
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übungsaufgabe (Simulation)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    XML
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            XML
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../XML/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Syntax & Struktur
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../XML/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DTD & Schema
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../XML/3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    XPath & XSLT
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../XML/4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Erweiterte Abfragen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Java Grundlagen
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Java Grundlagen
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP_Introduction/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Objektorientierung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java_Grundlagen/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setup & Syntax
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java_Grundlagen/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kontrollstrukturen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java_Grundlagen/3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Methoden & Funktionen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java_Grundlagen/4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Arrays & Collections
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java_Grundlagen/5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Design Patterns Übung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java_Grundlagen/6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Design Patterns Lösung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Java Aufbau
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Java Aufbau
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java_Aufbau/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Streams & Lambdas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java_Aufbau/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Collections
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Application Server
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Application Server
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Application_Server/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Einführung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Application_Server/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Konfiguration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Low Code
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Low Code
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Einführung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Advanced
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Advanced
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#einfuhrung" class="md-nav__link">
+    <span class="md-ellipsis">
+      Einführung
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enterprise-integrationen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enterprise-Integrationen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-automatisierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflow-Automatisierung
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mobile-apps-mit-low-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mobile Apps mit Low Code
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#microservices-api-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Microservices &amp; API-Integration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#governance-skalierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      Governance &amp; Skalierung
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Features
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices-fur-advanced-low-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices für Advanced Low Code
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#haufige-fehler-fallstricke" class="md-nav__link">
+    <span class="md-ellipsis">
+      Häufige Fehler &amp; Fallstricke
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zusammenfassung-checkliste" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zusammenfassung &amp; Checkliste
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nachste-schritte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nächste Schritte
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#einfuhrung" class="md-nav__link">
+    <span class="md-ellipsis">
+      Einführung
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enterprise-integrationen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enterprise-Integrationen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-automatisierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      Workflow-Automatisierung
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mobile-apps-mit-low-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mobile Apps mit Low Code
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#microservices-api-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Microservices &amp; API-Integration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#governance-skalierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      Governance &amp; Skalierung
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#advanced-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Advanced Features
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices-fur-advanced-low-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices für Advanced Low Code
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#haufige-fehler-fallstricke" class="md-nav__link">
+    <span class="md-ellipsis">
+      Häufige Fehler &amp; Fallstricke
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zusammenfassung-checkliste" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zusammenfassung &amp; Checkliste
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nachste-schritte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nächste Schritte
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="low-code-2-advanced-low-code-topics">Low Code 2 – Advanced Low Code Topics<a class="headerlink" href="#low-code-2-advanced-low-code-topics" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Lernziele</p>
+<p>Nach diesem Kapitel kannst du …</p>
+<ul>
+<li><strong>Advanced Low Code</strong>-Features verstehen und nutzen.</li>
+<li><strong>Integrationen</strong> mit externen Systemen umsetzen.</li>
+<li><strong>Workflow-Automatisierung</strong> gestalten.</li>
+<li><strong>Mobile Apps</strong> mit Low Code erstellen.</li>
+<li><strong>Governance</strong> und Skalierung planen.</li>
+</ul>
+</div>
+<hr />
+<h2 id="einfuhrung">Einführung<a class="headerlink" href="#einfuhrung" title="Permanent link">&para;</a></h2>
+<p><strong>Advanced Low Code</strong> geht über einfache Anwendungen hinaus:
+- <strong>Enterprise-Integrationen</strong> (ERP, CRM, Legacy)
+- <strong>Komplexe Workflows</strong> mit Genehmigungen
+- <strong>Mobile Apps</strong> mit nativer Performance
+- <strong>Microservices</strong> und API-Integration
+- <strong>Governance</strong> und Sicherheit</p>
+<p><strong>Wichtige Fakten:</strong>
+- Low Code wird für <strong>70%</strong> der Enterprise-Apps genutzt (Gartner)
+- <strong>Integration</strong> ist der größte Treiber für Low Code
+- <strong>Citizen Developers</strong> bauen 40% der Anwendungen
+- <strong>Hybrid-Ansätze</strong> (Low Code + Custom Code) sind Standard</p>
+<hr />
+<h2 id="enterprise-integrationen">Enterprise-Integrationen<a class="headerlink" href="#enterprise-integrationen" title="Permanent link">&para;</a></h2>
+<h3 id="1-erp-integration-sap-oracle">1. ERP-Integration (SAP, Oracle)<a class="headerlink" href="#1-erp-integration-sap-oracle" title="Permanent link">&para;</a></h3>
+<p><strong>Anwendungsfälle:</strong>
+- <strong>Daten-Synchronisation</strong> (Kunden, Produkte)
+- <strong>Workflow-Integration</strong> (Bestellfreigaben)
+- <strong>Reporting</strong> (Echtzeit-Dashboards)</p>
+<p><strong>Beispiel: SAP-Integration mit OutSystems</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>1. SAP-Connector konfigurieren
+2. RFC/BAPI definieren
+3. Datenmapping erstellen
+4. Error-Handling implementieren
+5. Monitoring einrichten
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Technische Umsetzung:</strong>
+- <strong>OData</strong> für RESTful Integration
+- <strong>SOAP</strong> für Legacy-SAP
+- <strong>IDoc</strong> für Batch-Verarbeitung
+- <strong>JCo</strong> (Java Connector) für direkte Anbindung</p>
+<h3 id="2-crm-integration-salesforce-dynamics">2. CRM-Integration (Salesforce, Dynamics)<a class="headerlink" href="#2-crm-integration-salesforce-dynamics" title="Permanent link">&para;</a></h3>
+<p><strong>Anwendungsfälle:</strong>
+- <strong>Lead-Management</strong> (Website → CRM)
+- <strong>Kunden-Support</strong> (Ticket-System)
+- <strong>Marketing-Automatisierung</strong></p>
+<p><strong>Beispiel: Salesforce-Integration</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// REST API Aufruf</span>
+<span class="nx">POST</span><span class="w"> </span><span class="o">/</span><span class="nx">services</span><span class="o">/</span><span class="nx">data</span><span class="o">/</span><span class="nx">v52</span><span class="mf">.0</span><span class="o">/</span><span class="nx">sobjects</span><span class="o">/</span><span class="nx">Lead</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="s2">&quot;FirstName&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Max&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s2">&quot;LastName&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Mustermann&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s2">&quot;Company&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Beispiel GmbH&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s2">&quot;Email&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;max@example.com&quot;</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
+<h3 id="3-legacy-systeme-mainframe-as400">3. Legacy-Systeme (Mainframe, AS/400)<a class="headerlink" href="#3-legacy-systeme-mainframe-as400" title="Permanent link">&para;</a></h3>
+<p><strong>Anwendungsfälle:</strong>
+- <strong>Screen-Scraping</strong> für alte Oberflächen
+- <strong>File-Transfer</strong> (FTP, SFTP)
+- <strong>Database-Linking</strong> (ODBC, JDBC)</p>
+<p><strong>Beispiel: File-Transfer mit Mendix</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>1. SFTP-Connector konfigurieren
+2. Datei-Format definieren (CSV, XML, JSON)
+3. Mapping-Logik erstellen
+4. Validierung implementieren
+5. Fehlerbehandlung (Retry, Alert)
+</code></pre></div></td></tr></table></div></p>
+<hr />
+<h2 id="workflow-automatisierung">Workflow-Automatisierung<a class="headerlink" href="#workflow-automatisierung" title="Permanent link">&para;</a></h2>
+<h3 id="1-genehmigungs-workflows">1. Genehmigungs-Workflows<a class="headerlink" href="#1-genehmigungs-workflows" title="Permanent link">&para;</a></h3>
+<p><strong>Anwendungsfälle:</strong>
+- <strong>Urlaubsanträge</strong>
+- <strong>Budget-Freigaben</strong>
+- <strong>Change-Management</strong></p>
+<p><strong>Beispiel: Urlaubsantrag (Power Apps)</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>1. Formular: Mitarbeiter gibt Daten ein
+2. Prüfung: Manager prüft Antrag
+3. Freigabe: HR bestätigt
+4. Benachrichtigung: Email an Mitarbeiter
+5. Kalender: Outlook-Sync
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Workflow-Logik:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Pseudocode</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">tage</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Freigabe durch HR nötig</span>
+<span class="w">  </span><span class="nx">sendToHR</span><span class="p">(</span><span class="nx">antrag</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Direkte Freigabe durch Manager</span>
+<span class="w">  </span><span class="nx">approve</span><span class="p">(</span><span class="nx">antrag</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
+<h3 id="2-business-rules-engine">2. Business Rules Engine<a class="headerlink" href="#2-business-rules-engine" title="Permanent link">&para;</a></h3>
+<p><strong>Anwendungsfälle:</strong>
+- <strong>Kredit-Scoring</strong> (Banking)
+- <strong>Risiko-Bewertung</strong> (Versicherung)
+- <strong>Preis-Berechnung</strong> (E-Commerce)</p>
+<p><strong>Beispiel: Kredit-Scoring (OutSystems)</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>Regel 1: Alter &gt;= 18 → Score +10
+Regel 2: Einkommen &gt; 3000 → Score +20
+Regel 3: Schufa-Score &gt; 800 → Score +30
+Regel 4: Score &gt;= 50 → Kredit genehmigt
+</code></pre></div></td></tr></table></div></p>
+<h3 id="3-dokumenten-workflows">3. Dokumenten-Workflows<a class="headerlink" href="#3-dokumenten-workflows" title="Permanent link">&para;</a></h3>
+<p><strong>Anwendungsfälle:</strong>
+- <strong>Vertrags-Management</strong>
+- <strong>Rechnungs-Verarbeitung</strong>
+- <strong>Compliance-Dokumente</strong></p>
+<p><strong>Beispiel: Rechnungs-Workflow</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code>1. Rechnung eingehen (Email, Upload)
+2. OCR-Verarbeitung (Daten extrahieren)
+3. Validierung (Betrag, Lieferant)
+4. Genehmigung (Freigabe durch Manager)
+5. Zahlung (SAP-Integration)
+6. Archivierung (DMS)
+</code></pre></div></td></tr></table></div></p>
+<hr />
+<h2 id="mobile-apps-mit-low-code">Mobile Apps mit Low Code<a class="headerlink" href="#mobile-apps-mit-low-code" title="Permanent link">&para;</a></h2>
+<h3 id="1-native-vs-hybrid">1. Native vs. Hybrid<a class="headerlink" href="#1-native-vs-hybrid" title="Permanent link">&para;</a></h3>
+<p><strong>Native Apps (OutSystems, Mendix):</strong>
+- <strong>Performance</strong>: Hohe Performance
+- <strong>Offline</strong>: Offline-Fähigkeit
+- <strong>Gerätefunktionen</strong>: Kamera, GPS, etc.
+- <strong>App Store</strong>: Direkte Veröffentlichung</p>
+<p><strong>Hybrid Apps (Power Apps, Bubble):</strong>
+- <strong>Schnellere Entwicklung</strong>
+- <strong>Cross-Platform</strong> (iOS, Android, Web)
+- <strong>Eingeschränkte Performance</strong>
+- <strong>Web-basiert</strong></p>
+<h3 id="2-offline-fahigkeit">2. Offline-Fähigkeit<a class="headerlink" href="#2-offline-fahigkeit" title="Permanent link">&para;</a></h3>
+<p><strong>Anwendungsfälle:</strong>
+- <strong>Außendienst</strong> (Feldarbeiter)
+- <strong>Logistik</strong> (Lagerarbeiter)
+- <strong>Gesundheitswesen</strong> (Ärzte)</p>
+<p><strong>Beispiel: Offline-Formular (OutSystems)</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>1. Daten lokal speichern (IndexedDB)
+2. Sync bei Netzwerk-Verfügbarkeit
+3. Konflikt-Management (Last-Write-Wins)
+4. Daten-Kompression
+</code></pre></div></td></tr></table></div></p>
+<h3 id="3-push-benachrichtigungen">3. Push-Benachrichtigungen<a class="headerlink" href="#3-push-benachrichtigungen" title="Permanent link">&para;</a></h3>
+<p><strong>Anwendungsfälle:</strong>
+- <strong>Echtzeit-Alerts</strong> (Sicherheit)
+- <strong>Workflow-Updates</strong> (Genehmigungen)
+- <strong>Marketing</strong> (Angebote)</p>
+<p><strong>Beispiel: Push-Integration</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>1. Firebase Cloud Messaging (FCM)
+2. Apple Push Notification Service (APNS)
+3. User-Subscription verwalten
+4. Segmentierung (Rollen, Standort)
+</code></pre></div></td></tr></table></div></p>
+<hr />
+<h2 id="microservices-api-integration">Microservices &amp; API-Integration<a class="headerlink" href="#microservices-api-integration" title="Permanent link">&para;</a></h2>
+<h3 id="1-api-first-ansatz">1. API-First-Ansatz<a class="headerlink" href="#1-api-first-ansatz" title="Permanent link">&para;</a></h3>
+<p><strong>Anwendungsfälle:</strong>
+- <strong>Headless CMS</strong> (Content-Management)
+- <strong>Microservices-Architektur</strong>
+- <strong>Partner-Integration</strong></p>
+<p><strong>Beispiel: REST API erstellen (Mendix)</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">Endpoint</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/api/v1/customers</span>
+<span class="nt">Method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GET</span>
+<span class="nt">Response</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">JSON</span>
+<span class="p p-Indicator">{</span>
+<span class="w">  </span><span class="s">&quot;customers&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="p p-Indicator">[</span>
+<span class="w">    </span><span class="p p-Indicator">{</span>
+<span class="w">      </span><span class="s">&quot;id&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="nv">1</span><span class="p p-Indicator">,</span>
+<span class="w">      </span><span class="s">&quot;name&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;Max</span><span class="nv"> </span><span class="s">Mustermann&quot;</span><span class="p p-Indicator">,</span>
+<span class="w">      </span><span class="s">&quot;email&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&quot;max@example.com&quot;</span>
+<span class="w">    </span><span class="p p-Indicator">}</span>
+<span class="w">  </span><span class="p p-Indicator">]</span>
+<span class="p p-Indicator">}</span>
+</code></pre></div></td></tr></table></div></p>
+<h3 id="2-api-gateway">2. API-Gateway<a class="headerlink" href="#2-api-gateway" title="Permanent link">&para;</a></h3>
+<p><strong>Anwendungsfälle:</strong>
+- <strong>Rate-Limiting</strong> (DOS-Schutz)
+- <strong>Authentifizierung</strong> (OAuth2, JWT)
+- <strong>Caching</strong> (Performance)
+- <strong>Monitoring</strong> (API-Analytics)</p>
+<p><strong>Beispiel: API-Gateway (OutSystems)</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>1. Endpoint definieren
+2. Security-Policy (JWT, API-Key)
+3. Rate-Limiting (1000 req/hour)
+4. Caching (Redis)
+5. Logging &amp; Monitoring
+</code></pre></div></td></tr></table></div></p>
+<h3 id="3-webhooks-events">3. Webhooks &amp; Events<a class="headerlink" href="#3-webhooks-events" title="Permanent link">&para;</a></h3>
+<p><strong>Anwendungsfälle:</strong>
+- <strong>Echtzeit-Updates</strong> (Statusänderungen)
+- <strong>Integrationen</strong> (Slack, Teams)
+- <strong>Event-Driven-Architecture</strong></p>
+<p><strong>Beispiel: Webhook-Integration</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Webhook-Endpoint</span>
+<span class="nx">POST</span><span class="w"> </span><span class="o">/</span><span class="nx">webhook</span><span class="o">/</span><span class="nx">payment</span>
+<span class="p">{</span>
+<span class="w">  </span><span class="s2">&quot;event&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;payment.success&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="s2">&quot;data&quot;</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;orderId&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">12345</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;amount&quot;</span><span class="o">:</span><span class="w"> </span><span class="mf">99.99</span><span class="p">,</span>
+<span class="w">    </span><span class="s2">&quot;customer&quot;</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;max@example.com&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div></p>
+<hr />
+<h2 id="governance-skalierung">Governance &amp; Skalierung<a class="headerlink" href="#governance-skalierung" title="Permanent link">&para;</a></h2>
+<h3 id="1-zentrale-governance">1. Zentrale Governance<a class="headerlink" href="#1-zentrale-governance" title="Permanent link">&para;</a></h3>
+<p><strong>Anwendungsfälle:</strong>
+- <strong>Standardisierung</strong> (Design, Code)
+- <strong>Sicherheitsrichtlinien</strong>
+- <strong>Qualitätssicherung</strong>
+- <strong>Compliance</strong> (GDPR, HIPAA)</p>
+<p><strong>Governance-Framework:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>1. Center of Excellence (CoE)
+2. Design-Standards (UI, UX)
+3. Code-Review-Prozess
+4. Security-Audits
+5. Performance-Testing
+</code></pre></div></td></tr></table></div></p>
+<h3 id="2-skalierungsstrategien">2. Skalierungsstrategien<a class="headerlink" href="#2-skalierungsstrategien" title="Permanent link">&para;</a></h3>
+<p><strong>Anwendungsfälle:</strong>
+- <strong>Wachsende User-Basis</strong>
+- <strong>Datenwachstum</strong>
+- <strong>Performance-Anforderungen</strong></p>
+<p><strong>Skalierungs-Optionen:</strong>
+- <strong>Horizontal</strong>: Mehr Server (Load Balancer)
+- <strong>Vertical</strong>: Größere Server (CPU, RAM)
+- <strong>Database</strong>: Sharding, Replication
+- <strong>Caching</strong>: Redis, Memcached</p>
+<h3 id="3-monitoring-alerting">3. Monitoring &amp; Alerting<a class="headerlink" href="#3-monitoring-alerting" title="Permanent link">&para;</a></h3>
+<p><strong>Anwendungsfälle:</strong>
+- <strong>Performance-Metriken</strong> (Response-Time, Throughput)
+- <strong>Error-Raten</strong> (Fehler pro Minute)
+- <strong>Resource-Utilization</strong> (CPU, Memory, Disk)
+- <strong>Business-Metriken</strong> (Conversion, Uptime)</p>
+<p><strong>Beispiel: Monitoring-Stack</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>1. Prometheus (Metrics)
+2. Grafana (Dashboards)
+3. AlertManager (Alerts)
+4. ELK Stack (Logging)
+5. APM (Application Performance Monitoring)
+</code></pre></div></td></tr></table></div></p>
+<hr />
+<h2 id="advanced-features">Advanced Features<a class="headerlink" href="#advanced-features" title="Permanent link">&para;</a></h2>
+<h3 id="1-machine-learning-integration">1. Machine Learning Integration<a class="headerlink" href="#1-machine-learning-integration" title="Permanent link">&para;</a></h3>
+<p><strong>Anwendungsfälle:</strong>
+- <strong>Predictive Analytics</strong> (Churn-Prädiktion)
+- <strong>Anomalie-Erkennung</strong> (Fraud Detection)
+- <strong>Recommendation Engines</strong> (Personalisierung)</p>
+<p><strong>Beispiel: ML mit Low Code (OutSystems)</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>1. Daten sammeln (User-Verhalten)
+2. ML-Modell trainieren (Python, R)
+3. API-Integration (REST)
+4. Ergebnisse visualisieren
+5. Automatisierte Entscheidungen
+</code></pre></div></td></tr></table></div></p>
+<h3 id="2-iot-integration">2. IoT-Integration<a class="headerlink" href="#2-iot-integration" title="Permanent link">&para;</a></h3>
+<p><strong>Anwendungsfälle:</strong>
+- <strong>Smart Factory</strong> (Maschinen-Monitoring)
+- <strong>Smart Home</strong> (Gerätesteuerung)
+- <strong>Asset Tracking</strong> (GPS, Sensoren)</p>
+<p><strong>Beispiel: IoT-Dashboard</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>1. MQTT-Broker konfigurieren
+2. Sensordaten empfangen
+3. Echtzeit-Visualisierung
+4. Alerting bei Schwellwerten
+5. Automatisierte Aktionen
+</code></pre></div></td></tr></table></div></p>
+<h3 id="3-blockchain-integration">3. Blockchain-Integration<a class="headerlink" href="#3-blockchain-integration" title="Permanent link">&para;</a></h3>
+<p><strong>Anwendungsfälle:</strong>
+- <strong>Supply Chain</strong> (Transparenz)
+- <strong>Smart Contracts</strong> (Automatisierung)
+- <strong>Digital Identity</strong> (KYC/AML)</p>
+<p><strong>Beispiel: Blockchain-Integration</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>1. Ethereum/ Hyperledger Connector
+2. Smart Contract Deployment
+3. Transaktions-Tracking
+4. Wallet-Management
+</code></pre></div></td></tr></table></div></p>
+<hr />
+<h2 id="best-practices-fur-advanced-low-code">Best Practices für Advanced Low Code<a class="headerlink" href="#best-practices-fur-advanced-low-code" title="Permanent link">&para;</a></h2>
+<h3 id="1-architektur-entscheidungen">1. Architektur-Entscheidungen<a class="headerlink" href="#1-architektur-entscheidungen" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Microservices</strong> statt Monolith</li>
+<li><strong>API-First</strong> Design</li>
+<li><strong>Event-Driven</strong> Architecture</li>
+<li><strong>CQRS</strong> (Command Query Responsibility Segregation)</li>
+</ul>
+<h3 id="2-performance-optimierung">2. Performance-Optimierung<a class="headerlink" href="#2-performance-optimierung" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Caching</strong> (Redis, CDN)</li>
+<li><strong>Database-Optimierung</strong> (Indexing, Partitioning)</li>
+<li><strong>Async-Processing</strong> (Message Queues)</li>
+<li><strong>Lazy-Loading</strong> für Daten</li>
+</ul>
+<h3 id="3-sicherheit">3. Sicherheit<a class="headerlink" href="#3-sicherheit" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>OWASP Top 10</strong> befolgen</li>
+<li><strong>Zero-Trust</strong> Architecture</li>
+<li><strong>Penetration Testing</strong> regelmäßig</li>
+<li><strong>Security-By-Design</strong></li>
+</ul>
+<h3 id="4-wartbarkeit">4. Wartbarkeit<a class="headerlink" href="#4-wartbarkeit" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Modularer Aufbau</strong></li>
+<li><strong>Dokumentation</strong> (API, Prozesse)</li>
+<li><strong>Versionierung</strong> (Git, Semantic Versioning)</li>
+<li><strong>CI/CD Pipeline</strong></li>
+</ul>
+<h3 id="5-user-experience">5. User Experience<a class="headerlink" href="#5-user-experience" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Mobile-First</strong> Design</li>
+<li><strong>Accessibility</strong> (WCAG 2.1)</li>
+<li><strong>Performance</strong> (Lighthouse Score &gt; 90)</li>
+<li><strong>Offline-First</strong> für mobile Apps</li>
+</ul>
+<hr />
+<h2 id="haufige-fehler-fallstricke">Häufige Fehler &amp; Fallstricke<a class="headerlink" href="#haufige-fehler-fallstricke" title="Permanent link">&para;</a></h2>
+<h3 id="fehler-1-vendor-lock-in">Fehler 1: Vendor Lock-in<a class="headerlink" href="#fehler-1-vendor-lock-in" title="Permanent link">&para;</a></h3>
+<p><strong>Problem:</strong> Abhängigkeit von einer Plattform
+<strong>Lösung:</strong>
+- API-First Ansatz
+- Datenportabilität prüfen
+- Exit-Strategie planen</p>
+<h3 id="fehler-2-skalierbarkeit-ignorieren">Fehler 2: Skalierbarkeit ignorieren<a class="headerlink" href="#fehler-2-skalierbarkeit-ignorieren" title="Permanent link">&para;</a></h3>
+<p><strong>Problem:</strong> Anwendung wird bei Wachstum unbrauchbar
+<strong>Lösung:</strong>
+- Load-Testing frühzeitig
+- Horizontale Skalierung planen
+- Database-Sharding berücksichtigen</p>
+<h3 id="fehler-3-shadow-it">Fehler 3: Shadow IT<a class="headerlink" href="#fehler-3-shadow-it" title="Permanent link">&para;</a></h3>
+<p><strong>Problem:</strong> Unkontrollierte Anwendungen
+<strong>Lösung:</strong>
+- Zentrale Governance etablieren
+- Citizen Developer Training
+- Standardisierte Plattformen</p>
+<h3 id="fehler-4-technical-debt">Fehler 4: Technical Debt<a class="headerlink" href="#fehler-4-technical-debt" title="Permanent link">&para;</a></h3>
+<p><strong>Problem:</strong> Schnelle Entwicklung, schlechte Wartbarkeit
+<strong>Lösung:</strong>
+- Code-Reviews
+- Refactoring-Plan
+- Qualitätsmetriken</p>
+<hr />
+<h2 id="zusammenfassung-checkliste">Zusammenfassung &amp; Checkliste<a class="headerlink" href="#zusammenfassung-checkliste" title="Permanent link">&para;</a></h2>
+<h3 id="wichtige-konzepte">Wichtige Konzepte<a class="headerlink" href="#wichtige-konzepte" title="Permanent link">&para;</a></h3>
+<ul>
+<li>✅ <strong>Enterprise-Integration</strong>: ERP, CRM, Legacy</li>
+<li>✅ <strong>Workflow-Automatisierung</strong>: Genehmigungen, Rules</li>
+<li>✅ <strong>Mobile Apps</strong>: Native, Hybrid, Offline</li>
+<li>✅ <strong>Microservices</strong>: API-First, Gateway</li>
+<li>✅ <strong>Governance</strong>: Zentral, Standards, Compliance</li>
+<li>✅ <strong>Advanced Features</strong>: ML, IoT, Blockchain</li>
+</ul>
+<h3 id="checkliste-fur-advanced-low-code">Checkliste für Advanced Low Code<a class="headerlink" href="#checkliste-fur-advanced-low-code" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] Enterprise-Integrationen geplant</li>
+<li>[ ] Workflow-Logik definiert</li>
+<li>[ ] Mobile-Strategie festgelegt</li>
+<li>[ ] API-First Design</li>
+<li>[ ] Governance-Framework etabliert</li>
+<li>[ ] Monitoring &amp; Alerting eingerichtet</li>
+<li>[ ] Security-Audits geplant</li>
+</ul>
+<hr />
+<h2 id="nachste-schritte">Nächste Schritte<a class="headerlink" href="#nachste-schritte" title="Permanent link">&para;</a></h2>
+<p>Nachdem du diese Grundlagen beherrschst:
+1. <strong>Low Code Certification</strong> (OutSystems, Mendix, Microsoft)
+2. <strong>Enterprise Architecture</strong> (TOGAF, Zachman)
+3. <strong>DevOps &amp; CI/CD</strong> für Low Code
+4. <strong>AI/ML Integration</strong> (AutoML, Custom Models)</p>
+<p><strong>Empfohlene Ressourcen:</strong>
+- <a href="https://www.gartner.com/">Gartner Magic Quadrant Low Code</a>
+- <a href="https://www.forrester.com/">Forrester Wave Low Code</a>
+- <a href="https://www.lowcodeacademy.com/">Low Code Academy</a>
+- <a href="https://www.outsystems.com/">OutSystems Architecture Guide</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../1/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Einführung">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Einführung
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Qualidy GmbH
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.foerde-campus.de/" target="_blank" rel="noopener" title="www.foerde-campus.de" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tracking", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
