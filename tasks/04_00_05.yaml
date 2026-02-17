@@ -1,0 +1,61 @@
+title: "Singleton Pattern - Einfache Implementierung"
+question: |-
+  Implementiere das **Singleton Pattern** in Java.
+
+  Erstelle eine Klasse `DatabaseConnection` mit folgenden Anforderungen:
+
+  1. Die Klasse soll nur **eine einzige Instanz** haben (Singleton)
+  2. Erstelle eine private statische Variable `instance` vom Typ `DatabaseConnection`
+  3. Erstelle einen **privaten Konstruktor** (verhindert direkte Instanziierung)
+  4. Erstelle eine **public statische Methode** `getInstance()`, die:
+     - Die Instanz zurückgibt, wenn sie existiert
+     - Eine neue Instanz erstellt, wenn keine existiert
+  5. Füge eine Methode `connect()` hinzu, die "Verbunden zur Datenbank" ausgibt
+
+  **Hinweis:** Das Singleton Pattern wird verwendet, um sicherzustellen, dass eine Klasse nur eine Instanz hat.
+
+solution: |-
+  ```java
+  public class DatabaseConnection {
+      // Private statische Instanzvariable
+      private static DatabaseConnection instance;
+
+      // Privater Konstruktor (verhindert direkte Instanziierung)
+      private DatabaseConnection() {
+          System.out.println("Datenbankverbindung erstellt");
+      }
+
+      // Public statische Methode zum Zugriff auf die Instanz
+      public static DatabaseConnection getInstance() {
+          if (instance == null) {
+              instance = new DatabaseConnection();
+          }
+          return instance;
+      }
+
+      // Methode zur Verbindung
+      public void connect() {
+          System.out.println("Verbunden zur Datenbank");
+      }
+  }
+
+  // Verwendung
+  public class Main {
+      public static void main(String[] args) {
+          DatabaseConnection db1 = DatabaseConnection.getInstance();
+          DatabaseConnection db2 = DatabaseConnection.getInstance();
+
+          db1.connect();  // Beide zeigen dieselbe Instanz
+          db2.connect();
+
+          System.out.println("db1 == db2: " + (db1 == db2)); // true
+      }
+  }
+  ```
+tip: |-
+  - Denke daran, dass der Konstruktor **privat** sein muss
+  - Die Instanzvariable muss **static** sein
+  - Die `getInstance()`-Methode muss **public static** sein
+  - Die Instanz wird nur beim ersten Aufruf erstellt (Lazy Initialization)
+difficulty: 2
+solution_video: null

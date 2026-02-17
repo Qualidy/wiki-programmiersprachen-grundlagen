@@ -1,0 +1,105 @@
+title: "Observer Pattern - Benachrichtigungssystem"
+question: |-
+  Implementiere das **Observer Pattern** in Java.
+
+  Erstelle ein einfaches Benachrichtigungssystem für einen Wetterdienst:
+
+  1. Erstelle ein **Interface** `Observer` mit:
+     - Eine Methode `update(String message)`
+
+  2. Erstelle eine **abstrakte Klasse** `Subject` mit:
+     - Eine private Liste von Observern
+     - Eine Methode `addObserver(Observer observer)`
+     - Eine Methode `removeObserver(Observer observer)`
+     - Eine Methode `notifyObservers(String message)`
+
+  3. Erstelle eine **konkrete Klasse** `WetterStation` die von `Subject` erbt:
+     - Eine Methode `setzeWetter(String wetter)` die alle Observer benachrichtigt
+
+  4. Erstelle zwei **konkrete Observer-Klassen**:
+     - `Smartphone` mit `update()`, das "Smartphone: Wetter geändert zu: [message]" ausgibt
+     - `Webseite` mit `update()`, das "Webseite: Wetter geändert zu: [message]" ausgibt
+
+  5. Erstelle eine `Main`-Klasse, die das System demonstriert
+
+solution: |-
+  ```java
+  import java.util.ArrayList;
+  import java.util.List;
+
+  // Observer-Interface
+  interface Observer {
+      void update(String message);
+  }
+
+  // Subject (Observable) - Basis-Klasse
+  abstract class Subject {
+      private List<Observer> observers = new ArrayList<>();
+
+      public void addObserver(Observer observer) {
+          observers.add(observer);
+      }
+
+      public void removeObserver(Observer observer) {
+          observers.remove(observer);
+      }
+
+      public void notifyObservers(String message) {
+          for (Observer observer : observers) {
+              observer.update(message);
+          }
+      }
+  }
+
+  // Konkrete Subject-Klasse
+  class WetterStation extends Subject {
+      public void setzeWetter(String wetter) {
+          System.out.println("Wetterstation: Wetter wird aktualisiert zu: " + wetter);
+          notifyObservers(wetter);
+      }
+  }
+
+  // Konkrete Observer-Klassen
+  class Smartphone implements Observer {
+      @Override
+      public void update(String message) {
+          System.out.println("Smartphone: Wetter geändert zu: " + message);
+      }
+  }
+
+  class Webseite implements Observer {
+      @Override
+      public void update(String message) {
+          System.out.println("Webseite: Wetter geändert zu: " + message);
+      }
+  }
+
+  // Verwendung
+  public class Main {
+      public static void main(String[] args) {
+          WetterStation wetterStation = new WetterStation();
+
+          Smartphone smartphone = new Smartphone();
+          Webseite webseite = new Webseite();
+
+          wetterStation.addObserver(smartphone);
+          wetterStation.addObserver(webseite);
+
+          wetterStation.setzeWetter("Sonnig");
+          System.out.println("---");
+          wetterStation.setzeWetter("Regnerisch");
+
+          // Observer entfernen
+          wetterStation.removeObserver(smartphone);
+          System.out.println("---");
+          wetterStation.setzeWetter("Bewölkt");
+      }
+  }
+  ```
+tip: |-
+  - Observer Pattern wird für Publish-Subscribe verwendet
+  - Subject verwaltet eine Liste von Observern
+  - Bei Änderungen werden alle Observer benachrichtigt
+  - Observer können dynamisch hinzugefügt/entfernt werden
+difficulty: 3
+solution_video: null

@@ -1,0 +1,91 @@
+title: "Factory Pattern - Objekterstellung"
+question: |-
+  Implementiere das **Factory Pattern** in Java.
+
+  Erstelle ein einfaches System zur Erstellung von Fahrzeugen:
+
+  1. Erstelle eine **abstrakte Klasse** `Fahrzeug` mit:
+     - Eine abstrakte Methode `fahre()`
+     - Eine konkrete Methode `getInfo()` die den Klassennamen zurückgibt
+
+  2. Erstelle zwei **konkrete Klassen**:
+     - `Auto` mit der Methode `fahre()`, die "Auto fährt" ausgibt
+     - `Motorrad` mit der Methode `fahre()`, die "Motorrad fährt" ausgibt
+
+  3. Erstelle eine **Factory-Klasse** `FahrzeugFactory` mit:
+     - Eine statische Methode `erstelleFahrzeug(String typ)`
+     - Die Methode soll ein `Auto` zurückgeben, wenn typ="auto" ist
+     - Die Methode soll ein `Motorrad` zurückgeben, wenn typ="motorrad" ist
+     - Ansonsten `null` zurückgeben
+
+  4. Erstelle eine `Main`-Klasse, die die Factory verwendet
+
+solution: |-
+  ```java
+  // Abstrakte Basis-Klasse
+  abstract class Fahrzeug {
+      public abstract void fahre();
+
+      public String getInfo() {
+          return "Ich bin ein: " + this.getClass().getSimpleName();
+      }
+  }
+
+  // Konkrete Klasse Auto
+  class Auto extends Fahrzeug {
+      @Override
+      public void fahre() {
+          System.out.println("Auto fährt auf der Straße");
+      }
+  }
+
+  // Konkrete Klasse Motorrad
+  class Motorrad extends Fahrzeug {
+      @Override
+      public void fahre() {
+          System.out.println("Motorrad fährt auf der Straße");
+      }
+  }
+
+  // Factory-Klasse
+  class FahrzeugFactory {
+      public static Fahrzeug erstelleFahrzeug(String typ) {
+          if (typ == null) {
+              return null;
+          }
+          switch (typ.toLowerCase()) {
+              case "auto":
+                  return new Auto();
+              case "motorrad":
+                  return new Motorrad();
+              default:
+                  return null;
+          }
+      }
+  }
+
+  // Verwendung
+  public class Main {
+      public static void main(String[] args) {
+          Fahrzeug auto = FahrzeugFactory.erstelleFahrzeug("auto");
+          Fahrzeug motorrad = FahrzeugFactory.erstelleFahrzeug("motorrad");
+
+          if (auto != null) {
+              System.out.println(auto.getInfo());
+              auto.fahre();
+          }
+
+          if (motorrad != null) {
+              System.out.println(motorrad.getInfo());
+              motorrad.fahre();
+          }
+      }
+  }
+  ```
+tip: |-
+  - Die abstrakte Klasse definiert das gemeinsame Interface
+  - Die Factory kapselt die Erstellungslogik
+  - Der Client (Main) muss die konkreten Klassen nicht kennen
+  - Nutze `switch` oder `if-else` für die Typ-Entscheidung
+difficulty: 3
+solution_video: null

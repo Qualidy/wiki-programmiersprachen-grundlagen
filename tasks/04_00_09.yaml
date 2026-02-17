@@ -1,0 +1,82 @@
+title: "Adapter Pattern - Kompatibilität"
+question: |-
+  Implementiere das **Adapter Pattern** in Java.
+
+  Erstelle ein System, das einen alten Dienst mit einer neuen Schnittstelle verbindet:
+
+  1. Erstelle eine **alte Klasse** `AlteDatenbank` mit:
+     - Einer Methode `holeDaten()`, die einen String zurückgibt
+     - Die Methode gibt "Alte Daten aus Datenbank" zurück
+
+  2. Erstelle ein **neues Interface** `NeueDatenquelle` mit:
+     - Einer Methode `ladeDaten()`, die einen String zurückgibt
+
+  3. Erstelle einen **Adapter** `DatenbankAdapter` der:
+     - Das Interface `NeueDatenquelle` implementiert
+     - Eine Instanz von `AlteDatenbank` enthält
+     - Die Methode `ladeDaten()` implementiert, die die alte Methode `holeDaten()` aufruft
+
+  4. Erstelle eine `Main`-Klasse, die den Adapter verwendet
+
+solution: |-
+  ```java
+  // Alte Klasse (Adaptee)
+  class AlteDatenbank {
+      public String holeDaten() {
+          return "Alte Daten aus Datenbank";
+      }
+  }
+
+  // Neues Interface (Target)
+  interface NeueDatenquelle {
+      String ladeDaten();
+  }
+
+  // Adapter
+  class DatenbankAdapter implements NeueDatenquelle {
+      private AlteDatenbank alteDatenbank;
+
+      public DatenbankAdapter(AlteDatenbank alteDatenbank) {
+          this.alteDatenbank = alteDatenbank;
+      }
+
+      @Override
+      public String ladeDaten() {
+          // Adapter übersetzt den Aufruf
+          return alteDatenbank.holeDaten();
+      }
+  }
+
+  // Neue Klasse, die das neue Interface verwendet
+  class DatenVerarbeiter {
+      public void verarbeiteDaten(NeueDatenquelle datenquelle) {
+          String daten = datenquelle.ladeDaten();
+          System.out.println("Verarbeite: " + daten);
+      }
+  }
+
+  // Verwendung
+  public class Main {
+      public static void main(String[] args) {
+          // Alte Datenbank
+          AlteDatenbank alteDB = new AlteDatenbank();
+
+          // Adapter erstellen
+          NeueDatenquelle adapter = new DatenbankAdapter(alteDB);
+
+          // Neue Klasse verwendet den Adapter
+          DatenVerarbeiter verarbeiter = new DatenVerarbeiter();
+          verarbeiter.verarbeiteDaten(adapter);
+
+          // Direkter Aufruf des Adapters
+          System.out.println("Adapter liefert: " + adapter.ladeDaten());
+      }
+  }
+  ```
+tip: |-
+  - Adapter Pattern ermöglicht Kompatibilität zwischen unterschiedlichen Interfaces
+  - Der Adapter übersetzt Aufrufe von einem Interface zum anderen
+  - Nützlich für Migration von alten zu neuen Systemen
+  - Der Client muss nicht wissen, dass ein Adapter verwendet wird
+difficulty: 2
+solution_video: null

@@ -1,0 +1,99 @@
+title: "Strategy Pattern - Zahlungsmethoden"
+question: |-
+  Implementiere das **Strategy Pattern** in Java.
+
+  Erstelle ein System für verschiedene Zahlungsmethoden:
+
+  1. Erstelle ein **Interface** `Zahlungsstrategie` mit:
+     - Eine Methode `zahle(double betrag)`
+
+  2. Erstelle **drei konkrete Strategie-Klassen**:
+     - `Kreditkarte` mit `zahle()`, die "Zahle [betrag] € mit Kreditkarte" ausgibt
+     - `PayPal` mit `zahle()`, die "Zahle [betrag] € mit PayPal" ausgibt
+     - `Barzahlung` mit `zahle()`, die "Zahle [betrag] € bar" ausgibt
+
+  3. Erstelle eine **Kontext-Klasse** `Warenkorb` mit:
+     - Einem Attribut `strategie` vom Typ `Zahlungsstrategie`
+     - Einer Methode `setzeStrategie(Zahlungsstrategie strategie)`
+     - Einer Methode `bezahlen(double betrag)` die die aktuelle Strategie verwendet
+
+  4. Erstelle eine `Main`-Klasse, die demonstriert, wie die Strategie gewechselt werden kann
+
+solution: |-
+  ```java
+  // Strategy-Interface
+  interface Zahlungsstrategie {
+      void zahle(double betrag);
+  }
+
+  // Konkrete Strategien
+  class Kreditkarte implements Zahlungsstrategie {
+      @Override
+      public void zahle(double betrag) {
+          System.out.printf("Zahle %.2f € mit Kreditkarte%n", betrag);
+      }
+  }
+
+  class PayPal implements Zahlungsstrategie {
+      @Override
+      public void zahle(double betrag) {
+          System.out.printf("Zahle %.2f € mit PayPal%n", betrag);
+      }
+  }
+
+  class Barzahlung implements Zahlungsstrategie {
+      @Override
+      public void zahle(double betrag) {
+          System.out.printf("Zahle %.2f € bar%n", betrag);
+      }
+  }
+
+  // Kontext-Klasse
+  class Warenkorb {
+      private Zahlungsstrategie strategie;
+
+      public void setzeStrategie(Zahlungsstrategie strategie) {
+          this.strategie = strategie;
+          System.out.println("Zahlungsmethode gewechselt zu: " +
+              strategie.getClass().getSimpleName());
+      }
+
+      public void bezahlen(double betrag) {
+          if (strategie != null) {
+              strategie.zahle(betrag);
+          } else {
+              System.out.println("Keine Zahlungsmethode ausgewählt!");
+          }
+      }
+  }
+
+  // Verwendung
+  public class Main {
+      public static void main(String[] args) {
+          Warenkorb warenkorb = new Warenkorb();
+
+          // Erste Zahlung mit Kreditkarte
+          warenkorb.setzeStrategie(new Kreditkarte());
+          warenkorb.bezahlen(99.99);
+
+          System.out.println("---");
+
+          // Zweite Zahlung mit PayPal
+          warenkorb.setzeStrategie(new PayPal());
+          warenkorb.bezahlen(49.50);
+
+          System.out.println("---");
+
+          // Dritte Zahlung bar
+          warenkorb.setzeStrategie(new Barzahlung());
+          warenkorb.bezahlen(10.00);
+      }
+  }
+  ```
+tip: |-
+  - Strategy Pattern erlaubt Austausch von Algorithmen zur Laufzeit
+  - Die Strategie wird als Interface definiert
+  - Der Kontext (Warenkorb) verwendet eine Strategie-Instanz
+  - Verschiedene Strategien können leicht hinzugefügt werden
+difficulty: 3
+solution_video: null
