@@ -29,6 +29,8 @@ nav:
     - Kontrollstrukturen: content/Java_Grundlagen/2.md
     - Methoden & Funktionen: content/Java_Grundlagen/3.md
     - Arrays & Collections: content/Java_Grundlagen/4.md
+    - Design Patterns Übung: content/Java_Grundlagen/5.md
+    - Design Patterns Lösung: content/Java_Grundlagen/6.md
   - Java Aufbau:
     - Streams & Lambdas: content/Java_Aufbau/1.md
     - Collections: content/Java_Aufbau/2.md
