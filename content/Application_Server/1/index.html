@@ -1,0 +1,2361 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../Java_Aufbau/2/">
+      
+      
+        <link rel="next" href="../2/">
+      
+      
+      <link rel="icon" href="../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Einführung - IT-Basis - Überblick über das Web und Programmiersprachen</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/logo.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/grid.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/video_admonition.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/python_tutor_admonition.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/mermaid.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/cd.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#application-server-1-einfuhrung-grundlagen" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="IT-Basis - Überblick über das Web und Programmiersprachen" class="md-header__button md-logo" aria-label="IT-Basis - Überblick über das Web und Programmiersprachen" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IT-Basis - Überblick über das Web und Programmiersprachen
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Einführung
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="IT-Basis - Überblick über das Web und Programmiersprachen" class="md-nav__button md-logo" aria-label="IT-Basis - Überblick über das Web und Programmiersprachen" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    IT-Basis - Überblick über das Web und Programmiersprachen
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    HTML CSS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            HTML CSS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HTML_CSS/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Einführung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HTML_CSS/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HTML-Elemente
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HTML_CSS/3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Attribute & Formulare
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HTML_CSS/4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CSS Fundamentals
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HTML_CSS/5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CSS Layout
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HTML_CSS/6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Accessibility
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HTML_CSS/7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übungsaufgabe
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    JavaScript
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            JavaScript
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Variablen & Operatoren
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kontrollstrukturen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DOM & Events
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Async & APIs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Arrays & Objects
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Best Practices & Patterns
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übungsaufgabe (Simulation)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    XML
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            XML
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../XML/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Syntax & Struktur
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../XML/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DTD & Schema
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../XML/3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    XPath & XSLT
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../XML/4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Erweiterte Abfragen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Java Grundlagen
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Java Grundlagen
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP_Introduction/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Objektorientierung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java_Grundlagen/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setup & Syntax
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java_Grundlagen/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kontrollstrukturen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java_Grundlagen/3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Methoden & Funktionen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java_Grundlagen/4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Arrays & Collections
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java_Grundlagen/5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Design Patterns Übung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java_Grundlagen/6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Design Patterns Lösung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Java Aufbau
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Java Aufbau
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java_Aufbau/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Streams & Lambdas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java_Aufbau/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Collections
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Application Server
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Application Server
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Einführung
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Einführung
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#einfuhrung" class="md-nav__link">
+    <span class="md-ellipsis">
+      Einführung
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#was-ist-ein-application-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      Was ist ein Application Server?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kernfunktionen-eines-application-servers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kernfunktionen eines Application Servers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apache-tomcat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apache Tomcat
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation &amp; Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#konfiguration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Konfiguration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deployment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#erste-webanwendung" class="md-nav__link">
+    <span class="md-ellipsis">
+      Erste Webanwendung
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#praktische-beispiele" class="md-nav__link">
+    <span class="md-ellipsis">
+      Praktische Beispiele
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#haufige-fehler-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Häufige Fehler &amp; Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zusammenfassung-checkliste" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zusammenfassung &amp; Checkliste
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nachste-schritte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nächste Schritte
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Konfiguration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Low Code
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Low Code
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Low_Code/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Einführung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Low_Code/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Advanced
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#einfuhrung" class="md-nav__link">
+    <span class="md-ellipsis">
+      Einführung
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#was-ist-ein-application-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      Was ist ein Application Server?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kernfunktionen-eines-application-servers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kernfunktionen eines Application Servers
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apache-tomcat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apache Tomcat
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installation-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Installation &amp; Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#konfiguration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Konfiguration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Deployment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#erste-webanwendung" class="md-nav__link">
+    <span class="md-ellipsis">
+      Erste Webanwendung
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#praktische-beispiele" class="md-nav__link">
+    <span class="md-ellipsis">
+      Praktische Beispiele
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#haufige-fehler-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Häufige Fehler &amp; Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zusammenfassung-checkliste" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zusammenfassung &amp; Checkliste
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nachste-schritte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nächste Schritte
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="application-server-1-einfuhrung-grundlagen">Application Server 1 – Einführung &amp; Grundlagen<a class="headerlink" href="#application-server-1-einfuhrung-grundlagen" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Lernziele</p>
+<p>Nach diesem Kapitel kannst du …</p>
+<ul>
+<li>Was ein <strong>Application Server</strong> ist und wofür er verwendet wird.</li>
+<li>Die <strong>Funktionen</strong> eines Application Servers verstehen.</li>
+<li><strong>Apache Tomcat</strong> als Beispiel-Server kennenlernen.</li>
+<li>Eine einfache <strong>Webanwendung</strong> deployen.</li>
+<li>Die <strong>Architektur</strong> von Webanwendungen verstehen.</li>
+</ul>
+</div>
+<hr />
+<h2 id="einfuhrung">Einführung<a class="headerlink" href="#einfuhrung" title="Permanent link">&para;</a></h2>
+<p>Ein <strong>Application Server</strong> ist eine Software, die als Plattform für die Ausführung von <strong>Anwendungen</strong> dient. Im Web-Kontext sind das typischerweise <strong>Webanwendungen</strong>, die über HTTP/HTTPS kommunizieren.</p>
+<p><img align="left" alt="Server Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Apache_Tomcat_logo.svg/640px-Apache_Tomcat_logo.svg.png" width="300px" /></p>
+<p><strong>Wichtige Fakten:</strong>
+- Application Server sind <strong>Middleware</strong> zwischen Betriebssystem und Anwendung
+- Sie bieten <strong>Dienste</strong> wie Sicherheit, Transaktionen, Datenbankzugriff
+- Sie können <strong>mehrere Anwendungen</strong> gleichzeitig hosten
+- Sie sind <strong>plattformunabhängig</strong> (Java-basiert)</p>
+<p><strong>Anwendungsbereiche:</strong>
+- Enterprise-Anwendungen (Banking, Versicherungen)
+- Webanwendungen (E-Commerce, Portale)
+- REST-Services (APIs)
+- Microservices-Architekturen</p>
+<hr />
+<h2 id="was-ist-ein-application-server">Was ist ein Application Server?<a class="headerlink" href="#was-ist-ein-application-server" title="Permanent link">&para;</a></h2>
+<h3 id="definition">Definition<a class="headerlink" href="#definition" title="Permanent link">&para;</a></h3>
+<p>Ein Application Server ist eine <strong>Laufzeitumgebung</strong> für Softwareanwendungen, die:
+- <strong>Ressourcen</strong> verwaltet (Speicher, Threads, Verbindungen)
+- <strong>Dienste</strong> bereitstellt (Sicherheit, Transaktionen, Persistenz)
+- <strong>Skalierbarkeit</strong> ermöglicht (Load Balancing, Clustering)
+- <strong>Monitoring</strong> und Management bietet</p>
+<h3 id="unterschiede-zu-web-server">Unterschiede zu Web Server<a class="headerlink" href="#unterschiede-zu-web-server" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Aspekt</th>
+<th>Web Server</th>
+<th>Application Server</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Zweck</strong></td>
+<td>Statische Inhalte (HTML, CSS, Bilder)</td>
+<td>Dynamische Inhalte (Java, PHP, .NET)</td>
+</tr>
+<tr>
+<td><strong>Beispiele</strong></td>
+<td>Apache, Nginx, IIS</td>
+<td>Tomcat, JBoss, WebLogic, GlassFish</td>
+</tr>
+<tr>
+<td><strong>Sprachen</strong></td>
+<td>HTML, CSS, JavaScript</td>
+<td>Java, Python, PHP, C#</td>
+</tr>
+<tr>
+<td><strong>Datenbank</strong></td>
+<td>Kein direkter Zugriff</td>
+<td>Direkter Datenbankzugriff</td>
+</tr>
+<tr>
+<td><strong>Skalierung</strong></td>
+<td>Einfach</td>
+<td>Komplexer</td>
+</tr>
+</tbody>
+</table>
+<h3 id="kombination-web-server-application-server">Kombination: Web Server + Application Server<a class="headerlink" href="#kombination-web-server-application-server" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Browser → Web Server (Apache/Nginx) → Application Server (Tomcat) → Anwendung
+</code></pre></div></td></tr></table></div>
+<hr />
+<h2 id="kernfunktionen-eines-application-servers">Kernfunktionen eines Application Servers<a class="headerlink" href="#kernfunktionen-eines-application-servers" title="Permanent link">&para;</a></h2>
+<h3 id="1-lifecycle-management">1. Lifecycle Management<a class="headerlink" href="#1-lifecycle-management" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Starten, Stoppen, Neustarten von Anwendungen</li>
+<li>Automatisches Laden bei Server-Start</li>
+<li>Hot-Deployment (Anwendungen ohne Neustart aktualisieren)</li>
+</ul>
+<h3 id="2-ressourcen-management">2. Ressourcen-Management<a class="headerlink" href="#2-ressourcen-management" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Thread-Pooling</strong>: Verwaltung von Arbeits-Threads</li>
+<li><strong>Connection-Pooling</strong>: Verwaltung von Datenbank-Verbindungen</li>
+<li><strong>Speichermanagement</strong>: Garbage Collection optimieren</li>
+</ul>
+<h3 id="3-sicherheit">3. Sicherheit<a class="headerlink" href="#3-sicherheit" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Authentication</strong>: Benutzerauthentifizierung</li>
+<li><strong>Authorization</strong>: Berechtigungsverwaltung (Rollen)</li>
+<li><strong>SSL/TLS</strong>: Verschlüsselung der Kommunikation</li>
+<li><strong>Session-Management</strong>: Sichere Session-Verwaltung</li>
+</ul>
+<h3 id="4-transaktionsmanagement">4. Transaktionsmanagement<a class="headerlink" href="#4-transaktionsmanagement" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>ACID-Prinzipien</strong> (Atomicity, Consistency, Isolation, Durability)</li>
+<li><strong>Distributed Transactions</strong> über mehrere Ressourcen</li>
+<li><strong>Rollback</strong> bei Fehlern</li>
+</ul>
+<h3 id="5-datenbankzugriff">5. Datenbankzugriff<a class="headerlink" href="#5-datenbankzugriff" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>JDBC</strong> (Java Database Connectivity)</li>
+<li><strong>Connection-Pooling</strong> für Performance</li>
+<li><strong>ORM-Integration</strong> (Hibernate, JPA)</li>
+</ul>
+<h3 id="6-web-services">6. Web-Services<a class="headerlink" href="#6-web-services" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>REST-APIs</strong> (JAX-RS)</li>
+<li><strong>SOAP-Services</strong> (JAX-WS)</li>
+<li><strong>JSON/XML-Verarbeitung</strong></li>
+</ul>
+<h3 id="7-monitoring-management">7. Monitoring &amp; Management<a class="headerlink" href="#7-monitoring-management" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>JMX</strong> (Java Management Extensions)</li>
+<li><strong>Logging</strong> und Tracing</li>
+<li><strong>Performance-Metriken</strong></li>
+<li><strong>Admin-Konsole</strong></li>
+</ul>
+<hr />
+<h2 id="apache-tomcat">Apache Tomcat<a class="headerlink" href="#apache-tomcat" title="Permanent link">&para;</a></h2>
+<h3 id="was-ist-tomcat">Was ist Tomcat?<a class="headerlink" href="#was-ist-tomcat" title="Permanent link">&para;</a></h3>
+<p><strong>Apache Tomcat</strong> (auch bekannt als <strong>Jakarta Tomcat</strong>) ist der <strong>populärste Open-Source Application Server</strong> für Java Webanwendungen.</p>
+<p><strong>Wichtige Fakten:</strong>
+- Entwickelt von Apache Software Foundation
+- Implementiert <strong>Jakarta Servlet</strong>, <strong>Jakarta Server Pages (JSP)</strong>, <strong>Jakarta WebSocket</strong>
+- <strong>Kein vollständiger Java EE/Jakarta EE Server</strong> (nur Web-Container)
+- Leichtgewichtig und einfach zu konfigurieren
+- Kostenlos und Open-Source</p>
+<p><strong>Versionen:</strong>
+- <strong>Tomcat 10.x</strong> (aktuell, Jakarta EE 9/10)
+- <strong>Tomcat 9.x</strong> (Java EE 8)
+- <strong>Tomcat 8.x</strong> (Java EE 7)</p>
+<h3 id="architektur">Architektur<a class="headerlink" href="#architektur" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>Client (Browser) → Connector (HTTP) → Container (Servlet Engine)
+                                      ↓
+                              → Servlets / JSP
+                                      ↓
+                              → Datenbank / externe Ressourcen
+</code></pre></div></td></tr></table></div>
+<p><strong>Komponenten:</strong>
+- <strong>Connector</strong>: Empfängt HTTP-Anfragen (HTTP/1.1, HTTP/2, AJP)
+- <strong>Container</strong>: Verarbeitet Anfragen (Servlet Engine)
+- <strong>Servlet</strong>: Java-Klasse, die HTTP-Anfragen verarbeitet
+- <strong>JSP</strong>: Java Server Pages (HTML mit Java-Code)</p>
+<hr />
+<h2 id="installation-setup">Installation &amp; Setup<a class="headerlink" href="#installation-setup" title="Permanent link">&para;</a></h2>
+<h3 id="schritt-1-download">Schritt 1: Download<a class="headerlink" href="#schritt-1-download" title="Permanent link">&para;</a></h3>
+<p>Lade Tomcat von <a href="https://tomcat.apache.org/">tomcat.apache.org</a> herunter:
+- Wähle die aktuelle Version (z. B. Tomcat 10.1.x)
+- Wähle "Core" (ZIP-Datei)</p>
+<h3 id="schritt-2-entpacken">Schritt 2: Entpacken<a class="headerlink" href="#schritt-2-entpacken" title="Permanent link">&para;</a></h3>
+<p>Entpacke die ZIP-Datei in ein Verzeichnis, z. B.:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>C:\Programme\apache-tomcat-10.1.x\
+</code></pre></div></td></tr></table></div></p>
+<h3 id="schritt-3-verzeichnisstruktur">Schritt 3: Verzeichnisstruktur<a class="headerlink" href="#schritt-3-verzeichnisstruktur" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code>apache-tomcat-10.1.x/
+├── bin/           # Start/Stop-Skripte
+├── conf/          # Konfigurationsdateien
+├── lib/           # Bibliotheken
+├── logs/          # Log-Dateien
+├── temp/          # Temporäre Dateien
+├── webapps/       # Anwendungen werden hier deployed
+└── work/          # Kompilierte JSPs
+</code></pre></div></td></tr></table></div>
+<h3 id="schritt-4-starten">Schritt 4: Starten<a class="headerlink" href="#schritt-4-starten" title="Permanent link">&para;</a></h3>
+<p><strong>Windows:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>bin<span class="se">\s</span>tartup.bat
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Linux/Mac:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>./bin/startup.sh
+</code></pre></div></td></tr></table></div></p>
+<h3 id="schritt-5-prufen">Schritt 5: Prüfen<a class="headerlink" href="#schritt-5-prufen" title="Permanent link">&para;</a></h3>
+<p>Öffne den Browser und gehe zu:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>http://localhost:8080
+</code></pre></div></td></tr></table></div></p>
+<p>Du solltest die <strong>Tomcat-Startseite</strong> sehen.</p>
+<h3 id="schritt-6-stoppen">Schritt 6: Stoppen<a class="headerlink" href="#schritt-6-stoppen" title="Permanent link">&para;</a></h3>
+<p><strong>Windows:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>bin<span class="se">\s</span>hutdown.bat
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Linux/Mac:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>./bin/shutdown.sh
+</code></pre></div></td></tr></table></div></p>
+<hr />
+<h2 id="konfiguration">Konfiguration<a class="headerlink" href="#konfiguration" title="Permanent link">&para;</a></h2>
+<h3 id="server-port-andern">Server-Port ändern<a class="headerlink" href="#server-port-andern" title="Permanent link">&para;</a></h3>
+<p>Datei: <code>conf/server.xml</code></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">&lt;Connector</span><span class="w"> </span><span class="na">port=</span><span class="s">&quot;8080&quot;</span><span class="w"> </span><span class="na">protocol=</span><span class="s">&quot;HTTP/1.1&quot;</span>
+<span class="w">           </span><span class="na">connectionTimeout=</span><span class="s">&quot;20000&quot;</span>
+<span class="w">           </span><span class="na">redirectPort=</span><span class="s">&quot;8443&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>Ändern zu:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">&lt;Connector</span><span class="w"> </span><span class="na">port=</span><span class="s">&quot;8081&quot;</span><span class="w"> </span><span class="na">protocol=</span><span class="s">&quot;HTTP/1.1&quot;</span><span class="w"> </span><span class="err">...</span><span class="w"> </span><span class="nt">/&gt;</span>
+</code></pre></div></td></tr></table></div></p>
+<h3 id="admin-berechtigungen">Admin-Berechtigungen<a class="headerlink" href="#admin-berechtigungen" title="Permanent link">&para;</a></h3>
+<p>Datei: <code>conf/tomcat-users.xml</code></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">&lt;role</span><span class="w"> </span><span class="na">rolename=</span><span class="s">&quot;manager-gui&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;role</span><span class="w"> </span><span class="na">rolename=</span><span class="s">&quot;admin-gui&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;user</span><span class="w"> </span><span class="na">username=</span><span class="s">&quot;admin&quot;</span><span class="w"> </span><span class="na">password=</span><span class="s">&quot;admin123&quot;</span><span class="w"> </span><span class="na">roles=</span><span class="s">&quot;manager-gui,admin-gui&quot;</span><span class="nt">/&gt;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="context-path">Context-Path<a class="headerlink" href="#context-path" title="Permanent link">&para;</a></h3>
+<p>In <code>conf/server.xml</code> oder <code>conf/Catalina/localhost/</code>:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">&lt;Context</span><span class="w"> </span><span class="na">path=</span><span class="s">&quot;/meine-app&quot;</span><span class="w"> </span><span class="na">docBase=</span><span class="s">&quot;meine-app&quot;</span><span class="w"> </span><span class="nt">/&gt;</span>
+</code></pre></div></td></tr></table></div></p>
+<hr />
+<h2 id="deployment">Deployment<a class="headerlink" href="#deployment" title="Permanent link">&para;</a></h2>
+<h3 id="1-manuelles-deployment-einfach">1. Manuelles Deployment (einfach)<a class="headerlink" href="#1-manuelles-deployment-einfach" title="Permanent link">&para;</a></h3>
+<p>Kopiere die <strong>WAR-Datei</strong> (Web Application Archive) in das <code>webapps</code>-Verzeichnis:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>cp<span class="w"> </span>meine-app.war<span class="w"> </span>/opt/tomcat/webapps/
+</code></pre></div></td></tr></table></div>
+<p>Tomcat entpackt automatisch und startet die Anwendung.</p>
+<h3 id="2-manager-interface">2. Manager-Interface<a class="headerlink" href="#2-manager-interface" title="Permanent link">&para;</a></h3>
+<p>Öffne: <code>http://localhost:8080/manager</code></p>
+<ul>
+<li><strong>Deploy</strong>: Neue Anwendung hochladen</li>
+<li><strong>Undeploy</strong>: Anwendung entfernen</li>
+<li><strong>Start/Stop</strong>: Anwendung starten/stoppen</li>
+<li><strong>Reload</strong>: Anwendung neu laden</li>
+</ul>
+<h3 id="3-auto-deployment">3. Auto-Deployment<a class="headerlink" href="#3-auto-deployment" title="Permanent link">&para;</a></h3>
+<p>In <code>conf/server.xml</code>:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">&lt;Host</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;localhost&quot;</span><span class="w"> </span><span class="na">appBase=</span><span class="s">&quot;webapps&quot;</span>
+<span class="w">      </span><span class="na">unpackWARs=</span><span class="s">&quot;true&quot;</span><span class="w"> </span><span class="na">autoDeploy=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/Host&gt;</span>
+</code></pre></div></td></tr></table></div></p>
+<hr />
+<h2 id="erste-webanwendung">Erste Webanwendung<a class="headerlink" href="#erste-webanwendung" title="Permanent link">&para;</a></h2>
+<h3 id="projektstruktur">Projektstruktur<a class="headerlink" href="#projektstruktur" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code>meine-app/
+├── src/
+│   └── main/
+│       ├── java/
+│       │   └── com/
+│       │       └── example/
+│       │           └── HelloServlet.java
+│       └── webapp/
+│           ├── WEB-INF/
+│           │   └── web.xml
+│           └── index.jsp
+├── pom.xml (Maven)
+</code></pre></div></td></tr></table></div>
+<h3 id="helloservletjava">HelloServlet.java<a class="headerlink" href="#helloservletjava" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">package</span><span class="w"> </span><span class="nn">com.example</span><span class="p">;</span>
+
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.io.*</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">jakarta.servlet.*</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">jakarta.servlet.http.*</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HelloServlet</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">HttpServlet</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">doGet</span><span class="p">(</span><span class="n">HttpServletRequest</span><span class="w"> </span><span class="n">request</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">HttpServletResponse</span><span class="w"> </span><span class="n">response</span><span class="p">)</span>
+<span class="w">            </span><span class="kd">throws</span><span class="w"> </span><span class="n">ServletException</span><span class="p">,</span><span class="w"> </span><span class="n">IOException</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="n">response</span><span class="p">.</span><span class="na">setContentType</span><span class="p">(</span><span class="s">&quot;text/html&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">PrintWriter</span><span class="w"> </span><span class="n">out</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">response</span><span class="p">.</span><span class="na">getWriter</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;&lt;html&gt;&lt;body&gt;&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;&lt;h1&gt;Hallo von Servlet!&lt;/h1&gt;&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;&lt;p&gt;Zeit: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">java</span><span class="p">.</span><span class="na">util</span><span class="p">.</span><span class="na">Date</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&lt;/p&gt;&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;&lt;/body&gt;&lt;/html&gt;&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="webxml">web.xml<a class="headerlink" href="#webxml" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;web-app</span><span class="w"> </span><span class="na">xmlns=</span><span class="s">&quot;https://jakarta.ee/xml/ns/jakartaee&quot;</span>
+<span class="w">         </span><span class="na">xmlns:xsi=</span><span class="s">&quot;http://www.w3.org/2001/XMLSchema-instance&quot;</span>
+<span class="w">         </span><span class="na">xsi:schemaLocation=</span><span class="s">&quot;https://jakarta.ee/xml/ns/jakartaee</span>
+<span class="s">                             https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd&quot;</span>
+<span class="w">         </span><span class="na">version=</span><span class="s">&quot;5.0&quot;</span><span class="nt">&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;servlet&gt;</span>
+<span class="w">        </span><span class="nt">&lt;servlet-name&gt;</span>HelloServlet<span class="nt">&lt;/servlet-name&gt;</span>
+<span class="w">        </span><span class="nt">&lt;servlet-class&gt;</span>com.example.HelloServlet<span class="nt">&lt;/servlet-class&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/servlet&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;servlet-mapping&gt;</span>
+<span class="w">        </span><span class="nt">&lt;servlet-name&gt;</span>HelloServlet<span class="nt">&lt;/servlet-name&gt;</span>
+<span class="w">        </span><span class="nt">&lt;url-pattern&gt;</span>/hello<span class="nt">&lt;/url-pattern&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/servlet-mapping&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;welcome-file-list&gt;</span>
+<span class="w">        </span><span class="nt">&lt;welcome-file&gt;</span>index.jsp<span class="nt">&lt;/welcome-file&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/welcome-file-list&gt;</span>
+<span class="nt">&lt;/web-app&gt;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="indexjsp">index.jsp<a class="headerlink" href="#indexjsp" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="k">&lt;%@</span><span class="w"> </span><span class="n">page</span><span class="w"> </span><span class="n">contentType</span><span class="o">=</span><span class="s">&quot;text/html;charset=UTF-8&quot;</span><span class="w"> </span><span class="n">language</span><span class="o">=</span><span class="s">&quot;java&quot;</span><span class="w"> </span><span class="k">%&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;head&gt;</span>
+<span class="w">    </span><span class="nt">&lt;title&gt;</span>Meine<span class="w"> </span>erste<span class="w"> </span>Webanwendung<span class="nt">&lt;/title&gt;</span>
+<span class="nt">&lt;/head&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+<span class="w">    </span><span class="nt">&lt;h1&gt;</span>Willkommen!<span class="nt">&lt;/h1&gt;</span>
+<span class="w">    </span><span class="nt">&lt;p&gt;</span>Dies<span class="w"> </span>ist<span class="w"> </span>eine<span class="w"> </span>JSP-Seite.<span class="nt">&lt;/p&gt;</span>
+<span class="w">    </span><span class="nt">&lt;a</span><span class="w"> </span><span class="na">href=</span><span class="s">&quot;hello&quot;</span><span class="nt">&gt;</span>Zum<span class="w"> </span>Servlet<span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="maven-build-pomxml">Maven-Build (pom.xml)<a class="headerlink" href="#maven-build-pomxml" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">&lt;project&gt;</span>
+<span class="w">    </span><span class="nt">&lt;modelVersion&gt;</span>4.0.0<span class="nt">&lt;/modelVersion&gt;</span>
+<span class="w">    </span><span class="nt">&lt;groupId&gt;</span>com.example<span class="nt">&lt;/groupId&gt;</span>
+<span class="w">    </span><span class="nt">&lt;artifactId&gt;</span>meine-app<span class="nt">&lt;/artifactId&gt;</span>
+<span class="w">    </span><span class="nt">&lt;version&gt;</span>1.0<span class="nt">&lt;/version&gt;</span>
+<span class="w">    </span><span class="nt">&lt;packaging&gt;</span>war<span class="nt">&lt;/packaging&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;dependencies&gt;</span>
+<span class="w">        </span><span class="nt">&lt;dependency&gt;</span>
+<span class="w">            </span><span class="nt">&lt;groupId&gt;</span>jakarta.servlet<span class="nt">&lt;/groupId&gt;</span>
+<span class="w">            </span><span class="nt">&lt;artifactId&gt;</span>jakarta.servlet-api<span class="nt">&lt;/artifactId&gt;</span>
+<span class="w">            </span><span class="nt">&lt;version&gt;</span>5.0.0<span class="nt">&lt;/version&gt;</span>
+<span class="w">            </span><span class="nt">&lt;scope&gt;</span>provided<span class="nt">&lt;/scope&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/dependency&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/dependencies&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;build&gt;</span>
+<span class="w">        </span><span class="nt">&lt;finalName&gt;</span>meine-app<span class="nt">&lt;/finalName&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/build&gt;</span>
+<span class="nt">&lt;/project&gt;</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>Build:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>mvn<span class="w"> </span>clean<span class="w"> </span>package
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Deploy:</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>cp<span class="w"> </span>target/meine-app.war<span class="w"> </span>/opt/tomcat/webapps/
+</code></pre></div></td></tr></table></div></p>
+<p><strong>Aufrufen:</strong>
+- JSP: <code>http://localhost:8080/meine-app/</code>
+- Servlet: <code>http://localhost:8080/meine-app/hello</code></p>
+<hr />
+<h2 id="praktische-beispiele">Praktische Beispiele<a class="headerlink" href="#praktische-beispiele" title="Permanent link">&para;</a></h2>
+<h3 id="beispiel-1-formular-verarbeiten">Beispiel 1: Formular verarbeiten<a class="headerlink" href="#beispiel-1-formular-verarbeiten" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// FormServlet.java</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">FormServlet</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">HttpServlet</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">doPost</span><span class="p">(</span><span class="n">HttpServletRequest</span><span class="w"> </span><span class="n">request</span><span class="p">,</span>
+<span class="w">                         </span><span class="n">HttpServletResponse</span><span class="w"> </span><span class="n">response</span><span class="p">)</span>
+<span class="w">            </span><span class="kd">throws</span><span class="w"> </span><span class="n">ServletException</span><span class="p">,</span><span class="w"> </span><span class="n">IOException</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">request</span><span class="p">.</span><span class="na">getParameter</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">email</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">request</span><span class="p">.</span><span class="na">getParameter</span><span class="p">(</span><span class="s">&quot;email&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">response</span><span class="p">.</span><span class="na">setContentType</span><span class="p">(</span><span class="s">&quot;text/html&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">PrintWriter</span><span class="w"> </span><span class="n">out</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">response</span><span class="p">.</span><span class="na">getWriter</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;&lt;html&gt;&lt;body&gt;&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;&lt;h1&gt;Daten erhalten&lt;/h1&gt;&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;&lt;p&gt;Name: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&lt;/p&gt;&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;&lt;p&gt;Email: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">email</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&lt;/p&gt;&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;&lt;/body&gt;&lt;/html&gt;&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="beispiel-2-session-management">Beispiel 2: Session-Management<a class="headerlink" href="#beispiel-2-session-management" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// SessionServlet.java</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">SessionServlet</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">HttpServlet</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">doGet</span><span class="p">(</span><span class="n">HttpServletRequest</span><span class="w"> </span><span class="n">request</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">HttpServletResponse</span><span class="w"> </span><span class="n">response</span><span class="p">)</span>
+<span class="w">            </span><span class="kd">throws</span><span class="w"> </span><span class="n">ServletException</span><span class="p">,</span><span class="w"> </span><span class="n">IOException</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="n">HttpSession</span><span class="w"> </span><span class="n">session</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">request</span><span class="p">.</span><span class="na">getSession</span><span class="p">();</span>
+
+<span class="w">        </span><span class="c1">// Session-Daten setzen</span>
+<span class="w">        </span><span class="n">session</span><span class="p">.</span><span class="na">setAttribute</span><span class="p">(</span><span class="s">&quot;benutzer&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Max&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">session</span><span class="p">.</span><span class="na">setAttribute</span><span class="p">(</span><span class="s">&quot;rolle&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Admin&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Session-ID ausgeben</span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">sessionId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">session</span><span class="p">.</span><span class="na">getId</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">response</span><span class="p">.</span><span class="na">setContentType</span><span class="p">(</span><span class="s">&quot;text/html&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">PrintWriter</span><span class="w"> </span><span class="n">out</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">response</span><span class="p">.</span><span class="na">getWriter</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;&lt;html&gt;&lt;body&gt;&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;&lt;h1&gt;Session erstellt&lt;/h1&gt;&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;&lt;p&gt;Session-ID: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">sessionId</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&lt;/p&gt;&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;&lt;/body&gt;&lt;/html&gt;&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="beispiel-3-datenbank-zugriff-jdbc">Beispiel 3: Datenbank-Zugriff (JDBC)<a class="headerlink" href="#beispiel-3-datenbank-zugriff-jdbc" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// DatabaseServlet.java</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">DatabaseServlet</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">HttpServlet</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">doGet</span><span class="p">(</span><span class="n">HttpServletRequest</span><span class="w"> </span><span class="n">request</span><span class="p">,</span>
+<span class="w">                        </span><span class="n">HttpServletResponse</span><span class="w"> </span><span class="n">response</span><span class="p">)</span>
+<span class="w">            </span><span class="kd">throws</span><span class="w"> </span><span class="n">ServletException</span><span class="p">,</span><span class="w"> </span><span class="n">IOException</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">Class</span><span class="p">.</span><span class="na">forName</span><span class="p">(</span><span class="s">&quot;com.mysql.cj.jdbc.Driver&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">Connection</span><span class="w"> </span><span class="n">conn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DriverManager</span><span class="p">.</span><span class="na">getConnection</span><span class="p">(</span>
+<span class="w">                </span><span class="s">&quot;jdbc:mysql://localhost:3306/mydb&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s">&quot;user&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="s">&quot;password&quot;</span>
+<span class="w">            </span><span class="p">);</span>
+
+<span class="w">            </span><span class="n">Statement</span><span class="w"> </span><span class="n">stmt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">conn</span><span class="p">.</span><span class="na">createStatement</span><span class="p">();</span>
+<span class="w">            </span><span class="n">ResultSet</span><span class="w"> </span><span class="n">rs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">stmt</span><span class="p">.</span><span class="na">executeQuery</span><span class="p">(</span><span class="s">&quot;SELECT * FROM users&quot;</span><span class="p">);</span>
+
+<span class="w">            </span><span class="n">response</span><span class="p">.</span><span class="na">setContentType</span><span class="p">(</span><span class="s">&quot;text/html&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">PrintWriter</span><span class="w"> </span><span class="n">out</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">response</span><span class="p">.</span><span class="na">getWriter</span><span class="p">();</span>
+
+<span class="w">            </span><span class="n">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;&lt;html&gt;&lt;body&gt;&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;&lt;h1&gt;Benutzerliste&lt;/h1&gt;&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;&lt;table border=&#39;1&#39;&gt;&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;&lt;tr&gt;&lt;th&gt;ID&lt;/th&gt;&lt;th&gt;Name&lt;/th&gt;&lt;/tr&gt;&quot;</span><span class="p">);</span>
+
+<span class="w">            </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">rs</span><span class="p">.</span><span class="na">next</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;&lt;tr&gt;&quot;</span><span class="p">);</span>
+<span class="w">                </span><span class="n">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;&lt;td&gt;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">rs</span><span class="p">.</span><span class="na">getInt</span><span class="p">(</span><span class="s">&quot;id&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&lt;/td&gt;&quot;</span><span class="p">);</span>
+<span class="w">                </span><span class="n">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;&lt;td&gt;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">rs</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&lt;/td&gt;&quot;</span><span class="p">);</span>
+<span class="w">                </span><span class="n">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;&lt;/tr&gt;&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+
+<span class="w">            </span><span class="n">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;&lt;/table&gt;&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;&lt;/body&gt;&lt;/html&gt;&quot;</span><span class="p">);</span>
+
+<span class="w">            </span><span class="n">rs</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<span class="w">            </span><span class="n">stmt</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+<span class="w">            </span><span class="n">conn</span><span class="p">.</span><span class="na">close</span><span class="p">();</span>
+
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">Exception</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ServletException</span><span class="p">(</span><span class="n">e</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<hr />
+<h2 id="haufige-fehler-best-practices">Häufige Fehler &amp; Best Practices<a class="headerlink" href="#haufige-fehler-best-practices" title="Permanent link">&para;</a></h2>
+<h3 id="fehler-1-port-bereits-belegt">Fehler 1: Port bereits belegt<a class="headerlink" href="#fehler-1-port-bereits-belegt" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Port 8080 required by Tomcat is already in use
+</code></pre></div></td></tr></table></div>
+<strong>Lösung:</strong> Ändere den Port in <code>conf/server.xml</code> oder beende den Prozess.</p>
+<h3 id="fehler-2-classnotfoundexception">Fehler 2: ClassNotFoundException<a class="headerlink" href="#fehler-2-classnotfoundexception" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>java.lang.ClassNotFoundException: com.example.HelloServlet
+</code></pre></div></td></tr></table></div>
+<strong>Lösung:</strong> Prüfe den Classpath und die <code>web.xml</code>-Konfiguration.</p>
+<h3 id="fehler-3-404-not-found">Fehler 3: 404 Not Found<a class="headerlink" href="#fehler-3-404-not-found" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>HTTP Status 404 – Not Found
+</code></pre></div></td></tr></table></div>
+<strong>Lösung:</strong> Prüfe den Context-Path und die URL-Mapping.</p>
+<h3 id="fehler-4-outofmemoryerror">Fehler 4: OutOfMemoryError<a class="headerlink" href="#fehler-4-outofmemoryerror" title="Permanent link">&para;</a></h3>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>java.lang.OutOfMemoryError: Java heap space
+</code></pre></div></td></tr></table></div>
+<strong>Lösung:</strong> Erhöhe den Heap-Speicher in <code>bin/setenv.sh</code>/<code>setenv.bat</code>:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nv">JAVA_OPTS</span><span class="o">=</span><span class="s2">&quot;-Xmx1024m -Xms512m&quot;</span>
+</code></pre></div></td></tr></table></div></p>
+<h3 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Context-Path</strong>: Kurz und aussagekräftig (<code>/shop</code>, <code>/api</code>)</li>
+<li><strong>Session-Timeout</strong>: Nicht zu lange (Standard: 30 Minuten)</li>
+<li><strong>Logging</strong>: Konfiguriere Logging (Log4j, SLF4J)</li>
+<li><strong>Sicherheit</strong>: HTTPS aktivieren, Passwörter verschlüsseln</li>
+<li><strong>Performance</strong>: Connection-Pooling verwenden</li>
+<li><strong>Monitoring</strong>: JMX und Health-Checks einrichten</li>
+</ol>
+<hr />
+<h2 id="zusammenfassung-checkliste">Zusammenfassung &amp; Checkliste<a class="headerlink" href="#zusammenfassung-checkliste" title="Permanent link">&para;</a></h2>
+<h3 id="wichtige-konzepte">Wichtige Konzepte<a class="headerlink" href="#wichtige-konzepte" title="Permanent link">&para;</a></h3>
+<ul>
+<li>✅ <strong>Application Server</strong>: Plattform für Anwendungen</li>
+<li>✅ <strong>Tomcat</strong>: Populärer Java Web-Container</li>
+<li>✅ <strong>Deployment</strong>: WAR-Dateien, Manager-Interface</li>
+<li>✅ <strong>Servlets &amp; JSP</strong>: Dynamische Webinhalte</li>
+<li>✅ <strong>Session-Management</strong>: Benutzer-Session verwalten</li>
+<li>✅ <strong>Sicherheit</strong>: Authentifizierung, Autorisierung</li>
+</ul>
+<h3 id="checkliste-fur-setup">Checkliste für Setup<a class="headerlink" href="#checkliste-fur-setup" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] Tomcat installiert und gestartet</li>
+<li>[ ] Port 8080 erreichbar</li>
+<li>[ ] Admin-Berechtigungen konfiguriert</li>
+<li>[ ] Erste Webanwendung deployed</li>
+<li>[ ] Logging konfiguriert</li>
+<li>[ ] Sicherheitseinstellungen geprüft</li>
+</ul>
+<hr />
+<h2 id="nachste-schritte">Nächste Schritte<a class="headerlink" href="#nachste-schritte" title="Permanent link">&para;</a></h2>
+<p>Nachdem du diese Grundlagen beherrschst:
+1. <strong>Tomcat-Konfiguration</strong> - Server.xml, Context.xml, Web.xml
+2. <strong>Advanced Deployment</strong> - Docker, Kubernetes
+3. <strong>Performance-Tuning</strong> - Connection-Pooling, Caching
+4. <strong>Monitoring</strong> - JMX, Prometheus, Grafana
+5. <strong>Clustering</strong> - Load Balancing, Session Replication</p>
+<p><strong>Empfohlene Ressourcen:</strong>
+- <a href="https://tomcat.apache.org/tomcat-10.1-doc/">Apache Tomcat Documentation</a>
+- <a href="https://eclipse-ee4j.github.io/jakartaee-tutorial/">Jakarta EE Tutorial</a>
+- <a href="https://www.baeldung.com/tomcat">Baeldung Tomcat</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../Java_Aufbau/2/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Collections">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Collections
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../2/" class="md-footer__link md-footer__link--next" aria-label="Next: Konfiguration">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Konfiguration
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Qualidy GmbH
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.foerde-campus.de/" target="_blank" rel="noopener" title="www.foerde-campus.de" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tracking", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

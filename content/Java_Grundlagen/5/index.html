@@ -1,0 +1,2531 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../4/">
+      
+      
+        <link rel="next" href="../6/">
+      
+      
+      <link rel="icon" href="../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Design Patterns Übung - IT-Basis - Überblick über das Web und Programmiersprachen</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/logo.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/grid.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/video_admonition.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/python_tutor_admonition.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/mermaid.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/cd.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#java-grundlagen-5-ubungsblatt-design-patterns" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="IT-Basis - Überblick über das Web und Programmiersprachen" class="md-header__button md-logo" aria-label="IT-Basis - Überblick über das Web und Programmiersprachen" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IT-Basis - Überblick über das Web und Programmiersprachen
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Design Patterns Übung
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="IT-Basis - Überblick über das Web und Programmiersprachen" class="md-nav__button md-logo" aria-label="IT-Basis - Überblick über das Web und Programmiersprachen" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    IT-Basis - Überblick über das Web und Programmiersprachen
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    HTML CSS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            HTML CSS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HTML_CSS/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Einführung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HTML_CSS/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HTML-Elemente
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HTML_CSS/3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Attribute & Formulare
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HTML_CSS/4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CSS Fundamentals
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HTML_CSS/5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CSS Layout
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HTML_CSS/6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Accessibility
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HTML_CSS/7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übungsaufgabe
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    JavaScript
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            JavaScript
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Variablen & Operatoren
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kontrollstrukturen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DOM & Events
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Async & APIs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Arrays & Objects
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Best Practices & Patterns
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übungsaufgabe (Simulation)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    XML
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            XML
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../XML/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Syntax & Struktur
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../XML/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DTD & Schema
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../XML/3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    XPath & XSLT
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../XML/4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Erweiterte Abfragen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Java Grundlagen
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Java Grundlagen
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP_Introduction/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Objektorientierung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setup & Syntax
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kontrollstrukturen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Methoden & Funktionen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Arrays & Collections
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Design Patterns Übung
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Design Patterns Übung
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#einfuhrung-in-design-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Einführung in Design Patterns
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ubungsaufgaben" class="md-nav__link">
+    <span class="md-ellipsis">
+      Übungsaufgaben
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vergleich-der-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vergleich der Patterns
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices-fur-design-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices für Design Patterns
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zusammenfassung-checkliste" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zusammenfassung &amp; Checkliste
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nachste-schritte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nächste Schritte
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#losungsblatt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lösungsblatt
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Design Patterns Lösung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Java Aufbau
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Java Aufbau
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java_Aufbau/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Streams & Lambdas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java_Aufbau/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Collections
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Application Server
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Application Server
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Application_Server/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Einführung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Application_Server/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Konfiguration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Low Code
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Low Code
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Low_Code/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Einführung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Low_Code/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Advanced
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#einfuhrung-in-design-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Einführung in Design Patterns
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ubungsaufgaben" class="md-nav__link">
+    <span class="md-ellipsis">
+      Übungsaufgaben
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vergleich-der-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vergleich der Patterns
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices-fur-design-patterns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices für Design Patterns
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zusammenfassung-checkliste" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zusammenfassung &amp; Checkliste
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nachste-schritte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nächste Schritte
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#losungsblatt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lösungsblatt
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="java-grundlagen-5-ubungsblatt-design-patterns">Java Grundlagen 5 – Übungsblatt: Design Patterns<a class="headerlink" href="#java-grundlagen-5-ubungsblatt-design-patterns" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Lernziele</p>
+<p>Nach diesem Kapitel kannst du …</p>
+<ul>
+<li><strong>Design Patterns</strong> verstehen und anwenden</li>
+<li><strong>Singleton Pattern</strong> implementieren</li>
+<li><strong>Factory Pattern</strong> zur Objekterstellung nutzen</li>
+<li><strong>Observer Pattern</strong> für Benachrichtigungen verwenden</li>
+<li><strong>Strategy Pattern</strong> für Algorithmen austauschen</li>
+<li><strong>Adapter Pattern</strong> für Kompatibilität nutzen</li>
+</ul>
+</div>
+<hr />
+<h2 id="einfuhrung-in-design-patterns">Einführung in Design Patterns<a class="headerlink" href="#einfuhrung-in-design-patterns" title="Permanent link">&para;</a></h2>
+<h3 id="was-sind-design-patterns">Was sind Design Patterns?<a class="headerlink" href="#was-sind-design-patterns" title="Permanent link">&para;</a></h3>
+<p><strong>Design Patterns</strong> sind bewährte Lösungsansätze für wiederkehrende Probleme in der Softwareentwicklung. Sie sind:</p>
+<ul>
+<li><strong>Wiederverwendbare Lösungen</strong> für häufige Probleme</li>
+<li><strong>Best Practices</strong> aus der Industrie</li>
+<li><strong>Sprachunabhängig</strong> (gilt für viele Programmiersprachen)</li>
+<li><strong>Dokumentierte Erfahrungen</strong> erfahrener Entwickler</li>
+</ul>
+<h3 id="kategorien-von-design-patterns">Kategorien von Design Patterns<a class="headerlink" href="#kategorien-von-design-patterns" title="Permanent link">&para;</a></h3>
+<p><strong>Erzeugungsmuster (Creational Patterns):</strong>
+- Singleton, Factory, Builder, Prototype
+- <strong>Ziel:</strong> Objekterstellung kontrollieren</p>
+<p><strong>Strukturmuster (Structural Patterns):</strong>
+- Adapter, Decorator, Facade, Proxy
+- <strong>Ziel:</strong> Klassen und Objekte zusammenfügen</p>
+<p><strong>Verhaltensmuster (Behavioral Patterns):</strong>
+- Observer, Strategy, Command, Template Method
+- <strong>Ziel:</strong> Kommunikation zwischen Objekten</p>
+<hr />
+<h2 id="ubungsaufgaben">Übungsaufgaben<a class="headerlink" href="#ubungsaufgaben" title="Permanent link">&para;</a></h2>
+<h3 id="aufgabe-1-singleton-pattern">Aufgabe 1: Singleton Pattern (🌶🌶)<a class="headerlink" href="#aufgabe-1-singleton-pattern" title="Permanent link">&para;</a></h3>
+<p>Implementiere das <strong>Singleton Pattern</strong> für eine Datenbankverbindung.</p>
+<p><strong>Anforderungen:</strong>
+- Klasse <code>DatabaseConnection</code> soll nur eine Instanz haben
+- Privater Konstruktor verhindert direkte Instanziierung
+- <code>getInstance()</code>-Methode gibt die einzige Instanz zurück
+- <code>connect()</code>-Methode simuliert die Verbindung</p>
+<details class="question" open="open">
+<summary>🌶🌶 Singleton Pattern - Einfache Implementierung</summary>
+<p>Implementiere das <strong>Singleton Pattern</strong> in Java.</p>
+<p>Erstelle eine Klasse <code>DatabaseConnection</code> mit folgenden Anforderungen:</p>
+<ol>
+<li>Die Klasse soll nur <strong>eine einzige Instanz</strong> haben (Singleton)</li>
+<li>Erstelle eine private statische Variable <code>instance</code> vom Typ <code>DatabaseConnection</code></li>
+<li>Erstelle einen <strong>privaten Konstruktor</strong> (verhindert direkte Instanziierung)</li>
+<li>Erstelle eine <strong>public statische Methode</strong> <code>getInstance()</code>, die:</li>
+<li>Die Instanz zurückgibt, wenn sie existiert</li>
+<li>Eine neue Instanz erstellt, wenn keine existiert</li>
+<li>Füge eine Methode <code>connect()</code> hinzu, die "Verbunden zur Datenbank" ausgibt</li>
+</ol>
+<p><strong>Hinweis:</strong> Das Singleton Pattern wird verwendet, um sicherzustellen, dass eine Klasse nur eine Instanz hat.</p>
+<details class="info">
+<summary>Tipp</summary>
+<ul>
+<li>Denke daran, dass der Konstruktor <strong>privat</strong> sein muss</li>
+<li>Die Instanzvariable muss <strong>static</strong> sein</li>
+<li>Die <code>getInstance()</code>-Methode muss <strong>public static</strong> sein</li>
+<li>Die Instanz wird nur beim ersten Aufruf erstellt (Lazy Initialization)</li>
+</ul>
+</details>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">DatabaseConnection</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Private statische Instanzvariable</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">DatabaseConnection</span><span class="w"> </span><span class="n">instance</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// Privater Konstruktor (verhindert direkte Instanziierung)</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="nf">DatabaseConnection</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Datenbankverbindung erstellt&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Public statische Methode zum Zugriff auf die Instanz</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">DatabaseConnection</span><span class="w"> </span><span class="nf">getInstance</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">instance</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">instance</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DatabaseConnection</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">instance</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="c1">// Methode zur Verbindung</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">connect</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Verbunden zur Datenbank&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Verwendung</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">DatabaseConnection</span><span class="w"> </span><span class="n">db1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DatabaseConnection</span><span class="p">.</span><span class="na">getInstance</span><span class="p">();</span>
+<span class="w">        </span><span class="n">DatabaseConnection</span><span class="w"> </span><span class="n">db2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DatabaseConnection</span><span class="p">.</span><span class="na">getInstance</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">db1</span><span class="p">.</span><span class="na">connect</span><span class="p">();</span><span class="w">  </span><span class="c1">// Beide zeigen dieselbe Instanz</span>
+<span class="w">        </span><span class="n">db2</span><span class="p">.</span><span class="na">connect</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;db1 == db2: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">db1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">db2</span><span class="p">));</span><span class="w"> </span><span class="c1">// true</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<hr />
+<h3 id="aufgabe-2-factory-pattern">Aufgabe 2: Factory Pattern (🌶🌶🌶)<a class="headerlink" href="#aufgabe-2-factory-pattern" title="Permanent link">&para;</a></h3>
+<p>Implementiere das <strong>Factory Pattern</strong> für Fahrzeug-Erstellung.</p>
+<p><strong>Anforderungen:</strong>
+- Abstrakte Klasse <code>Fahrzeug</code> mit <code>fahre()</code>-Methode
+- Konkrete Klassen <code>Auto</code> und <code>Motorrad</code>
+- Factory-Klasse <code>FahrzeugFactory</code> zur Erstellung
+- Client verwendet Factory, ohne konkrete Klassen zu kennen</p>
+<details class="question" open="open">
+<summary>🌶🌶🌶 Factory Pattern - Objekterstellung</summary>
+<p>Implementiere das <strong>Factory Pattern</strong> in Java.</p>
+<p>Erstelle ein einfaches System zur Erstellung von Fahrzeugen:</p>
+<ol>
+<li>Erstelle eine <strong>abstrakte Klasse</strong> <code>Fahrzeug</code> mit:</li>
+<li>Eine abstrakte Methode <code>fahre()</code></li>
+<li>
+<p>Eine konkrete Methode <code>getInfo()</code> die den Klassennamen zurückgibt</p>
+</li>
+<li>
+<p>Erstelle zwei <strong>konkrete Klassen</strong>:</p>
+</li>
+<li><code>Auto</code> mit der Methode <code>fahre()</code>, die "Auto fährt" ausgibt</li>
+<li>
+<p><code>Motorrad</code> mit der Methode <code>fahre()</code>, die "Motorrad fährt" ausgibt</p>
+</li>
+<li>
+<p>Erstelle eine <strong>Factory-Klasse</strong> <code>FahrzeugFactory</code> mit:</p>
+</li>
+<li>Eine statische Methode <code>erstelleFahrzeug(String typ)</code></li>
+<li>Die Methode soll ein <code>Auto</code> zurückgeben, wenn typ="auto" ist</li>
+<li>Die Methode soll ein <code>Motorrad</code> zurückgeben, wenn typ="motorrad" ist</li>
+<li>
+<p>Ansonsten <code>null</code> zurückgeben</p>
+</li>
+<li>
+<p>Erstelle eine <code>Main</code>-Klasse, die die Factory verwendet</p>
+</li>
+</ol>
+<details class="info">
+<summary>Tipp</summary>
+<ul>
+<li>Die abstrakte Klasse definiert das gemeinsame Interface</li>
+<li>Die Factory kapselt die Erstellungslogik</li>
+<li>Der Client (Main) muss die konkreten Klassen nicht kennen</li>
+<li>Nutze <code>switch</code> oder <code>if-else</code> für die Typ-Entscheidung</li>
+</ul>
+</details>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Abstrakte Basis-Klasse</span>
+<span class="kd">abstract</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Fahrzeug</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">fahre</span><span class="p">();</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getInfo</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Ich bin ein: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">getClass</span><span class="p">().</span><span class="na">getSimpleName</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Konkrete Klasse Auto</span>
+<span class="kd">class</span> <span class="nc">Auto</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Fahrzeug</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">fahre</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Auto fährt auf der Straße&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Konkrete Klasse Motorrad</span>
+<span class="kd">class</span> <span class="nc">Motorrad</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Fahrzeug</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">fahre</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Motorrad fährt auf der Straße&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Factory-Klasse</span>
+<span class="kd">class</span> <span class="nc">FahrzeugFactory</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">Fahrzeug</span><span class="w"> </span><span class="nf">erstelleFahrzeug</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">typ</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">typ</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">typ</span><span class="p">.</span><span class="na">toLowerCase</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="s">&quot;auto&quot;</span><span class="p">:</span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Auto</span><span class="p">();</span>
+<span class="w">            </span><span class="k">case</span><span class="w"> </span><span class="s">&quot;motorrad&quot;</span><span class="p">:</span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Motorrad</span><span class="p">();</span>
+<span class="w">            </span><span class="k">default</span><span class="p">:</span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Verwendung</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Fahrzeug</span><span class="w"> </span><span class="n">auto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FahrzeugFactory</span><span class="p">.</span><span class="na">erstelleFahrzeug</span><span class="p">(</span><span class="s">&quot;auto&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">Fahrzeug</span><span class="w"> </span><span class="n">motorrad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FahrzeugFactory</span><span class="p">.</span><span class="na">erstelleFahrzeug</span><span class="p">(</span><span class="s">&quot;motorrad&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">auto</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">auto</span><span class="p">.</span><span class="na">getInfo</span><span class="p">());</span>
+<span class="w">            </span><span class="n">auto</span><span class="p">.</span><span class="na">fahre</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">motorrad</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">motorrad</span><span class="p">.</span><span class="na">getInfo</span><span class="p">());</span>
+<span class="w">            </span><span class="n">motorrad</span><span class="p">.</span><span class="na">fahre</span><span class="p">();</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<hr />
+<h3 id="aufgabe-3-observer-pattern">Aufgabe 3: Observer Pattern (🌶🌶🌶)<a class="headerlink" href="#aufgabe-3-observer-pattern" title="Permanent link">&para;</a></h3>
+<p>Implementiere das <strong>Observer Pattern</strong> für ein Wetter-Benachrichtigungssystem.</p>
+<p><strong>Anforderungen:</strong>
+- Interface <code>Observer</code> mit <code>update()</code>-Methode
+- Abstrakte Klasse <code>Subject</code> für Verwaltung der Observer
+- Konkrete Klasse <code>WetterStation</code> als Subject
+- Konkrete Observer: <code>Smartphone</code> und <code>Webseite</code>
+- Observer können dynamisch hinzugefügt/entfernt werden</p>
+<details class="question" open="open">
+<summary>🌶🌶🌶 Observer Pattern - Benachrichtigungssystem</summary>
+<p>Implementiere das <strong>Observer Pattern</strong> in Java.</p>
+<p>Erstelle ein einfaches Benachrichtigungssystem für einen Wetterdienst:</p>
+<ol>
+<li>Erstelle ein <strong>Interface</strong> <code>Observer</code> mit:</li>
+<li>
+<p>Eine Methode <code>update(String message)</code></p>
+</li>
+<li>
+<p>Erstelle eine <strong>abstrakte Klasse</strong> <code>Subject</code> mit:</p>
+</li>
+<li>Eine private Liste von Observern</li>
+<li>Eine Methode <code>addObserver(Observer observer)</code></li>
+<li>Eine Methode <code>removeObserver(Observer observer)</code></li>
+<li>
+<p>Eine Methode <code>notifyObservers(String message)</code></p>
+</li>
+<li>
+<p>Erstelle eine <strong>konkrete Klasse</strong> <code>WetterStation</code> die von <code>Subject</code> erbt:</p>
+</li>
+<li>
+<p>Eine Methode <code>setzeWetter(String wetter)</code> die alle Observer benachrichtigt</p>
+</li>
+<li>
+<p>Erstelle zwei <strong>konkrete Observer-Klassen</strong>:</p>
+</li>
+<li><code>Smartphone</code> mit <code>update()</code>, das "Smartphone: Wetter geändert zu: [message]" ausgibt</li>
+<li>
+<p><code>Webseite</code> mit <code>update()</code>, das "Webseite: Wetter geändert zu: [message]" ausgibt</p>
+</li>
+<li>
+<p>Erstelle eine <code>Main</code>-Klasse, die das System demonstriert</p>
+</li>
+</ol>
+<details class="info">
+<summary>Tipp</summary>
+<ul>
+<li>Observer Pattern wird für Publish-Subscribe verwendet</li>
+<li>Subject verwaltet eine Liste von Observern</li>
+<li>Bei Änderungen werden alle Observer benachrichtigt</li>
+<li>Observer können dynamisch hinzugefügt/entfernt werden</li>
+</ul>
+</details>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span>
+<span class="normal">69</span>
+<span class="normal">70</span>
+<span class="normal">71</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">java.util.List</span><span class="p">;</span>
+
+<span class="c1">// Observer-Interface</span>
+<span class="kd">interface</span> <span class="nc">Observer</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">message</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// Subject (Observable) - Basis-Klasse</span>
+<span class="kd">abstract</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Subject</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">Observer</span><span class="o">&gt;</span><span class="w"> </span><span class="n">observers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">addObserver</span><span class="p">(</span><span class="n">Observer</span><span class="w"> </span><span class="n">observer</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">observers</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">observer</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">removeObserver</span><span class="p">(</span><span class="n">Observer</span><span class="w"> </span><span class="n">observer</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">observers</span><span class="p">.</span><span class="na">remove</span><span class="p">(</span><span class="n">observer</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">notifyObservers</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">message</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Observer</span><span class="w"> </span><span class="n">observer</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">observers</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">observer</span><span class="p">.</span><span class="na">update</span><span class="p">(</span><span class="n">message</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Konkrete Subject-Klasse</span>
+<span class="kd">class</span> <span class="nc">WetterStation</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Subject</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setzeWetter</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">wetter</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Wetterstation: Wetter wird aktualisiert zu: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">wetter</span><span class="p">);</span>
+<span class="w">        </span><span class="n">notifyObservers</span><span class="p">(</span><span class="n">wetter</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Konkrete Observer-Klassen</span>
+<span class="kd">class</span> <span class="nc">Smartphone</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Observer</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">message</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Smartphone: Wetter geändert zu: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">message</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">Webseite</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Observer</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">update</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">message</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Webseite: Wetter geändert zu: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">message</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Verwendung</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">WetterStation</span><span class="w"> </span><span class="n">wetterStation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">WetterStation</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">Smartphone</span><span class="w"> </span><span class="n">smartphone</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Smartphone</span><span class="p">();</span>
+<span class="w">        </span><span class="n">Webseite</span><span class="w"> </span><span class="n">webseite</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Webseite</span><span class="p">();</span>
+
+<span class="w">        </span><span class="n">wetterStation</span><span class="p">.</span><span class="na">addObserver</span><span class="p">(</span><span class="n">smartphone</span><span class="p">);</span>
+<span class="w">        </span><span class="n">wetterStation</span><span class="p">.</span><span class="na">addObserver</span><span class="p">(</span><span class="n">webseite</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">wetterStation</span><span class="p">.</span><span class="na">setzeWetter</span><span class="p">(</span><span class="s">&quot;Sonnig&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;---&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">wetterStation</span><span class="p">.</span><span class="na">setzeWetter</span><span class="p">(</span><span class="s">&quot;Regnerisch&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Observer entfernen</span>
+<span class="w">        </span><span class="n">wetterStation</span><span class="p">.</span><span class="na">removeObserver</span><span class="p">(</span><span class="n">smartphone</span><span class="p">);</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;---&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">wetterStation</span><span class="p">.</span><span class="na">setzeWetter</span><span class="p">(</span><span class="s">&quot;Bewölkt&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<hr />
+<h3 id="aufgabe-4-strategy-pattern">Aufgabe 4: Strategy Pattern (🌶🌶🌶)<a class="headerlink" href="#aufgabe-4-strategy-pattern" title="Permanent link">&para;</a></h3>
+<p>Implementiere das <strong>Strategy Pattern</strong> für Zahlungsmethoden.</p>
+<p><strong>Anforderungen:</strong>
+- Interface <code>Zahlungsstrategie</code> mit <code>zahle()</code>-Methode
+- Drei konkrete Strategien: <code>Kreditkarte</code>, <code>PayPal</code>, <code>Barzahlung</code>
+- Kontext-Klasse <code>Warenkorb</code> mit wechselbarer Strategie
+- Strategie kann zur Laufzeit ausgetauscht werden</p>
+<details class="question" open="open">
+<summary>🌶🌶🌶 Strategy Pattern - Zahlungsmethoden</summary>
+<p>Implementiere das <strong>Strategy Pattern</strong> in Java.</p>
+<p>Erstelle ein System für verschiedene Zahlungsmethoden:</p>
+<ol>
+<li>Erstelle ein <strong>Interface</strong> <code>Zahlungsstrategie</code> mit:</li>
+<li>
+<p>Eine Methode <code>zahle(double betrag)</code></p>
+</li>
+<li>
+<p>Erstelle <strong>drei konkrete Strategie-Klassen</strong>:</p>
+</li>
+<li><code>Kreditkarte</code> mit <code>zahle()</code>, die "Zahle [betrag] € mit Kreditkarte" ausgibt</li>
+<li><code>PayPal</code> mit <code>zahle()</code>, die "Zahle [betrag] € mit PayPal" ausgibt</li>
+<li>
+<p><code>Barzahlung</code> mit <code>zahle()</code>, die "Zahle [betrag] € bar" ausgibt</p>
+</li>
+<li>
+<p>Erstelle eine <strong>Kontext-Klasse</strong> <code>Warenkorb</code> mit:</p>
+</li>
+<li>Einem Attribut <code>strategie</code> vom Typ <code>Zahlungsstrategie</code></li>
+<li>Einer Methode <code>setzeStrategie(Zahlungsstrategie strategie)</code></li>
+<li>
+<p>Einer Methode <code>bezahlen(double betrag)</code> die die aktuelle Strategie verwendet</p>
+</li>
+<li>
+<p>Erstelle eine <code>Main</code>-Klasse, die demonstriert, wie die Strategie gewechselt werden kann</p>
+</li>
+</ol>
+<details class="info">
+<summary>Tipp</summary>
+<ul>
+<li>Strategy Pattern erlaubt Austausch von Algorithmen zur Laufzeit</li>
+<li>Die Strategie wird als Interface definiert</li>
+<li>Der Kontext (Warenkorb) verwendet eine Strategie-Instanz</li>
+<li>Verschiedene Strategien können leicht hinzugefügt werden</li>
+</ul>
+</details>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span>
+<span class="normal">53</span>
+<span class="normal">54</span>
+<span class="normal">55</span>
+<span class="normal">56</span>
+<span class="normal">57</span>
+<span class="normal">58</span>
+<span class="normal">59</span>
+<span class="normal">60</span>
+<span class="normal">61</span>
+<span class="normal">62</span>
+<span class="normal">63</span>
+<span class="normal">64</span>
+<span class="normal">65</span>
+<span class="normal">66</span>
+<span class="normal">67</span>
+<span class="normal">68</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Strategy-Interface</span>
+<span class="kd">interface</span> <span class="nc">Zahlungsstrategie</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">zahle</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">betrag</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="c1">// Konkrete Strategien</span>
+<span class="kd">class</span> <span class="nc">Kreditkarte</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Zahlungsstrategie</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">zahle</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">betrag</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;Zahle %.2f € mit Kreditkarte%n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">betrag</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">PayPal</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Zahlungsstrategie</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">zahle</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">betrag</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;Zahle %.2f € mit PayPal%n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">betrag</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">class</span> <span class="nc">Barzahlung</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Zahlungsstrategie</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">zahle</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">betrag</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;Zahle %.2f € bar%n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">betrag</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Kontext-Klasse</span>
+<span class="kd">class</span> <span class="nc">Warenkorb</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Zahlungsstrategie</span><span class="w"> </span><span class="n">strategie</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setzeStrategie</span><span class="p">(</span><span class="n">Zahlungsstrategie</span><span class="w"> </span><span class="n">strategie</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">strategie</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">strategie</span><span class="p">;</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Zahlungsmethode gewechselt zu: &quot;</span><span class="w"> </span><span class="o">+</span>
+<span class="w">            </span><span class="n">strategie</span><span class="p">.</span><span class="na">getClass</span><span class="p">().</span><span class="na">getSimpleName</span><span class="p">());</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">bezahlen</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">betrag</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">strategie</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="kc">null</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">strategie</span><span class="p">.</span><span class="na">zahle</span><span class="p">(</span><span class="n">betrag</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Keine Zahlungsmethode ausgewählt!&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Verwendung</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">Warenkorb</span><span class="w"> </span><span class="n">warenkorb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Warenkorb</span><span class="p">();</span>
+
+<span class="w">        </span><span class="c1">// Erste Zahlung mit Kreditkarte</span>
+<span class="w">        </span><span class="n">warenkorb</span><span class="p">.</span><span class="na">setzeStrategie</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Kreditkarte</span><span class="p">());</span>
+<span class="w">        </span><span class="n">warenkorb</span><span class="p">.</span><span class="na">bezahlen</span><span class="p">(</span><span class="mf">99.99</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;---&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Zweite Zahlung mit PayPal</span>
+<span class="w">        </span><span class="n">warenkorb</span><span class="p">.</span><span class="na">setzeStrategie</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">PayPal</span><span class="p">());</span>
+<span class="w">        </span><span class="n">warenkorb</span><span class="p">.</span><span class="na">bezahlen</span><span class="p">(</span><span class="mf">49.50</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;---&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Dritte Zahlung bar</span>
+<span class="w">        </span><span class="n">warenkorb</span><span class="p">.</span><span class="na">setzeStrategie</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Barzahlung</span><span class="p">());</span>
+<span class="w">        </span><span class="n">warenkorb</span><span class="p">.</span><span class="na">bezahlen</span><span class="p">(</span><span class="mf">10.00</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<hr />
+<h3 id="aufgabe-5-adapter-pattern">Aufgabe 5: Adapter Pattern (🌶🌶)<a class="headerlink" href="#aufgabe-5-adapter-pattern" title="Permanent link">&para;</a></h3>
+<p>Implementiere das <strong>Adapter Pattern</strong> für Datenbank-Kompatibilität.</p>
+<p><strong>Anforderungen:</strong>
+- Alte Klasse <code>AlteDatenbank</code> mit <code>holeDaten()</code>-Methode
+- Neues Interface <code>NeueDatenquelle</code> mit <code>ladeDaten()</code>-Methode
+- Adapter <code>DatenbankAdapter</code> übersetzt Aufrufe
+- Client verwendet neues Interface, ohne alte Klasse zu kennen</p>
+<details class="question" open="open">
+<summary>🌶🌶 Adapter Pattern - Kompatibilität</summary>
+<p>Implementiere das <strong>Adapter Pattern</strong> in Java.</p>
+<p>Erstelle ein System, das einen alten Dienst mit einer neuen Schnittstelle verbindet:</p>
+<ol>
+<li>Erstelle eine <strong>alte Klasse</strong> <code>AlteDatenbank</code> mit:</li>
+<li>Einer Methode <code>holeDaten()</code>, die einen String zurückgibt</li>
+<li>
+<p>Die Methode gibt "Alte Daten aus Datenbank" zurück</p>
+</li>
+<li>
+<p>Erstelle ein <strong>neues Interface</strong> <code>NeueDatenquelle</code> mit:</p>
+</li>
+<li>
+<p>Einer Methode <code>ladeDaten()</code>, die einen String zurückgibt</p>
+</li>
+<li>
+<p>Erstelle einen <strong>Adapter</strong> <code>DatenbankAdapter</code> der:</p>
+</li>
+<li>Das Interface <code>NeueDatenquelle</code> implementiert</li>
+<li>Eine Instanz von <code>AlteDatenbank</code> enthält</li>
+<li>
+<p>Die Methode <code>ladeDaten()</code> implementiert, die die alte Methode <code>holeDaten()</code> aufruft</p>
+</li>
+<li>
+<p>Erstelle eine <code>Main</code>-Klasse, die den Adapter verwendet</p>
+</li>
+</ol>
+<details class="info">
+<summary>Tipp</summary>
+<ul>
+<li>Adapter Pattern ermöglicht Kompatibilität zwischen unterschiedlichen Interfaces</li>
+<li>Der Adapter übersetzt Aufrufe von einem Interface zum anderen</li>
+<li>Nützlich für Migration von alten zu neuen Systemen</li>
+<li>Der Client muss nicht wissen, dass ein Adapter verwendet wird</li>
+</ul>
+</details>
+<details class="success">
+<summary>Lösung</summary>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span>
+<span class="normal">37</span>
+<span class="normal">38</span>
+<span class="normal">39</span>
+<span class="normal">40</span>
+<span class="normal">41</span>
+<span class="normal">42</span>
+<span class="normal">43</span>
+<span class="normal">44</span>
+<span class="normal">45</span>
+<span class="normal">46</span>
+<span class="normal">47</span>
+<span class="normal">48</span>
+<span class="normal">49</span>
+<span class="normal">50</span>
+<span class="normal">51</span>
+<span class="normal">52</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Alte Klasse (Adaptee)</span>
+<span class="kd">class</span> <span class="nc">AlteDatenbank</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">holeDaten</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Alte Daten aus Datenbank&quot;</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Neues Interface (Target)</span>
+<span class="kd">interface</span> <span class="nc">NeueDatenquelle</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="nf">ladeDaten</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="c1">// Adapter</span>
+<span class="kd">class</span> <span class="nc">DatenbankAdapter</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">NeueDatenquelle</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">AlteDatenbank</span><span class="w"> </span><span class="n">alteDatenbank</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">DatenbankAdapter</span><span class="p">(</span><span class="n">AlteDatenbank</span><span class="w"> </span><span class="n">alteDatenbank</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">alteDatenbank</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">alteDatenbank</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">ladeDaten</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Adapter übersetzt den Aufruf</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">alteDatenbank</span><span class="p">.</span><span class="na">holeDaten</span><span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Neue Klasse, die das neue Interface verwendet</span>
+<span class="kd">class</span> <span class="nc">DatenVerarbeiter</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">verarbeiteDaten</span><span class="p">(</span><span class="n">NeueDatenquelle</span><span class="w"> </span><span class="n">datenquelle</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">daten</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">datenquelle</span><span class="p">.</span><span class="na">ladeDaten</span><span class="p">();</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Verarbeite: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">daten</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Verwendung</span>
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// Alte Datenbank</span>
+<span class="w">        </span><span class="n">AlteDatenbank</span><span class="w"> </span><span class="n">alteDB</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">AlteDatenbank</span><span class="p">();</span>
+
+<span class="w">        </span><span class="c1">// Adapter erstellen</span>
+<span class="w">        </span><span class="n">NeueDatenquelle</span><span class="w"> </span><span class="n">adapter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DatenbankAdapter</span><span class="p">(</span><span class="n">alteDB</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Neue Klasse verwendet den Adapter</span>
+<span class="w">        </span><span class="n">DatenVerarbeiter</span><span class="w"> </span><span class="n">verarbeiter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">DatenVerarbeiter</span><span class="p">();</span>
+<span class="w">        </span><span class="n">verarbeiter</span><span class="p">.</span><span class="na">verarbeiteDaten</span><span class="p">(</span><span class="n">adapter</span><span class="p">);</span>
+
+<span class="w">        </span><span class="c1">// Direkter Aufruf des Adapters</span>
+<span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Adapter liefert: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">adapter</span><span class="p">.</span><span class="na">ladeDaten</span><span class="p">());</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+</details>
+</details>
+<hr />
+<h2 id="vergleich-der-patterns">Vergleich der Patterns<a class="headerlink" href="#vergleich-der-patterns" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Pattern</th>
+<th>Zweck</th>
+<th>Wann verwenden?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Singleton</strong></td>
+<td>Nur eine Instanz</td>
+<td>Globale Ressourcen, Logging, Konfiguration</td>
+</tr>
+<tr>
+<td><strong>Factory</strong></td>
+<td>Objekterstellung</td>
+<td>Flexible Erstellung von Objekten</td>
+</tr>
+<tr>
+<td><strong>Observer</strong></td>
+<td>Benachrichtigungen</td>
+<td>Publish-Subscribe, Event-Handling</td>
+</tr>
+<tr>
+<td><strong>Strategy</strong></td>
+<td>Algorithmen austauschen</td>
+<td>Verschiedene Zahlungsmethoden, Sortieralgorithmen</td>
+</tr>
+<tr>
+<td><strong>Adapter</strong></td>
+<td>Kompatibilität</td>
+<td>Integration alter Systeme, API-Anpassung</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="best-practices-fur-design-patterns">Best Practices für Design Patterns<a class="headerlink" href="#best-practices-fur-design-patterns" title="Permanent link">&para;</a></h2>
+<h3 id="dos">✅ Do's<a class="headerlink" href="#dos" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Verstehe das Problem</strong> bevor du ein Pattern anwendest</li>
+<li><strong>Übertreibe nicht</strong> - nicht jedes Problem braucht ein Pattern</li>
+<li><strong>Dokumentiere</strong> warum du ein Pattern gewählt hast</li>
+<li><strong>Teste</strong> die Implementierung gründlich</li>
+</ul>
+<h3 id="donts">❌ Don'ts<a class="headerlink" href="#donts" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Pattern für Pattern's sake</strong> - nur wenn es einen Nutzen hat</li>
+<li><strong>Zu komplex</strong> - einfache Lösungen bevorzugen</li>
+<li><strong>Vergessene Anpassungen</strong> - passe das Pattern an dein Problem an</li>
+</ul>
+<hr />
+<h2 id="zusammenfassung-checkliste">Zusammenfassung &amp; Checkliste<a class="headerlink" href="#zusammenfassung-checkliste" title="Permanent link">&para;</a></h2>
+<h3 id="wichtige-konzepte">Wichtige Konzepte<a class="headerlink" href="#wichtige-konzepte" title="Permanent link">&para;</a></h3>
+<ul>
+<li>✅ <strong>Design Patterns</strong> sind bewährte Lösungsansätze</li>
+<li>✅ <strong>Singleton</strong> sichert eine einzige Instanz</li>
+<li>✅ <strong>Factory</strong> kapselt Objekterstellung</li>
+<li>✅ <strong>Observer</strong> implementiert Publish-Subscribe</li>
+<li>✅ <strong>Strategy</strong> erlaubt Algorithmen-Austausch</li>
+<li>✅ <strong>Adapter</strong> ermöglicht Kompatibilität</li>
+</ul>
+<h3 id="checkliste">Checkliste<a class="headerlink" href="#checkliste" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] Singleton Pattern verstanden und implementiert</li>
+<li>[ ] Factory Pattern für flexible Erstellung verwendet</li>
+<li>[ ] Observer Pattern für Benachrichtigungen genutzt</li>
+<li>[ ] Strategy Pattern für Algorithmen-Austausch angewendet</li>
+<li>[ ] Adapter Pattern für Kompatibilität implementiert</li>
+<li>[ ] Unterschiede zwischen den Patterns erkannt</li>
+</ul>
+<hr />
+<h2 id="nachste-schritte">Nächste Schritte<a class="headerlink" href="#nachste-schritte" title="Permanent link">&para;</a></h2>
+<p>Nachdem du diese Übungen gelöst hast:</p>
+<ol>
+<li><strong>Lösungsblatt</strong> überprüfen und verstehen</li>
+<li><strong>Weitere Patterns</strong> lernen (Builder, Decorator, Facade)</li>
+<li><strong>Praxisprojekt</strong> mit mehreren Patterns kombinieren</li>
+<li><strong>Refactoring</strong> bestehender Code mit Patterns verbessern</li>
+</ol>
+<p><strong>Empfohlene Ressourcen:</strong>
+- <a href="https://en.wikipedia.org/wiki/Design_Patterns">Design Patterns - Gang of Four</a>
+- <a href="https://refactoring.guru/design-patterns">Refactoring Guru - Design Patterns</a>
+- <a href="https://java-design-patterns.com/">Java Design Patterns</a></p>
+<hr />
+<h2 id="losungsblatt">Lösungsblatt<a class="headerlink" href="#losungsblatt" title="Permanent link">&para;</a></h2>
+<p>Für die Lösungen zu diesen Übungen, siehe:
+<strong><a href="../6/">Java Grundlagen 6 – Lösungsblatt: Design Patterns</a></strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../4/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Arrays &amp; Collections">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Arrays & Collections
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../6/" class="md-footer__link md-footer__link--next" aria-label="Next: Design Patterns Lösung">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Design Patterns Lösung
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Qualidy GmbH
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.foerde-campus.de/" target="_blank" rel="noopener" title="www.foerde-campus.de" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tracking", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

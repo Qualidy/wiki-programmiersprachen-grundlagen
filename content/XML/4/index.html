@@ -1,0 +1,2493 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../3/">
+      
+      
+        <link rel="next" href="../../OOP_Introduction/1/">
+      
+      
+      <link rel="icon" href="../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Erweiterte Abfragen - IT-Basis - Überblick über das Web und Programmiersprachen</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/logo.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/grid.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/video_admonition.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/python_tutor_admonition.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/mermaid.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/cd.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#xml-grundlagen-4-xquery-advanced-xml" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="IT-Basis - Überblick über das Web und Programmiersprachen" class="md-header__button md-logo" aria-label="IT-Basis - Überblick über das Web und Programmiersprachen" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IT-Basis - Überblick über das Web und Programmiersprachen
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Erweiterte Abfragen
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="IT-Basis - Überblick über das Web und Programmiersprachen" class="md-nav__button md-logo" aria-label="IT-Basis - Überblick über das Web und Programmiersprachen" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    IT-Basis - Überblick über das Web und Programmiersprachen
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    HTML CSS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            HTML CSS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HTML_CSS/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Einführung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HTML_CSS/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HTML-Elemente
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HTML_CSS/3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Attribute & Formulare
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HTML_CSS/4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CSS Fundamentals
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HTML_CSS/5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CSS Layout
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HTML_CSS/6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Accessibility
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HTML_CSS/7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übungsaufgabe
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    JavaScript
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            JavaScript
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Variablen & Operatoren
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kontrollstrukturen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DOM & Events
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Async & APIs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Arrays & Objects
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Best Practices & Patterns
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übungsaufgabe (Simulation)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    XML
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            XML
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Syntax & Struktur
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DTD & Schema
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    XPath & XSLT
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Erweiterte Abfragen
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Erweiterte Abfragen
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#einfuhrung" class="md-nav__link">
+    <span class="md-ellipsis">
+      Einführung
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xquery" class="md-nav__link">
+    <span class="md-ellipsis">
+      XQuery
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xslt-2030-erweiterte-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      XSLT 2.0/3.0 (Erweiterte Features)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schematron-regelbasierte-validierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schematron (Regelbasierte Validierung)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xml-parsing-in-verschiedenen-sprachen" class="md-nav__link">
+    <span class="md-ellipsis">
+      XML-Parsing in verschiedenen Sprachen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xml-sicherheit" class="md-nav__link">
+    <span class="md-ellipsis">
+      XML-Sicherheit
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#praktische-beispiele" class="md-nav__link">
+    <span class="md-ellipsis">
+      Praktische Beispiele
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#haufige-fehler-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Häufige Fehler &amp; Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zusammenfassung-checkliste" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zusammenfassung &amp; Checkliste
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nachste-schritte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nächste Schritte
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Java Grundlagen
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Java Grundlagen
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP_Introduction/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Objektorientierung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java_Grundlagen/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setup & Syntax
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java_Grundlagen/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kontrollstrukturen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java_Grundlagen/3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Methoden & Funktionen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java_Grundlagen/4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Arrays & Collections
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java_Grundlagen/5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Design Patterns Übung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java_Grundlagen/6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Design Patterns Lösung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Java Aufbau
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Java Aufbau
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java_Aufbau/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Streams & Lambdas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java_Aufbau/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Collections
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Application Server
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Application Server
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Application_Server/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Einführung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Application_Server/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Konfiguration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Low Code
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Low Code
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Low_Code/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Einführung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Low_Code/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Advanced
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#einfuhrung" class="md-nav__link">
+    <span class="md-ellipsis">
+      Einführung
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xquery" class="md-nav__link">
+    <span class="md-ellipsis">
+      XQuery
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xslt-2030-erweiterte-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      XSLT 2.0/3.0 (Erweiterte Features)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#schematron-regelbasierte-validierung" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schematron (Regelbasierte Validierung)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xml-parsing-in-verschiedenen-sprachen" class="md-nav__link">
+    <span class="md-ellipsis">
+      XML-Parsing in verschiedenen Sprachen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#xml-sicherheit" class="md-nav__link">
+    <span class="md-ellipsis">
+      XML-Sicherheit
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#praktische-beispiele" class="md-nav__link">
+    <span class="md-ellipsis">
+      Praktische Beispiele
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#haufige-fehler-best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Häufige Fehler &amp; Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zusammenfassung-checkliste" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zusammenfassung &amp; Checkliste
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nachste-schritte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nächste Schritte
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="xml-grundlagen-4-xquery-advanced-xml">XML Grundlagen 4 – XQuery &amp; Advanced XML<a class="headerlink" href="#xml-grundlagen-4-xquery-advanced-xml" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Lernziele</p>
+<p>Nach diesem Kapitel kannst du …</p>
+<ul>
+<li><strong>XQuery</strong> zur Abfrage von XML-Datenbanken verwenden.</li>
+<li><strong>XSLT 2.0/3.0</strong> erweiterte Features verstehen.</li>
+<li><strong>XML-Validierung</strong> mit Schematron durchführen.</li>
+<li><strong>XML-Parsing</strong> in verschiedenen Sprachen nutzen.</li>
+<li><strong>XML-Sicherheit</strong> und Best Practices anwenden.</li>
+</ul>
+</div>
+<hr />
+<h2 id="einfuhrung">Einführung<a class="headerlink" href="#einfuhrung" title="Permanent link">&para;</a></h2>
+<p><strong>XQuery</strong> ist eine Abfragesprache für XML-Datenbanken:
+- <strong>XPath-basiert</strong>: Erweitert XPath um komplexe Abfragen
+- <strong>SQL-ähnlich</strong>: SELECT, WHERE, ORDER BY, JOIN
+- <strong>Funktional</strong>: Verarbeitung von XML-Dokumenten
+- <strong>Standardisiert</strong>: W3C XQuery 1.0, 3.0, 3.1</p>
+<p><strong>Advanced XML</strong> umfasst:
+- <strong>XSLT 2.0/3.0</strong>: Erweiterte Transformationen
+- <strong>Schematron</strong>: Regelbasierte Validierung
+- <strong>XProc</strong>: Pipeline-Verarbeitung
+- <strong>XForms</strong>: XML-basierte Formulare</p>
+<hr />
+<h2 id="xquery">XQuery<a class="headerlink" href="#xquery" title="Permanent link">&para;</a></h2>
+<h3 id="grundlagen">Grundlagen<a class="headerlink" href="#grundlagen" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c">(: XQuery-Beispiel :)</span>
+<span class="k">let</span><span class="w"> </span><span class="nv">$</span><span class="n">doc</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nf">doc</span><span class="p">(</span><span class="s2">&quot;adressbuch.xml&quot;</span><span class="p">)</span>
+<span class="k">return</span><span class="w"> </span><span class="nv">$</span><span class="n">doc</span><span class="p">//</span><span class="nt">kontakt</span><span class="p">[</span><span class="nt">name</span><span class="o">=</span><span class="s2">&quot;Max Mustermann&quot;</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="struktur">Struktur<a class="headerlink" href="#struktur" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c">(: XQuery-Modul :)</span>
+<span class="kp">xquery</span><span class="w"> </span><span class="kp">version</span><span class="w"> </span><span class="s2">&quot;3.1&quot;</span><span class="p">;</span>
+
+<span class="kd">module</span><span class="w"> </span><span class="kd">namespace</span><span class="w"> </span><span class="nn">my</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;http://example.com/my&quot;</span><span class="p">;</span>
+
+<span class="kd">declare</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nf">my:summe</span><span class="p">(</span><span class="nv">$</span><span class="n">zahlen</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="kt">xs:integer</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="kt">xs:integer</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nf">sum</span><span class="p">(</span><span class="nv">$</span><span class="n">zahlen</span><span class="p">)</span>
+<span class="p">};</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="xpath-in-xquery">XPath in XQuery<a class="headerlink" href="#xpath-in-xquery" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c">(: Basis-Abfragen :)</span>
+<span class="k">let</span><span class="w"> </span><span class="nv">$</span><span class="n">doc</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nf">doc</span><span class="p">(</span><span class="s2">&quot;adressbuch.xml&quot;</span><span class="p">)</span>
+
+<span class="c">(: Alle Kontakte :)</span>
+<span class="k">return</span><span class="w"> </span><span class="nv">$</span><span class="n">doc</span><span class="p">//</span><span class="nt">kontakt</span>
+
+<span class="c">(: Mit Bedingung :)</span>
+<span class="k">return</span><span class="w"> </span><span class="nv">$</span><span class="n">doc</span><span class="p">//</span><span class="nt">kontakt</span><span class="p">[</span><span class="nt">alter</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">25</span><span class="p">]</span>
+
+<span class="c">(: Mit Sortierung :)</span>
+<span class="k">return</span><span class="w"> </span><span class="nv">$</span><span class="n">doc</span><span class="p">//</span><span class="nt">kontakt</span><span class="w"> </span><span class="k">order by</span><span class="w"> </span><span class="nt">name</span><span class="w"> </span><span class="k">ascending</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="flwor-ausdrucke">FLWOR-Ausdrücke<a class="headerlink" href="#flwor-ausdrucke" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c">(: For-Let-Where-Order-Return :)</span>
+<span class="k">for</span><span class="w"> </span><span class="nv">$</span><span class="n">kontakt</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nf">doc</span><span class="p">(</span><span class="s2">&quot;adressbuch.xml&quot;</span><span class="p">)//</span><span class="nt">kontakt</span>
+<span class="k">let</span><span class="w"> </span><span class="nv">$</span><span class="n">name</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nv">$</span><span class="n">kontakt</span><span class="p">/</span><span class="nt">name</span>
+<span class="k">where</span><span class="w"> </span><span class="nv">$</span><span class="n">kontakt</span><span class="p">/</span><span class="nt">alter</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">25</span>
+<span class="k">order by</span><span class="w"> </span><span class="nv">$</span><span class="n">name</span><span class="w"> </span><span class="k">ascending</span>
+<span class="k">return</span><span class="w"> </span><span class="nv">$</span><span class="n">name</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="beispiel-komplexe-abfrage">Beispiel: Komplexe Abfrage<a class="headerlink" href="#beispiel-komplexe-abfrage" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c">(: Alle Kontakte aus Berlin mit mehr als 100 Follower :)</span>
+<span class="k">let</span><span class="w"> </span><span class="nv">$</span><span class="n">doc</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nf">doc</span><span class="p">(</span><span class="s2">&quot;adressbuch.xml&quot;</span><span class="p">)</span>
+<span class="k">for</span><span class="w"> </span><span class="nv">$</span><span class="n">k</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nv">$</span><span class="n">doc</span><span class="p">//</span><span class="nt">kontakt</span>
+<span class="k">where</span><span class="w"> </span><span class="nv">$</span><span class="n">k</span><span class="p">/</span><span class="nt">adresse</span><span class="p">/</span><span class="nt">stadt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Berlin&quot;</span>
+<span class="w">  </span><span class="ow">and</span><span class="w"> </span><span class="nv">$</span><span class="n">k</span><span class="p">/</span><span class="nt">follower</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">100</span>
+<span class="k">order by</span><span class="w"> </span><span class="nv">$</span><span class="n">k</span><span class="p">/</span><span class="nt">name</span><span class="w"> </span><span class="k">ascending</span>
+<span class="k">return</span>
+<span class="w">  </span><span class="nt">&lt;kontakt&gt;</span>
+<span class="l">    </span><span class="p">{</span><span class="nv">$</span><span class="n">k</span><span class="p">/</span><span class="nt">name</span><span class="p">}</span>
+<span class="l">    </span><span class="p">{</span><span class="nv">$</span><span class="n">k</span><span class="p">/</span><span class="nt">email</span><span class="p">}</span>
+<span class="l">    </span><span class="p">{</span><span class="nv">$</span><span class="n">k</span><span class="p">/</span><span class="nt">follower</span><span class="p">}</span>
+<span class="l">  </span><span class="nt">&lt;/kontakt&gt;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="funktionen-in-xquery">Funktionen in XQuery<a class="headerlink" href="#funktionen-in-xquery" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c">(: Eigene Funktionen :)</span>
+<span class="kd">declare</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nf">local:formatiereName</span><span class="p">(</span><span class="nv">$</span><span class="n">name</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="kt">xs:string</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="kt">xs:string</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nf">concat</span><span class="p">(</span><span class="nf">upper-case</span><span class="p">(</span><span class="nf">substring</span><span class="p">(</span><span class="nv">$</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">)),</span><span class="w"> </span><span class="nf">substring</span><span class="p">(</span><span class="nv">$</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">))</span>
+<span class="p">};</span>
+
+<span class="c">(: Verwendung :)</span>
+<span class="k">for</span><span class="w"> </span><span class="nv">$</span><span class="n">k</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nf">doc</span><span class="p">(</span><span class="s2">&quot;adressbuch.xml&quot;</span><span class="p">)//</span><span class="nt">kontakt</span>
+<span class="k">return</span><span class="w"> </span><span class="nf">local:formatiereName</span><span class="p">(</span><span class="nv">$</span><span class="n">k</span><span class="p">/</span><span class="nt">name</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="xquery-mit-json">XQuery mit JSON<a class="headerlink" href="#xquery-mit-json" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c">(: XQuery 3.1 unterstützt JSON :)</span>
+<span class="k">let</span><span class="w"> </span><span class="nv">$</span><span class="n">data</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nf">json-doc</span><span class="p">(</span><span class="s2">&quot;data.json&quot;</span><span class="p">)</span>
+<span class="k">return</span><span class="w"> </span><span class="nv">$</span><span class="n">data</span><span class="p">?</span><span class="err">users</span><span class="p">[</span><span class="err">?</span><span class="nt">age</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">25</span><span class="p">]</span>
+</code></pre></div></td></tr></table></div>
+<div class="admonition danger">
+<p class="admonition-title">Datei nicht gefunden</p>
+<p>Die Aufgaben-Datei <code>tasks/03_00_05.yaml</code> wurde nicht gefunden.</p>
+<p>Pfad: <code>/home/runner/work/wiki-programmiersprachen-grundlagen/wiki-programmiersprachen-grundlagen/tasks/03_00_05.yaml</code>
+Fehler: <code>[Errno 2] No such file or directory: '/home/runner/work/wiki-programmiersprachen-grundlagen/wiki-programmiersprachen-grundlagen/tasks/03_00_05.yaml'</code></p>
+</div>
+<hr />
+<h2 id="xslt-2030-erweiterte-features">XSLT 2.0/3.0 (Erweiterte Features)<a class="headerlink" href="#xslt-2030-erweiterte-features" title="Permanent link">&para;</a></h2>
+<h3 id="xslt-20-gruppierung">XSLT 2.0: Gruppierung<a class="headerlink" href="#xslt-20-gruppierung" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cm">&lt;!-- Gruppierung nach Stadt --&gt;</span>
+<span class="nt">&lt;xsl:for-each-group</span><span class="w"> </span><span class="na">select=</span><span class="s">&quot;kontakt&quot;</span><span class="w"> </span><span class="na">group-by=</span><span class="s">&quot;adresse/stadt&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;stadt</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;{current-grouping-key()}&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;xsl:for-each</span><span class="w"> </span><span class="na">select=</span><span class="s">&quot;current-group()&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;kontakt&gt;</span>
+<span class="w">        </span><span class="nt">&lt;name&gt;&lt;xsl:value-of</span><span class="w"> </span><span class="na">select=</span><span class="s">&quot;name&quot;</span><span class="nt">/&gt;&lt;/name&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/kontakt&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/xsl:for-each&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/stadt&gt;</span>
+<span class="nt">&lt;/xsl:for-each-group&gt;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="xslt-20-sequenzen">XSLT 2.0: Sequenzen<a class="headerlink" href="#xslt-20-sequenzen" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cm">&lt;!-- Sequenzen verarbeiten --&gt;</span>
+<span class="nt">&lt;xsl:variable</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;ergebnis&quot;</span><span class="w"> </span><span class="na">as=</span><span class="s">&quot;element()*&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;xsl:for-each</span><span class="w"> </span><span class="na">select=</span><span class="s">&quot;kontakt&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;item&gt;</span>
+<span class="w">      </span><span class="nt">&lt;name&gt;&lt;xsl:value-of</span><span class="w"> </span><span class="na">select=</span><span class="s">&quot;name&quot;</span><span class="nt">/&gt;&lt;/name&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/item&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/xsl:for-each&gt;</span>
+<span class="nt">&lt;/xsl:variable&gt;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="xslt-30-funktionen">XSLT 3.0: Funktionen<a class="headerlink" href="#xslt-30-funktionen" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cm">&lt;!-- Eigene Funktionen in XSLT 3.0 --&gt;</span>
+<span class="nt">&lt;xsl:function</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;local:formatiereDatum&quot;</span><span class="w"> </span><span class="na">as=</span><span class="s">&quot;xs:string&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;xsl:param</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;datum&quot;</span><span class="w"> </span><span class="na">as=</span><span class="s">&quot;xs:date&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;xsl:value-of</span><span class="w"> </span><span class="na">select=</span><span class="s">&quot;format-date($datum, &#39;[D].[M].[Y]&#39;)&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/xsl:function&gt;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="xslt-30-map-array">XSLT 3.0: Map &amp; Array<a class="headerlink" href="#xslt-30-map-array" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cm">&lt;!-- Map verwenden --&gt;</span>
+<span class="nt">&lt;xsl:variable</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;config&quot;</span><span class="w"> </span><span class="na">select=</span><span class="s">&quot;map {</span>
+<span class="s">  &#39;api-key&#39;: &#39;abc123&#39;,</span>
+<span class="s">  &#39;timeout&#39;: 5000</span>
+<span class="s">}&quot;</span><span class="nt">/&gt;</span>
+
+<span class="cm">&lt;!-- Array verwenden --&gt;</span>
+<span class="nt">&lt;xsl:variable</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;items&quot;</span><span class="w"> </span><span class="na">select=</span><span class="s">&quot;[1, 2, 3, 4, 5]&quot;</span><span class="nt">/&gt;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="xslt-30-streaming">XSLT 3.0: Streaming<a class="headerlink" href="#xslt-30-streaming" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cm">&lt;!-- Streaming für große Dateien --&gt;</span>
+<span class="nt">&lt;xsl:mode</span><span class="w"> </span><span class="na">streamable=</span><span class="s">&quot;yes&quot;</span><span class="nt">/&gt;</span>
+
+<span class="nt">&lt;xsl:template</span><span class="w"> </span><span class="na">match=</span><span class="s">&quot;kontakt&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="cm">&lt;!-- Verarbeitung ohne vollständiges Laden --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;xsl:value-of</span><span class="w"> </span><span class="na">select=</span><span class="s">&quot;name&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;/xsl:template&gt;</span>
+</code></pre></div></td></tr></table></div>
+<hr />
+<h2 id="schematron-regelbasierte-validierung">Schematron (Regelbasierte Validierung)<a class="headerlink" href="#schematron-regelbasierte-validierung" title="Permanent link">&para;</a></h2>
+<h3 id="was-ist-schematron">Was ist Schematron?<a class="headerlink" href="#was-ist-schematron" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Regelbasierte</strong> Validierung (nur strukturbasiert)</li>
+<li><strong>XSLT-basiert</strong>: Wird in XSLT transformiert</li>
+<li><strong>Flexibel</strong>: Komplexe Business-Regeln</li>
+<li><strong>Kombinierbar</strong>: Mit DTD/XSD</li>
+</ul>
+<h3 id="grundlegende-schematron-datei">Grundlegende Schematron-Datei<a class="headerlink" href="#grundlegende-schematron-datei" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;sch:schema</span><span class="w"> </span><span class="na">xmlns:sch=</span><span class="s">&quot;http://purl.oclc.org/dsdl/schematron&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;sch:title&gt;</span>Adressbuch-Validierung<span class="nt">&lt;/sch:title&gt;</span>
+
+<span class="w">  </span><span class="cm">&lt;!-- Regel: Jeder Kontakt muss eine Email haben --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;sch:rule</span><span class="w"> </span><span class="na">context=</span><span class="s">&quot;kontakt&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;sch:assert</span><span class="w"> </span><span class="na">test=</span><span class="s">&quot;email&quot;</span>
+<span class="w">                </span><span class="na">role=</span><span class="s">&quot;error&quot;</span><span class="nt">&gt;</span>Jeder<span class="w"> </span>Kontakt<span class="w"> </span>muss<span class="w"> </span>eine<span class="w"> </span>Email<span class="w"> </span>haben<span class="nt">&lt;/sch:assert&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/sch:rule&gt;</span>
+
+<span class="w">  </span><span class="cm">&lt;!-- Regel: Email muss gültig sein --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;sch:rule</span><span class="w"> </span><span class="na">context=</span><span class="s">&quot;email&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;sch:assert</span><span class="w"> </span><span class="na">test=</span><span class="s">&quot;contains(., &#39;@&#39;)&quot;</span>
+<span class="w">                </span><span class="na">role=</span><span class="s">&quot;error&quot;</span><span class="nt">&gt;</span>Ungültige<span class="w"> </span>Email-Adresse<span class="nt">&lt;/sch:assert&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/sch:rule&gt;</span>
+
+<span class="w">  </span><span class="cm">&lt;!-- Regel: ID muss einzigartig sein --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;sch:rule</span><span class="w"> </span><span class="na">context=</span><span class="s">&quot;kontakt&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;sch:assert</span><span class="w"> </span><span class="na">test=</span><span class="s">&quot;count(//kontakt[@id=current()/@id]) = 1&quot;</span>
+<span class="w">                </span><span class="na">role=</span><span class="s">&quot;error&quot;</span><span class="nt">&gt;</span>ID<span class="w"> </span>muss<span class="w"> </span>einzigartig<span class="w"> </span>sein<span class="nt">&lt;/sch:assert&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/sch:rule&gt;</span>
+
+<span class="w">  </span><span class="cm">&lt;!-- Regel: Telefon muss mit +49 beginnen --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;sch:rule</span><span class="w"> </span><span class="na">context=</span><span class="s">&quot;telefon&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;sch:assert</span><span class="w"> </span><span class="na">test=</span><span class="s">&quot;starts-with(., &#39;+49&#39;)&quot;</span>
+<span class="w">                </span><span class="na">role=</span><span class="s">&quot;warning&quot;</span><span class="nt">&gt;</span>Telefonnummer<span class="w"> </span>sollte<span class="w"> </span>mit<span class="w"> </span>+49<span class="w"> </span>beginnen<span class="nt">&lt;/sch:assert&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/sch:rule&gt;</span>
+<span class="nt">&lt;/sch:schema&gt;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="schematron-mit-xslt">Schematron mit XSLT<a class="headerlink" href="#schematron-mit-xslt" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1"># Schematron in XSLT transformieren</span>
+xsltproc<span class="w"> </span>iso_svrl.xsl<span class="w"> </span>schematron.sch<span class="w"> </span>&gt;<span class="w"> </span>schematron.xsl
+
+<span class="c1"># Validierung</span>
+xsltproc<span class="w"> </span>schematron.xsl<span class="w"> </span>adressbuch.xml<span class="w"> </span>&gt;<span class="w"> </span>ergebnis.xml
+</code></pre></div></td></tr></table></div>
+<h3 id="schematron-in-java">Schematron in Java<a class="headerlink" href="#schematron-in-java" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">org.iso.schematron.*</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">SchematronValidator</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">SchematronValidator</span><span class="w"> </span><span class="n">validator</span><span class="w"> </span><span class="o">=</span>
+<span class="w">            </span><span class="k">new</span><span class="w"> </span><span class="n">SchematronValidator</span><span class="p">(</span><span class="s">&quot;schematron.sch&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="n">ValidationResult</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">validator</span><span class="p">.</span><span class="na">validate</span><span class="p">(</span><span class="s">&quot;adressbuch.xml&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="na">isValid</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Valid!&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="na">getErrors</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Fehler: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">error</span><span class="p">);</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<hr />
+<h2 id="xml-parsing-in-verschiedenen-sprachen">XML-Parsing in verschiedenen Sprachen<a class="headerlink" href="#xml-parsing-in-verschiedenen-sprachen" title="Permanent link">&para;</a></h2>
+<h3 id="java-dom">Java (DOM)<a class="headerlink" href="#java-dom" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">javax.xml.parsers.*</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">org.w3c.dom.*</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">XMLParser</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">Exception</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">DocumentBuilderFactory</span><span class="w"> </span><span class="n">factory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DocumentBuilderFactory</span><span class="p">.</span><span class="na">newInstance</span><span class="p">();</span>
+<span class="w">        </span><span class="n">Document</span><span class="w"> </span><span class="n">doc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">factory</span><span class="p">.</span><span class="na">newDocumentBuilder</span><span class="p">()</span>
+<span class="w">            </span><span class="p">.</span><span class="na">parse</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">File</span><span class="p">(</span><span class="s">&quot;adressbuch.xml&quot;</span><span class="p">));</span>
+
+<span class="w">        </span><span class="n">NodeList</span><span class="w"> </span><span class="n">contacts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">doc</span><span class="p">.</span><span class="na">getElementsByTagName</span><span class="p">(</span><span class="s">&quot;kontakt&quot;</span><span class="p">);</span>
+
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">contacts</span><span class="p">.</span><span class="na">getLength</span><span class="p">();</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">Element</span><span class="w"> </span><span class="n">contact</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Element</span><span class="p">)</span><span class="w"> </span><span class="n">contacts</span><span class="p">.</span><span class="na">item</span><span class="p">(</span><span class="n">i</span><span class="p">);</span>
+<span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">contact</span><span class="p">.</span><span class="na">getElementsByTagName</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">)</span>
+<span class="w">                </span><span class="p">.</span><span class="na">item</span><span class="p">(</span><span class="mi">0</span><span class="p">).</span><span class="na">getTextContent</span><span class="p">();</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Name: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">name</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="java-sax-event-basiert">Java (SAX - Event-basiert)<a class="headerlink" href="#java-sax-event-basiert" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">org.xml.sax.*</span><span class="p">;</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">org.xml.sax.helpers.*</span><span class="p">;</span>
+
+<span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">SAXParser</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">DefaultHandler</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">startElement</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">uri</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">localName</span><span class="p">,</span>
+<span class="w">                            </span><span class="n">String</span><span class="w"> </span><span class="n">qName</span><span class="p">,</span><span class="w"> </span><span class="n">Attributes</span><span class="w"> </span><span class="n">attributes</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">qName</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="s">&quot;kontakt&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Neuer Kontakt:&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="nd">@Override</span>
+<span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">characters</span><span class="p">(</span><span class="kt">char</span><span class="o">[]</span><span class="w"> </span><span class="n">ch</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">start</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">length</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="n">ch</span><span class="p">,</span><span class="w"> </span><span class="n">start</span><span class="p">,</span><span class="w"> </span><span class="n">length</span><span class="p">).</span><span class="na">trim</span><span class="p">();</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">text</span><span class="p">.</span><span class="na">isEmpty</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Text: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">text</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="python-elementtree">Python (ElementTree)<a class="headerlink" href="#python-elementtree" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">xml.etree.ElementTree</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">ET</span>
+
+<span class="c1"># Laden</span>
+<span class="n">tree</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">&#39;adressbuch.xml&#39;</span><span class="p">)</span>
+<span class="n">root</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">getroot</span><span class="p">()</span>
+
+<span class="c1"># Durchlaufen</span>
+<span class="k">for</span> <span class="n">kontakt</span> <span class="ow">in</span> <span class="n">root</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s1">&#39;kontakt&#39;</span><span class="p">):</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">kontakt</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>
+    <span class="n">email</span> <span class="o">=</span> <span class="n">kontakt</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s1">&#39;email&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">: </span><span class="si">{</span><span class="n">email</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Erstellen</span>
+<span class="n">neuer_kontakt</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">Element</span><span class="p">(</span><span class="s1">&#39;kontakt&#39;</span><span class="p">,</span> <span class="nb">id</span><span class="o">=</span><span class="s1">&#39;4&#39;</span><span class="p">)</span>
+<span class="n">name</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">SubElement</span><span class="p">(</span><span class="n">neuer_kontakt</span><span class="p">,</span> <span class="s1">&#39;name&#39;</span><span class="p">)</span>
+<span class="n">name</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="s1">&#39;Neuer Kontakt&#39;</span>
+<span class="n">tree</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;neu.xml&#39;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="python-lxml-performance">Python (lxml - Performance)<a class="headerlink" href="#python-lxml-performance" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kn">from</span><span class="w"> </span><span class="nn">lxml</span><span class="w"> </span><span class="kn">import</span> <span class="n">etree</span>
+
+<span class="c1"># Laden mit XPath</span>
+<span class="n">tree</span> <span class="o">=</span> <span class="n">etree</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">&#39;adressbuch.xml&#39;</span><span class="p">)</span>
+<span class="n">kontakte</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s1">&#39;//kontakt[alter &gt; 25]&#39;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">kontakt</span><span class="p">:</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">k</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s1">&#39;name/text()&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">name</span><span class="p">)</span>
+
+<span class="c1"># XSLT-Transformation</span>
+<span class="n">xslt</span> <span class="o">=</span> <span class="n">etree</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="s1">&#39;transform.xsl&#39;</span><span class="p">)</span>
+<span class="n">transform</span> <span class="o">=</span> <span class="n">etree</span><span class="o">.</span><span class="n">XSLT</span><span class="p">(</span><span class="n">xslt</span><span class="p">)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">transform</span><span class="p">(</span><span class="n">tree</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="javascript-nodejs">JavaScript (Node.js)<a class="headerlink" href="#javascript-nodejs" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">DOMParser</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;xmldom&#39;</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">parser</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">DOMParser</span><span class="p">();</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">xml</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`&lt;adressbuch&gt;&lt;kontakt&gt;&lt;name&gt;Max&lt;/name&gt;&lt;/kontakt&gt;&lt;/adressbuch&gt;`</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">doc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">parser</span><span class="p">.</span><span class="nx">parseFromString</span><span class="p">(</span><span class="nx">xml</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;text/xml&#39;</span><span class="p">);</span>
+
+<span class="kd">const</span><span class="w"> </span><span class="nx">kontakte</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">doc</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;kontakt&#39;</span><span class="p">);</span>
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="nx">kontakte</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">kontakte</span><span class="p">[</span><span class="nx">i</span><span class="p">].</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">)[</span><span class="mf">0</span><span class="p">].</span><span class="nx">textContent</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">name</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<hr />
+<h2 id="xml-sicherheit">XML-Sicherheit<a class="headerlink" href="#xml-sicherheit" title="Permanent link">&para;</a></h2>
+<h3 id="1-xxe-xml-external-entity-angriffe">1. XXE (XML External Entity) Angriffe<a class="headerlink" href="#1-xxe-xml-external-entity-angriffe" title="Permanent link">&para;</a></h3>
+<p><strong>Problem</strong>: Externe Entitäten können Dateien lesen
+<strong>Lösung</strong>: Entitäten deaktivieren</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Java: XXE-Schutz</span>
+<span class="n">DocumentBuilderFactory</span><span class="w"> </span><span class="n">factory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DocumentBuilderFactory</span><span class="p">.</span><span class="na">newInstance</span><span class="p">();</span>
+
+<span class="c1">// Deaktiviere externe Entitäten</span>
+<span class="n">factory</span><span class="p">.</span><span class="na">setFeature</span><span class="p">(</span><span class="s">&quot;http://apache.org/xml/features/disallow-doctype-decl&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">true</span><span class="p">);</span>
+<span class="n">factory</span><span class="p">.</span><span class="na">setFeature</span><span class="p">(</span><span class="s">&quot;http://xml.org/sax/features/external-general-entities&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span>
+<span class="n">factory</span><span class="p">.</span><span class="na">setFeature</span><span class="p">(</span><span class="s">&quot;http://xml.org/sax/features/external-parameter-entities&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span>
+<span class="n">factory</span><span class="p">.</span><span class="na">setFeature</span><span class="p">(</span><span class="s">&quot;http://apache.org/xml/features/nonvalidating/load-external-dtd&quot;</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="2-xml-bomben-billion-laughs">2. XML-Bomben (Billion Laughs)<a class="headerlink" href="#2-xml-bomben-billion-laughs" title="Permanent link">&para;</a></h3>
+<p><strong>Problem</strong>: Rekursive Entitäten führen zu DoS
+<strong>Lösung</strong>: Limits setzen</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// Limits setzen</span>
+<span class="n">factory</span><span class="p">.</span><span class="na">setAttribute</span><span class="p">(</span><span class="n">XMLConstants</span><span class="p">.</span><span class="na">ACCESS_EXTERNAL_DTD</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">);</span>
+<span class="n">factory</span><span class="p">.</span><span class="na">setAttribute</span><span class="p">(</span><span class="n">XMLConstants</span><span class="p">.</span><span class="na">ACCESS_EXTERNAL_SCHEMA</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="3-xpath-injection">3. XPath-Injection<a class="headerlink" href="#3-xpath-injection" title="Permanent link">&para;</a></h3>
+<p><strong>Problem</strong>: Manipulation von XPath-Abfragen
+<strong>Lösung</strong>: Parameterisierung</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// ❌ Schlecht (Injection möglich)</span>
+<span class="n">String</span><span class="w"> </span><span class="n">xpath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;//kontakt[name=&#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">userInput</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&#39;]&quot;</span><span class="p">;</span>
+
+<span class="c1">// ✅ Gut (Parameterisiert)</span>
+<span class="n">XPath</span><span class="w"> </span><span class="n">xpath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">XPathFactory</span><span class="p">.</span><span class="na">newInstance</span><span class="p">().</span><span class="na">newXPath</span><span class="p">();</span>
+<span class="n">XPathExpression</span><span class="w"> </span><span class="n">expr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">xpath</span><span class="p">.</span><span class="na">compile</span><span class="p">(</span><span class="s">&quot;//kontakt[name=$name]&quot;</span><span class="p">);</span>
+<span class="n">expr</span><span class="p">.</span><span class="na">setParameter</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">userInput</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="4-signierung-verschlusselung">4. Signierung &amp; Verschlüsselung<a class="headerlink" href="#4-signierung-verschlusselung" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cm">&lt;!-- XML-DSig (Signierung) --&gt;</span>
+<span class="nt">&lt;SignedInfo&gt;</span>
+<span class="w">  </span><span class="nt">&lt;CanonicalizationMethod</span><span class="w"> </span><span class="na">Algorithm=</span><span class="s">&quot;...&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;SignatureMethod</span><span class="w"> </span><span class="na">Algorithm=</span><span class="s">&quot;...&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;Reference</span><span class="w"> </span><span class="na">URI=</span><span class="s">&quot;#kontakt1&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;DigestMethod</span><span class="w"> </span><span class="na">Algorithm=</span><span class="s">&quot;...&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;DigestValue&gt;</span>abc123...<span class="nt">&lt;/DigestValue&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/Reference&gt;</span>
+<span class="nt">&lt;/SignedInfo&gt;</span>
+<span class="nt">&lt;SignatureValue&gt;</span>xyz789...<span class="nt">&lt;/SignatureValue&gt;</span>
+
+<span class="cm">&lt;!-- XML-Enc (Verschlüsselung) --&gt;</span>
+<span class="nt">&lt;EncryptedData</span><span class="w"> </span><span class="na">Type=</span><span class="s">&quot;http://www.w3.org/2001/04/xmlenc#Element&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;EncryptionMethod</span><span class="w"> </span><span class="na">Algorithm=</span><span class="s">&quot;...&quot;</span><span class="nt">/&gt;</span>
+<span class="w">  </span><span class="nt">&lt;CipherData&gt;</span>
+<span class="w">    </span><span class="nt">&lt;CipherValue&gt;</span>verschlüsselte<span class="w"> </span>Daten<span class="nt">&lt;/CipherValue&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/CipherData&gt;</span>
+<span class="nt">&lt;/EncryptedData&gt;</span>
+</code></pre></div></td></tr></table></div>
+<hr />
+<h2 id="praktische-beispiele">Praktische Beispiele<a class="headerlink" href="#praktische-beispiele" title="Permanent link">&para;</a></h2>
+<h3 id="beispiel-1-xquery-fur-api">Beispiel 1: XQuery für API<a class="headerlink" href="#beispiel-1-xquery-fur-api" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c">(: REST API mit XQuery :)</span>
+<span class="kd">declare</span><span class="w"> </span><span class="kd">namespace</span><span class="w"> </span><span class="nn">output</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;http://www.w3.org/2010/xslt-xquery-serialization&quot;</span><span class="p">;</span>
+
+<span class="kd">declare</span><span class="w"> </span><span class="kd">option</span><span class="w"> </span><span class="nv">output:method</span><span class="w"> </span><span class="s2">&quot;json&quot;</span><span class="p">;</span>
+<span class="kd">declare</span><span class="w"> </span><span class="kd">option</span><span class="w"> </span><span class="nv">output:indent</span><span class="w"> </span><span class="s2">&quot;yes&quot;</span><span class="p">;</span>
+
+<span class="k">let</span><span class="w"> </span><span class="nv">$</span><span class="n">users</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nf">doc</span><span class="p">(</span><span class="s2">&quot;users.xml&quot;</span><span class="p">)//</span><span class="nt">user</span>
+<span class="k">return</span>
+<span class="w">  </span><span class="k">map</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="s2">&quot;users&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="nv">$</span><span class="n">u</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nv">$</span><span class="n">users</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="k">map</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="s2">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="nv">$</span><span class="n">u</span><span class="p">/</span><span class="na">@id</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="nv">$</span><span class="n">u</span><span class="p">/</span><span class="nt">name</span><span class="p">,</span>
+<span class="w">        </span><span class="s2">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="nv">$</span><span class="n">u</span><span class="p">/</span><span class="nt">email</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="w">  </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="beispiel-2-xslt-fur-pdf-generierung">Beispiel 2: XSLT für PDF-Generierung<a class="headerlink" href="#beispiel-2-xslt-fur-pdf-generierung" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span>
+<span class="normal">26</span>
+<span class="normal">27</span>
+<span class="normal">28</span>
+<span class="normal">29</span>
+<span class="normal">30</span>
+<span class="normal">31</span>
+<span class="normal">32</span>
+<span class="normal">33</span>
+<span class="normal">34</span>
+<span class="normal">35</span>
+<span class="normal">36</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nt">&lt;xsl:stylesheet</span><span class="w"> </span><span class="na">version=</span><span class="s">&quot;2.0&quot;</span>
+<span class="w">                </span><span class="na">xmlns:xsl=</span><span class="s">&quot;http://www.w3.org/1999/XSL/Transform&quot;</span>
+<span class="w">                </span><span class="na">xmlns:fo=</span><span class="s">&quot;http://www.w3.org/1999/XSL/Format&quot;</span><span class="nt">&gt;</span>
+
+<span class="w">  </span><span class="nt">&lt;xsl:template</span><span class="w"> </span><span class="na">match=</span><span class="s">&quot;/&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;fo:root&gt;</span>
+<span class="w">      </span><span class="nt">&lt;fo:layout-master-set&gt;</span>
+<span class="w">        </span><span class="nt">&lt;fo:simple-page-master</span><span class="w"> </span><span class="na">master-name=</span><span class="s">&quot;A4&quot;</span>
+<span class="w">                               </span><span class="na">page-height=</span><span class="s">&quot;29.7cm&quot;</span><span class="w"> </span><span class="na">page-width=</span><span class="s">&quot;21cm&quot;</span>
+<span class="w">                               </span><span class="na">margin=</span><span class="s">&quot;2cm&quot;</span><span class="nt">&gt;</span>
+<span class="w">          </span><span class="nt">&lt;fo:region-body</span><span class="w"> </span><span class="na">margin-top=</span><span class="s">&quot;2cm&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/fo:simple-page-master&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/fo:layout-master-set&gt;</span>
+
+<span class="w">      </span><span class="nt">&lt;fo:page-sequence</span><span class="w"> </span><span class="na">master-reference=</span><span class="s">&quot;A4&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;fo:flow</span><span class="w"> </span><span class="na">flow-name=</span><span class="s">&quot;xsl-region-body&quot;</span><span class="nt">&gt;</span>
+<span class="w">          </span><span class="nt">&lt;fo:block</span><span class="w"> </span><span class="na">font-size=</span><span class="s">&quot;24pt&quot;</span><span class="w"> </span><span class="na">font-weight=</span><span class="s">&quot;bold&quot;</span><span class="nt">&gt;</span>
+<span class="w">            </span>Adressbuch
+<span class="w">          </span><span class="nt">&lt;/fo:block&gt;</span>
+<span class="w">          </span><span class="nt">&lt;xsl:apply-templates</span><span class="w"> </span><span class="na">select=</span><span class="s">&quot;adressbuch/kontakt&quot;</span><span class="nt">/&gt;</span>
+<span class="w">        </span><span class="nt">&lt;/fo:flow&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/fo:page-sequence&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/fo:root&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/xsl:template&gt;</span>
+
+<span class="w">  </span><span class="nt">&lt;xsl:template</span><span class="w"> </span><span class="na">match=</span><span class="s">&quot;kontakt&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;fo:block</span><span class="w"> </span><span class="na">space-after=</span><span class="s">&quot;10pt&quot;</span><span class="nt">&gt;</span>
+<span class="w">      </span><span class="nt">&lt;fo:inline</span><span class="w"> </span><span class="na">font-weight=</span><span class="s">&quot;bold&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span><span class="nt">&lt;xsl:value-of</span><span class="w"> </span><span class="na">select=</span><span class="s">&quot;name&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/fo:inline&gt;</span>
+<span class="w">      </span><span class="nt">&lt;fo:block</span><span class="w"> </span><span class="na">font-size=</span><span class="s">&quot;12pt&quot;</span><span class="nt">&gt;</span>
+<span class="w">        </span>Email:<span class="w"> </span><span class="nt">&lt;xsl:value-of</span><span class="w"> </span><span class="na">select=</span><span class="s">&quot;email&quot;</span><span class="nt">/&gt;</span>
+<span class="w">      </span><span class="nt">&lt;/fo:block&gt;</span>
+<span class="w">    </span><span class="nt">&lt;/fo:block&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/xsl:template&gt;</span>
+<span class="nt">&lt;/xsl:stylesheet&gt;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="beispiel-3-schematron-fur-business-regeln">Beispiel 3: Schematron für Business-Regeln<a class="headerlink" href="#beispiel-3-schematron-fur-business-regeln" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span>
+<span class="normal">25</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;sch:schema</span><span class="w"> </span><span class="na">xmlns:sch=</span><span class="s">&quot;http://purl.oclc.org/dsdl/schematron&quot;</span><span class="nt">&gt;</span>
+<span class="w">  </span><span class="nt">&lt;sch:title&gt;</span>Business<span class="w"> </span>Rules<span class="nt">&lt;/sch:title&gt;</span>
+
+<span class="w">  </span><span class="cm">&lt;!-- Regel: Mindestens 3 Kontakte pro Stadt --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;sch:rule</span><span class="w"> </span><span class="na">context=</span><span class="s">&quot;adressbuch&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;sch:let</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;staedte&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;distinct-values(//adresse/stadt)&quot;</span><span class="nt">/&gt;</span>
+<span class="w">    </span><span class="nt">&lt;sch:let</span><span class="w"> </span><span class="na">name=</span><span class="s">&quot;minKontakte&quot;</span><span class="w"> </span><span class="na">value=</span><span class="s">&quot;3&quot;</span><span class="nt">/&gt;</span>
+
+<span class="w">    </span><span class="nt">&lt;sch:assert</span><span class="w"> </span><span class="na">test=</span><span class="s">&quot;count(//adresse/stadt[. = $staedte]) &gt;= $minKontakte&quot;</span>
+<span class="w">                </span><span class="na">role=</span><span class="s">&quot;error&quot;</span><span class="nt">&gt;</span>Jede<span class="w"> </span>Stadt<span class="w"> </span>muss<span class="w"> </span>mindestens<span class="w"> </span>3<span class="w"> </span>Kontakte<span class="w"> </span>haben<span class="nt">&lt;/sch:assert&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/sch:rule&gt;</span>
+
+<span class="w">  </span><span class="cm">&lt;!-- Regel: Keine Duplikate bei Email --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;sch:rule</span><span class="w"> </span><span class="na">context=</span><span class="s">&quot;email&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;sch:assert</span><span class="w"> </span><span class="na">test=</span><span class="s">&quot;count(//email[. = current()]) = 1&quot;</span>
+<span class="w">                </span><span class="na">role=</span><span class="s">&quot;error&quot;</span><span class="nt">&gt;</span>Email<span class="w"> </span>muss<span class="w"> </span>einzigartig<span class="w"> </span>sein<span class="nt">&lt;/sch:assert&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/sch:rule&gt;</span>
+
+<span class="w">  </span><span class="cm">&lt;!-- Regel: Telefonnummer muss gültig sein --&gt;</span>
+<span class="w">  </span><span class="nt">&lt;sch:rule</span><span class="w"> </span><span class="na">context=</span><span class="s">&quot;telefon&quot;</span><span class="nt">&gt;</span>
+<span class="w">    </span><span class="nt">&lt;sch:assert</span><span class="w"> </span><span class="na">test=</span><span class="s">&quot;matches(., &#39;^\+\d{1,3}\d{9,15}$&#39;)&quot;</span>
+<span class="w">                </span><span class="na">role=</span><span class="s">&quot;error&quot;</span><span class="nt">&gt;</span>Telefonnummer<span class="w"> </span>muss<span class="w"> </span>im<span class="w"> </span>Format<span class="w"> </span>+49123456789<span class="w"> </span>sein<span class="nt">&lt;/sch:assert&gt;</span>
+<span class="w">  </span><span class="nt">&lt;/sch:rule&gt;</span>
+<span class="nt">&lt;/sch:schema&gt;</span>
+</code></pre></div></td></tr></table></div>
+<hr />
+<h2 id="haufige-fehler-best-practices">Häufige Fehler &amp; Best Practices<a class="headerlink" href="#haufige-fehler-best-practices" title="Permanent link">&para;</a></h2>
+<h3 id="fehler-1-xxe-angriffe">Fehler 1: XXE-Angriffe<a class="headerlink" href="#fehler-1-xxe-angriffe" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="cm">&lt;!-- ❌ Gefährlich (XXE möglich) --&gt;</span>
+<span class="cp">&lt;!DOCTYPE foo [</span>
+<span class="cp">  &lt;!ENTITY xxe SYSTEM &quot;file:///etc/passwd&quot;&gt;</span>
+]&gt;
+<span class="nt">&lt;root&gt;</span><span class="ni">&amp;xxe;</span><span class="nt">&lt;/root&gt;</span>
+
+<span class="cm">&lt;!-- ✅ Sicher (Entitäten deaktiviert) --&gt;</span>
+<span class="nt">&lt;root&gt;</span>Daten<span class="nt">&lt;/root&gt;</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="fehler-2-xpath-injection">Fehler 2: XPath-Injection<a class="headerlink" href="#fehler-2-xpath-injection" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// ❌ Schlecht (Injection möglich)</span>
+<span class="n">String</span><span class="w"> </span><span class="n">xpath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;//user[name=&#39;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;&#39;]&quot;</span><span class="p">;</span>
+
+<span class="c1">// ✅ Gut (Parameterisiert)</span>
+<span class="n">XPath</span><span class="w"> </span><span class="n">xpath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">XPathFactory</span><span class="p">.</span><span class="na">newInstance</span><span class="p">().</span><span class="na">newXPath</span><span class="p">();</span>
+<span class="n">XPathExpression</span><span class="w"> </span><span class="n">expr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">xpath</span><span class="p">.</span><span class="na">compile</span><span class="p">(</span><span class="s">&quot;//user[name=$name]&quot;</span><span class="p">);</span>
+<span class="n">expr</span><span class="p">.</span><span class="na">setParameter</span><span class="p">(</span><span class="s">&quot;name&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="fehler-3-zu-groe-xml-dateien">Fehler 3: Zu große XML-Dateien<a class="headerlink" href="#fehler-3-zu-groe-xml-dateien" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="c1">// ❌ Schlecht (DOM lädt alles in Speicher)</span>
+<span class="n">Document</span><span class="w"> </span><span class="n">doc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">builder</span><span class="p">.</span><span class="na">parse</span><span class="p">(</span><span class="n">largeFile</span><span class="p">);</span>
+
+<span class="c1">// ✅ Gut (SAX oder StAX für große Dateien)</span>
+<span class="n">SAXParser</span><span class="w"> </span><span class="n">saxParser</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">factory</span><span class="p">.</span><span class="na">newSAXParser</span><span class="p">();</span>
+<span class="n">saxParser</span><span class="p">.</span><span class="na">parse</span><span class="p">(</span><span class="n">largeFile</span><span class="p">,</span><span class="w"> </span><span class="n">handler</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>XXE-Schutz</strong> immer aktivieren</li>
+<li><strong>XPath-Parameterisierung</strong> verwenden</li>
+<li><strong>SAX/StAX</strong> für große Dateien</li>
+<li><strong>Schematron</strong> für Business-Regeln</li>
+<li><strong>XML-Signierung</strong> für Sicherheit</li>
+<li><strong>XQuery</strong> für komplexe Abfragen</li>
+<li><strong>XSLT 3.0</strong> für moderne Transformationen</li>
+</ol>
+<hr />
+<h2 id="zusammenfassung-checkliste">Zusammenfassung &amp; Checkliste<a class="headerlink" href="#zusammenfassung-checkliste" title="Permanent link">&para;</a></h2>
+<h3 id="wichtige-konzepte">Wichtige Konzepte<a class="headerlink" href="#wichtige-konzepte" title="Permanent link">&para;</a></h3>
+<ul>
+<li>✅ <strong>XQuery</strong>: FLWOR, Funktionen, JSON-Unterstützung</li>
+<li>✅ <strong>XSLT 2.0/3.0</strong>: Gruppierung, Sequenzen, Streaming</li>
+<li>✅ <strong>Schematron</strong>: Regelbasierte Validierung</li>
+<li>✅ <strong>XML-Parsing</strong>: DOM, SAX, StAX, lxml</li>
+<li>✅ <strong>Sicherheit</strong>: XXE, XPath-Injection, Limits</li>
+</ul>
+<h3 id="checkliste-fur-xml">Checkliste für XML<a class="headerlink" href="#checkliste-fur-xml" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] XXE-Schutz aktiviert</li>
+<li>[ ] XPath-Parameterisierung</li>
+<li>[ ] Schematron für Business-Regeln</li>
+<li>[ ] SAX/StAX für große Dateien</li>
+<li>[ ] XML-Signierung bei Bedarf</li>
+<li>[ ] XQuery für komplexe Abfragen</li>
+</ul>
+<hr />
+<h2 id="nachste-schritte">Nächste Schritte<a class="headerlink" href="#nachste-schritte" title="Permanent link">&para;</a></h2>
+<p>Nachdem du diese Grundlagen beherrschst:
+1. <strong>XProc</strong> - XML-Pipeline-Verarbeitung
+2. <strong>XForms</strong> - XML-basierte Formulare
+3. <strong>XSL-FO</strong> - Druckausgaben
+4. <strong>XML-Datenbanken</strong> - eXist-db, BaseX</p>
+<p><strong>Empfohlene Ressourcen:</strong>
+- <a href="https://www.w3schools.com/xml/xquery_intro.asp">W3Schools XQuery</a>
+- <a href="https://www.w3.org/TR/xslt-30/">XSLT 3.0 Specification</a>
+- <a href="http://schematron.com/">Schematron</a>
+- <a href="https://www.w3.org/XML/Security/">XML Security</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../3/" class="md-footer__link md-footer__link--prev" aria-label="Previous: XPath &amp; XSLT">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                XPath & XSLT
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../OOP_Introduction/1/" class="md-footer__link md-footer__link--next" aria-label="Next: Objektorientierung">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Objektorientierung
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Qualidy GmbH
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.foerde-campus.de/" target="_blank" rel="noopener" title="www.foerde-campus.de" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tracking", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

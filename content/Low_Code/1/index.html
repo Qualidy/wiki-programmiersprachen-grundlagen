@@ -1,0 +1,2165 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../Application_Server/2/">
+      
+      
+        <link rel="next" href="../2/">
+      
+      
+      <link rel="icon" href="../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.18">
+    
+    
+      
+        <title>Einführung - IT-Basis - Überblick über das Web und Programmiersprachen</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/logo.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/grid.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/video_admonition.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/python_tutor_admonition.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/mermaid.css">
+    
+      <link rel="stylesheet" href="../../../stylesheets/cd.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#low-code-1-einfuhrung-grundlagen" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="IT-Basis - Überblick über das Web und Programmiersprachen" class="md-header__button md-logo" aria-label="IT-Basis - Überblick über das Web und Programmiersprachen" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IT-Basis - Überblick über das Web und Programmiersprachen
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Einführung
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="IT-Basis - Überblick über das Web und Programmiersprachen" class="md-nav__button md-logo" aria-label="IT-Basis - Überblick über das Web und Programmiersprachen" data-md-component="logo">
+      
+  <img src="../../../assets/logo.png" alt="logo">
+
+    </a>
+    IT-Basis - Überblick über das Web und Programmiersprachen
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übersicht
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    HTML CSS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            HTML CSS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HTML_CSS/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Einführung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HTML_CSS/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    HTML-Elemente
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HTML_CSS/3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Attribute & Formulare
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HTML_CSS/4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CSS Fundamentals
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HTML_CSS/5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CSS Layout
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HTML_CSS/6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Accessibility
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../HTML_CSS/7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übungsaufgabe
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    JavaScript
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            JavaScript
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Variablen & Operatoren
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kontrollstrukturen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DOM & Events
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Async & APIs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Arrays & Objects
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Best Practices & Patterns
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JavaScript/7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Übungsaufgabe (Simulation)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    XML
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            XML
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../XML/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Syntax & Struktur
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../XML/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    DTD & Schema
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../XML/3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    XPath & XSLT
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../XML/4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Erweiterte Abfragen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Java Grundlagen
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Java Grundlagen
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../OOP_Introduction/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Objektorientierung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java_Grundlagen/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setup & Syntax
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java_Grundlagen/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Kontrollstrukturen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java_Grundlagen/3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Methoden & Funktionen
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java_Grundlagen/4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Arrays & Collections
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java_Grundlagen/5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Design Patterns Übung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java_Grundlagen/6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Design Patterns Lösung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Java Aufbau
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Java Aufbau
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java_Aufbau/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Streams & Lambdas
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Java_Aufbau/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Collections
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Application Server
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Application Server
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Application_Server/1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Einführung
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Application_Server/2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Konfiguration
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Low Code
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Low Code
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Einführung
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Einführung
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#einfuhrung" class="md-nav__link">
+    <span class="md-ellipsis">
+      Einführung
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#was-ist-low-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Was ist Low Code?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#low-code-vs-no-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Low Code vs. No Code
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vorteile-von-low-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vorteile von Low Code
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nachteile-risiken" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nachteile &amp; Risiken
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anwendungsfalle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anwendungsfälle
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#populare-plattformen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Populäre Plattformen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#praktisches-beispiel-crm-mit-low-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Praktisches Beispiel: CRM mit Low Code
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#low-code-in-der-praxis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Low Code in der Praxis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entscheidungshilfe-low-code-oder-full-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entscheidungshilfe: Low Code oder Full Code?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#haufige-fehler-fallstricke" class="md-nav__link">
+    <span class="md-ellipsis">
+      Häufige Fehler &amp; Fallstricke
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zusammenfassung-checkliste" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zusammenfassung &amp; Checkliste
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nachste-schritte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nächste Schritte
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Advanced
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#einfuhrung" class="md-nav__link">
+    <span class="md-ellipsis">
+      Einführung
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#was-ist-low-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Was ist Low Code?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#low-code-vs-no-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Low Code vs. No Code
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vorteile-von-low-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vorteile von Low Code
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nachteile-risiken" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nachteile &amp; Risiken
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#anwendungsfalle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Anwendungsfälle
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#populare-plattformen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Populäre Plattformen
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#praktisches-beispiel-crm-mit-low-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Praktisches Beispiel: CRM mit Low Code
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#low-code-in-der-praxis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Low Code in der Praxis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#best-practices" class="md-nav__link">
+    <span class="md-ellipsis">
+      Best Practices
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entscheidungshilfe-low-code-oder-full-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Entscheidungshilfe: Low Code oder Full Code?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#haufige-fehler-fallstricke" class="md-nav__link">
+    <span class="md-ellipsis">
+      Häufige Fehler &amp; Fallstricke
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zusammenfassung-checkliste" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zusammenfassung &amp; Checkliste
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nachste-schritte" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nächste Schritte
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="low-code-1-einfuhrung-grundlagen">Low Code 1 – Einführung &amp; Grundlagen<a class="headerlink" href="#low-code-1-einfuhrung-grundlagen" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Lernziele</p>
+<p>Nach diesem Kapitel kannst du …</p>
+<ul>
+<li>Was <strong>Low Code</strong> und <strong>No Code</strong> sind und unterscheiden.</li>
+<li>Die <strong>Vorteile und Nachteile</strong> von Low Code verstehen.</li>
+<li><strong>Anwendungsfälle</strong> für Low Code erkennen.</li>
+<li><strong>Populäre Plattformen</strong> kennenlernen.</li>
+<li>Eine einfache <strong>Anwendung</strong> mit Low Code erstellen.</li>
+</ul>
+</div>
+<hr />
+<h2 id="einfuhrung">Einführung<a class="headerlink" href="#einfuhrung" title="Permanent link">&para;</a></h2>
+<p><strong>Low Code</strong> ist eine Entwicklungsmethode, die <strong>wenig oder gar keinen Programmiercode</strong> benötigt, um Anwendungen zu erstellen. Stattdessen werden <strong>visuelle Editoren</strong>, <strong>Drag-and-Drop</strong> und <strong>Konfiguration</strong> verwendet.</p>
+<p><img align="left" alt="Low Code Logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Logo_der_Low-Code_Association.svg/640px-Logo_der_Low-Code_Association.svg.png" width="300px" /></p>
+<p><strong>Wichtige Fakten:</strong>
+- Low Code wurde populär durch <strong>OutSystems</strong> (2001) und <strong>Mendix</strong> (2005)
+- Der Markt wächst jährlich um <strong>20-30%</strong>
+- Erwartet wird, dass bis <strong>2025 70%</strong> neuer Anwendungen mit Low Code entwickelt werden
+- <strong>Citizen Developers</strong> (Nicht-Programmierer) können Anwendungen bauen</p>
+<p><strong>Unterschiede:</strong>
+- <strong>Low Code</strong>: Wenig Code, visuelle Entwicklung, IT-Experten
+- <strong>No Code</strong>: Kein Code, rein visuell, Business-Anwender</p>
+<hr />
+<h2 id="was-ist-low-code">Was ist Low Code?<a class="headerlink" href="#was-ist-low-code" title="Permanent link">&para;</a></h2>
+<h3 id="definition">Definition<a class="headerlink" href="#definition" title="Permanent link">&para;</a></h3>
+<p>Low Code ist eine <strong>Entwicklungsplattform</strong>, die:
+- <strong>Visuelle Modellierung</strong> von Logik und UI ermöglicht
+- <strong>Automatisches Code-Generierung</strong> im Hintergrund
+- <strong>Wiederverwendbare Komponenten</strong> bietet
+- <strong>Integrationen</strong> mit externen Systemen vereinfacht
+- <strong>Schnelle Prototypen</strong> und Iterationen erlaubt</p>
+<h3 id="architektur">Architektur<a class="headerlink" href="#architektur" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>Visuelle Oberfläche → Modell → Generator → Code → Deployment
+</code></pre></div></td></tr></table></div>
+<p><strong>Komponenten:</strong>
+- <strong>Drag-and-Drop-Editor</strong>: UI-Komponenten platzieren
+- <strong>Workflow-Designer</strong>: Geschäftslogik modellieren
+- <strong>Datenmodell-Editor</strong>: Datenbanken definieren
+- <strong>Integration-Builder</strong>: APIs und Services verbinden</p>
+<hr />
+<h2 id="low-code-vs-no-code">Low Code vs. No Code<a class="headerlink" href="#low-code-vs-no-code" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Aspekt</th>
+<th>Low Code</th>
+<th>No Code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Zielgruppe</strong></td>
+<td>IT-Experten, Entwickler</td>
+<td>Business-Anwender, Citizen Developers</td>
+</tr>
+<tr>
+<td><strong>Flexibilität</strong></td>
+<td>Hoch (Code optional)</td>
+<td>Mittel (visuell)</td>
+</tr>
+<tr>
+<td><strong>Komplexität</strong></td>
+<td>Komplexe Anwendungen</td>
+<td>Einfache Anwendungen</td>
+</tr>
+<tr>
+<td><strong>Beispiele</strong></td>
+<td>OutSystems, Mendix</td>
+<td>Bubble, Webflow, Airtable</td>
+</tr>
+<tr>
+<td><strong>Code-Export</strong></td>
+<td>Möglich</td>
+<td>Nicht möglich</td>
+</tr>
+<tr>
+<td><strong>Skalierbarkeit</strong></td>
+<td>Hoch</td>
+<td>Begrenzt</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="vorteile-von-low-code">Vorteile von Low Code<a class="headerlink" href="#vorteile-von-low-code" title="Permanent link">&para;</a></h2>
+<h3 id="1-schnelleres-development">1. Schnelleres Development<a class="headerlink" href="#1-schnelleres-development" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>70-90%</strong> schneller als traditionelles Coding</li>
+<li>Sofortige Visualisierung von Ergebnissen</li>
+<li>Schnelle Iterationen und Anpassungen</li>
+</ul>
+<h3 id="2-geringere-kosten">2. Geringere Kosten<a class="headerlink" href="#2-geringere-kosten" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Weniger Entwickler-Stunden nötig</li>
+<li>Geringere Einarbeitungszeit</li>
+<li>Wiederverwendbare Komponenten</li>
+</ul>
+<h3 id="3-hohere-produktivitat">3. Höhere Produktivität<a class="headerlink" href="#3-hohere-produktivitat" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Entwickler fokussieren sich auf Logik, nicht auf Boilerplate</li>
+<li>Parallelarbeit durch visuelle Modellierung</li>
+<li>Schnelles Prototyping</li>
+</ul>
+<h3 id="4-democratization-of-it">4. Democratization of IT<a class="headerlink" href="#4-democratization-of-it" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Business-Anwender können Lösungen bauen</li>
+<li>Weniger Abhängigkeit von IT-Abteilung</li>
+<li>Schnelle Reaktion auf Anforderungen</li>
+</ul>
+<h3 id="5-qualitat-standards">5. Qualität &amp; Standards<a class="headerlink" href="#5-qualitat-standards" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Automatische Code-Generierung folgt Best Practices</li>
+<li>Weniger Fehler durch visuelle Validierung</li>
+<li>Konsistente Architektur</li>
+</ul>
+<hr />
+<h2 id="nachteile-risiken">Nachteile &amp; Risiken<a class="headerlink" href="#nachteile-risiken" title="Permanent link">&para;</a></h2>
+<h3 id="1-vendor-lock-in">1. Vendor Lock-in<a class="headerlink" href="#1-vendor-lock-in" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Abhängigkeit von Plattform-Anbieter</li>
+<li>Wechsel zu anderer Plattform schwierig</li>
+<li>Langfristige Kosten durch Lizenzen</li>
+</ul>
+<h3 id="2-flexibilitatsgrenzen">2. Flexibilitätsgrenzen<a class="headerlink" href="#2-flexibilitatsgrenzen" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Komplexe Logik kann schwierig sein</li>
+<li>Spezielle Anforderungen vielleicht nicht umsetzbar</li>
+<li>Performance-Optimierung begrenzt</li>
+</ul>
+<h3 id="3-skalierbarkeit">3. Skalierbarkeit<a class="headerlink" href="#3-skalierbarkeit" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Große Anwendungen werden schnell unübersichtlich</li>
+<li>Performance bei hohen Lasten fraglich</li>
+<li>Technische Schulden können wachsen</li>
+</ul>
+<h3 id="4-wartung-debugging">4. Wartung &amp; Debugging<a class="headerlink" href="#4-wartung-debugging" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Fehlersuche in visuellen Modellen schwierig</li>
+<li>Versionierung komplexer als Code</li>
+<li>Dokumentation oft unzureichend</li>
+</ul>
+<h3 id="5-qualitatssicherung">5. Qualitätssicherung<a class="headerlink" href="#5-qualitatssicherung" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Automatisierte Tests schwierig</li>
+<li>Code-Review nicht möglich</li>
+<li>Sicherheitsaudit komplex</li>
+</ul>
+<hr />
+<h2 id="anwendungsfalle">Anwendungsfälle<a class="headerlink" href="#anwendungsfalle" title="Permanent link">&para;</a></h2>
+<h3 id="1-business-apps">1. Business-Apps<a class="headerlink" href="#1-business-apps" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>CRM-Systeme</strong>: Kundenverwaltung, Verkaufstracking</li>
+<li><strong>ERP-Module</strong>: Bestellmanagement, Lagerverwaltung</li>
+<li><strong>HR-Tools</strong>: Bewerbermanagement, Mitarbeiterportale</li>
+</ul>
+<h3 id="2-prototyping-mvps">2. Prototyping &amp; MVPs<a class="headerlink" href="#2-prototyping-mvps" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Schnelle Ideenvalidierung</li>
+<li>Kundenfeedback sammeln</li>
+<li>Investoren-Pitches</li>
+</ul>
+<h3 id="3-workflow-automatisierung">3. Workflow-Automatisierung<a class="headerlink" href="#3-workflow-automatisierung" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Genehmigungsprozesse</li>
+<li>Formular-basierte Workflows</li>
+<li>Benachrichtigungen und Alerts</li>
+</ul>
+<h3 id="4-daten-integration">4. Daten-Integration<a class="headerlink" href="#4-daten-integration" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Dashboards und Reporting</li>
+<li>Daten-Synchronisation</li>
+<li>API-Integrationen</li>
+</ul>
+<h3 id="5-interne-tools">5. Interne Tools<a class="headerlink" href="#5-interne-tools" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Admin-Panels</li>
+<li>Helpdesk-Systeme</li>
+<li>Projektmanagement-Tools</li>
+</ul>
+<h3 id="nicht-geeignet">Nicht geeignet:<a class="headerlink" href="#nicht-geeignet" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>High-Performance-Anwendungen</strong> (Echtzeit, Big Data)</li>
+<li><strong>Komplexe Algorithmen</strong> (KI, Machine Learning)</li>
+<li><strong>Sicherheitskritische Systeme</strong> (Banking, Medizin)</li>
+<li><strong>Mobile Apps mit nativer Performance</strong></li>
+</ul>
+<hr />
+<h2 id="populare-plattformen">Populäre Plattformen<a class="headerlink" href="#populare-plattformen" title="Permanent link">&para;</a></h2>
+<h3 id="enterprise-low-code">Enterprise Low Code<a class="headerlink" href="#enterprise-low-code" title="Permanent link">&para;</a></h3>
+<h4 id="1-outsystems">1. <strong>OutSystems</strong><a class="headerlink" href="#1-outsystems" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Fokus</strong>: Enterprise-Apps, Mobile, Web</li>
+<li><strong>Vorteile</strong>: Hohe Flexibilität, starke Integration</li>
+<li><strong>Nachteile</strong>: Teuer, komplexe Lizenzierung</li>
+<li><strong>Preis</strong>: Ab ~€10.000/Jahr</li>
+</ul>
+<h4 id="2-mendix-siemens">2. <strong>Mendix (Siemens)</strong><a class="headerlink" href="#2-mendix-siemens" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Fokus</strong>: Enterprise, IoT, Manufacturing</li>
+<li><strong>Vorteile</strong>: Starke BPM-Integration, Skalierbarkeit</li>
+<li><strong>Nachteile</strong>: Steile Lernkurve</li>
+<li><strong>Preis</strong>: Ab ~€5.000/Jahr</li>
+</ul>
+<h4 id="3-microsoft-power-apps">3. <strong>Microsoft Power Apps</strong><a class="headerlink" href="#3-microsoft-power-apps" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Fokus</strong>: Office 365 Integration, SharePoint</li>
+<li><strong>Vorteile</strong>: Gute Microsoft-Integration, günstig</li>
+<li><strong>Nachteile</strong>: Eingeschränkte Flexibilität</li>
+<li><strong>Preis</strong>: Ab ~€10/Benutzer/Monat</li>
+</ul>
+<h3 id="no-code-citizen-developer">No Code / Citizen Developer<a class="headerlink" href="#no-code-citizen-developer" title="Permanent link">&para;</a></h3>
+<h4 id="4-bubble">4. <strong>Bubble</strong><a class="headerlink" href="#4-bubble" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Fokus</strong>: Web-Apps, Startups</li>
+<li><strong>Vorteile</strong>: Sehr flexibel, große Community</li>
+<li><strong>Nachteile</strong>: Vendor Lock-in, Performance</li>
+<li><strong>Preis</strong>: Ab ~€30/Monat</li>
+</ul>
+<h4 id="5-webflow">5. <strong>Webflow</strong><a class="headerlink" href="#5-webflow" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Fokus</strong>: Webseiten, Landing Pages</li>
+<li><strong>Vorteile</strong>: Design-orientiert, SEO-friendly</li>
+<li><strong>Nachteile</strong>: Keine komplexe Logik</li>
+<li><strong>Preis</strong>: Ab ~€15/Monat</li>
+</ul>
+<h4 id="6-airtable">6. <strong>Airtable</strong><a class="headerlink" href="#6-airtable" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Fokus</strong>: Datenbank-Apps, Collaboration</li>
+<li><strong>Vorteile</strong>: Einfach, mächtige Datenbank</li>
+<li><strong>Nachteile</strong>: Keine komplexe UI</li>
+<li><strong>Preis</strong>: Ab ~€12/Monat</li>
+</ul>
+<h4 id="7-appsheet-google">7. <strong>AppSheet (Google)</strong><a class="headerlink" href="#7-appsheet-google" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Fokus</strong>: Mobile Apps, Daten-Integration</li>
+<li><strong>Vorteile</strong>: Gute Google-Integration</li>
+<li><strong>Nachteile</strong>: Eingeschränkte Anpassung</li>
+<li><strong>Preis</strong>: Ab ~€5/Benutzer/Monat</li>
+</ul>
+<hr />
+<h2 id="praktisches-beispiel-crm-mit-low-code">Praktisches Beispiel: CRM mit Low Code<a class="headerlink" href="#praktisches-beispiel-crm-mit-low-code" title="Permanent link">&para;</a></h2>
+<h3 id="schritt-1-datenmodell">Schritt 1: Datenmodell<a class="headerlink" href="#schritt-1-datenmodell" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code>Kunden (Tabelle)
+├── ID (Primary Key)
+├── Name (Text)
+├── Email (Text)
+├── Telefon (Text)
+├── Status (Dropdown: Neu, Aktiv, Inaktiv)
+└── Erstelldatum (Datum)
+
+Interaktionen (Tabelle)
+├── ID (Primary Key)
+├── Kunden-ID (Foreign Key)
+├── Typ (Dropdown: Anruf, Email, Meeting)
+├── Notiz (Text)
+└── Datum (Datum)
+</code></pre></div></td></tr></table></div>
+<h3 id="schritt-2-ui-design">Schritt 2: UI-Design<a class="headerlink" href="#schritt-2-ui-design" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Dashboard</strong>: Übersicht aller Kunden</li>
+<li><strong>Detailansicht</strong>: Einzelner Kunde mit Interaktionshistorie</li>
+<li><strong>Formular</strong>: Neuen Kunden erfassen</li>
+<li><strong>Suche</strong>: Kunden finden</li>
+</ul>
+<h3 id="schritt-3-logik">Schritt 3: Logik<a class="headerlink" href="#schritt-3-logik" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Workflow</strong>: Bei neuem Kunden → Email an Vertrieb</li>
+<li><strong>Validierung</strong>: Email muss einzigartig sein</li>
+<li><strong>Benachrichtigung</strong>: Bei Status-Änderung</li>
+</ul>
+<h3 id="schritt-4-integrationen">Schritt 4: Integrationen<a class="headerlink" href="#schritt-4-integrationen" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Email</strong>: SMTP für Benachrichtigungen</li>
+<li><strong>API</strong>: Verbindung zu ERP-System</li>
+<li><strong>Export</strong>: CSV/Excel für Reports</li>
+</ul>
+<hr />
+<h2 id="low-code-in-der-praxis">Low Code in der Praxis<a class="headerlink" href="#low-code-in-der-praxis" title="Permanent link">&para;</a></h2>
+<h3 id="beispiel-1-approval-workflow-power-apps">Beispiel 1: Approval Workflow (Power Apps)<a class="headerlink" href="#beispiel-1-approval-workflow-power-apps" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>1. Formular: Mitarbeiter beantragt Urlaub
+2. Logik: Wenn Tage &gt; 5 → Genehmigung durch Manager
+3. Benachrichtigung: Email an Mitarbeiter
+4. Integration: Sync mit Outlook Kalender
+</code></pre></div></td></tr></table></div>
+<h3 id="beispiel-2-customer-portal-outsystems">Beispiel 2: Customer Portal (OutSystems)<a class="headerlink" href="#beispiel-2-customer-portal-outsystems" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code>1. Login: Authentifizierung via Active Directory
+2. Dashboard: Bestellungen, Rechnungen, Support-Tickets
+3. Self-Service: Passwort-Reset, Adressänderung
+4. Integration: SAP Backend, Payment Gateway
+</code></pre></div></td></tr></table></div>
+<h3 id="beispiel-3-mvp-fur-startup-bubble">Beispiel 3: MVP für Startup (Bubble)<a class="headerlink" href="#beispiel-3-mvp-fur-startup-bubble" title="Permanent link">&para;</a></h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span></pre></div></td><td class="code"><div><pre><span></span><code>1. Landing Page: Marketing, Features
+2. User Registration: Email, Passwort
+3. Core Feature: Produkt-Konfigurator
+4. Payment: Stripe Integration
+5. Launch: In 2 Wochen statt 6 Monaten
+</code></pre></div></td></tr></table></div>
+<hr />
+<h2 id="best-practices">Best Practices<a class="headerlink" href="#best-practices" title="Permanent link">&para;</a></h2>
+<h3 id="1-klare-anforderungen">1. Klare Anforderungen<a class="headerlink" href="#1-klare-anforderungen" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Definiere <strong>Scope</strong> und <strong>Ziele</strong></li>
+<li>Identifiziere <strong>Key Features</strong></li>
+<li>Priorisiere <strong>MVP</strong> (Minimum Viable Product)</li>
+</ul>
+<h3 id="2-datenmodellierung">2. Datenmodellierung<a class="headerlink" href="#2-datenmodellierung" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Normalisiere Daten</li>
+<li>Definiere Beziehungen</li>
+<li>Plane für Skalierbarkeit</li>
+</ul>
+<h3 id="3-uiux-design">3. UI/UX Design<a class="headerlink" href="#3-uiux-design" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Konsistente Design-Systeme</li>
+<li>Mobile-First Ansatz</li>
+<li>Barrierefreiheit</li>
+</ul>
+<h3 id="4-integrationen">4. Integrationen<a class="headerlink" href="#4-integrationen" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Dokumentiere APIs</li>
+<li>Implementiere Fehlerbehandlung</li>
+<li>Teste mit echten Daten</li>
+</ul>
+<h3 id="5-sicherheit">5. Sicherheit<a class="headerlink" href="#5-sicherheit" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Role-Based Access Control (RBAC)</li>
+<li>Datenverschlüsselung</li>
+<li>Audit-Logging</li>
+</ul>
+<h3 id="6-wartung">6. Wartung<a class="headerlink" href="#6-wartung" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Dokumentation</li>
+<li>Versionierung</li>
+<li>Regelmäßige Reviews</li>
+</ul>
+<hr />
+<h2 id="entscheidungshilfe-low-code-oder-full-code">Entscheidungshilfe: Low Code oder Full Code?<a class="headerlink" href="#entscheidungshilfe-low-code-oder-full-code" title="Permanent link">&para;</a></h2>
+<h3 id="low-code-wahlen-wenn">Low Code wählen, wenn:<a class="headerlink" href="#low-code-wahlen-wenn" title="Permanent link">&para;</a></h3>
+<ul>
+<li>✅ Schnelle Time-to-Market wichtig ist</li>
+<li>✅ Anwendung eher standardisiert ist</li>
+<li>✅ Ressourcen knapp sind</li>
+<li>✅ Business-Anwender beteiligt sind</li>
+<li>✅ Prototyping oder MVP</li>
+</ul>
+<h3 id="full-code-wahlen-wenn">Full Code wählen, wenn:<a class="headerlink" href="#full-code-wahlen-wenn" title="Permanent link">&para;</a></h3>
+<ul>
+<li>✅ Hohe Performance erforderlich ist</li>
+<li>✅ Komplexe Logik nötig ist</li>
+<li>✅ Volle Kontrolle über Code benötigt wird</li>
+<li>✅ Langfristige Skalierbarkeit geplant ist</li>
+<li>✅ Sicherheitskritische Anwendung</li>
+</ul>
+<h3 id="hybrid-ansatz">Hybrid-Ansatz:<a class="headerlink" href="#hybrid-ansatz" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Low Code</strong> für UI und Standard-Logik</li>
+<li><strong>Custom Code</strong> für komplexe Business-Logik</li>
+<li><strong>APIs</strong> für Integrationen</li>
+</ul>
+<hr />
+<h2 id="haufige-fehler-fallstricke">Häufige Fehler &amp; Fallstricke<a class="headerlink" href="#haufige-fehler-fallstricke" title="Permanent link">&para;</a></h2>
+<h3 id="fehler-1-zu-komplexe-anwendungen">Fehler 1: Zu komplexe Anwendungen<a class="headerlink" href="#fehler-1-zu-komplexe-anwendungen" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Problem</strong>: Low Code wird für alles verwendet</li>
+<li><strong>Lösung</strong>: Klare Grenzen setzen, Full Code für komplexe Teile</li>
+</ul>
+<h3 id="fehler-2-vendor-lock-in-ignorieren">Fehler 2: Vendor Lock-in ignorieren<a class="headerlink" href="#fehler-2-vendor-lock-in-ignorieren" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Problem</strong>: Späterer Wechsel sehr teuer</li>
+<li><strong>Lösung</strong>: Export-Möglichkeiten prüfen, Datenportabilität</li>
+</ul>
+<h3 id="fehler-3-keine-governance">Fehler 3: Keine Governance<a class="headerlink" href="#fehler-3-keine-governance" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Problem</strong>: Shadow IT, unkontrollierte Anwendungen</li>
+<li><strong>Lösung</strong>: Zentrale IT-Governance etablieren</li>
+</ul>
+<h3 id="fehler-4-zu-schnelles-wachstum">Fehler 4: Zu schnelles Wachstum<a class="headerlink" href="#fehler-4-zu-schnelles-wachstum" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Problem</strong>: Anwendung wird unübersichtlich</li>
+<li><strong>Lösung</strong>: Modularer Aufbau, regelmäßige Refactorings</li>
+</ul>
+<h3 id="fehler-5-qualitat-ignorieren">Fehler 5: Qualität ignorieren<a class="headerlink" href="#fehler-5-qualitat-ignorieren" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Problem</strong>: Keine Tests, keine Dokumentation</li>
+<li><strong>Lösung</strong>: Qualitätsstandards definieren und durchsetzen</li>
+</ul>
+<hr />
+<h2 id="zusammenfassung-checkliste">Zusammenfassung &amp; Checkliste<a class="headerlink" href="#zusammenfassung-checkliste" title="Permanent link">&para;</a></h2>
+<h3 id="wichtige-konzepte">Wichtige Konzepte<a class="headerlink" href="#wichtige-konzepte" title="Permanent link">&para;</a></h3>
+<ul>
+<li>✅ <strong>Low Code</strong>: Visuelle Entwicklung mit optionaler Code-Erweiterung</li>
+<li>✅ <strong>No Code</strong>: Reine visuelle Entwicklung</li>
+<li>✅ <strong>Vorteile</strong>: Schneller, günstiger, democratisiert IT</li>
+<li>✅ <strong>Nachteile</strong>: Vendor Lock-in, Flexibilitätsgrenzen</li>
+<li>✅ <strong>Anwendungsfälle</strong>: Business-Apps, Prototyping, Workflows</li>
+<li>✅ <strong>Plattformen</strong>: OutSystems, Mendix, Power Apps, Bubble</li>
+</ul>
+<h3 id="checkliste-fur-entscheidung">Checkliste für Entscheidung<a class="headerlink" href="#checkliste-fur-entscheidung" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] Anforderungen klar definiert</li>
+<li>[ ] Komplexität eingeschätzt</li>
+<li>[ ] Budget und Ressourcen geplant</li>
+<li>[ ] Vendor Lock-in geprüft</li>
+<li>[ ] Skalierbarkeit bedacht</li>
+<li>[ ] Sicherheitsanforderungen analysiert</li>
+<li>[ ] Team-Kompetenzen bewertet</li>
+</ul>
+<hr />
+<h2 id="nachste-schritte">Nächste Schritte<a class="headerlink" href="#nachste-schritte" title="Permanent link">&para;</a></h2>
+<p>Nachdem du diese Grundlagen beherrschst:
+1. <strong>Plattform auswählen</strong> - Demo-Accounts testen
+2. <strong>Pilot-Projekt</strong> - Kleine Anwendung bauen
+3. <strong>Training</strong> - Team schulen
+4. <strong>Governance</strong> - Standards definieren
+5. <strong>Skalierung</strong> - Erweitern auf mehr Anwendungen</p>
+<p><strong>Empfohlene Ressourcen:</strong>
+- <a href="https://www.gartner.com/">Gartner Magic Quadrant Low Code</a>
+- <a href="https://www.forrester.com/">Forrester Wave Low Code</a>
+- <a href="https://www.lowcodeacademy.com/">Low Code Academy</a>
+- <a href="https://www.outsystems.com/learning/">OutSystems Learning</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../../Application_Server/2/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Konfiguration">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Konfiguration
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../2/" class="md-footer__link md-footer__link--next" aria-label="Next: Advanced">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Advanced
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Qualidy GmbH
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.foerde-campus.de/" target="_blank" rel="noopener" title="www.foerde-campus.de" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tracking", "navigation.path", "navigation.top", "navigation.footer", "toc.follow", "content.code.copy", "content.code.annotate"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+        <script src="../../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
